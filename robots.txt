@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
-
-# (facoltativo) ritarda un filo la scansione se vuoi
-# Crawl-delay: 5
+Crawl-delay: 5
 
 Sitemap: https://raydalessandro.github.io/EAR_mktg_website/sitemap.xml
+Sitemap: https://raydalessandro.github.io/EAR_mktg_website/ai.txt
