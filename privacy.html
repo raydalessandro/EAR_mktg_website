@@ -18,25 +18,36 @@
     <!-- CSS Links -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/responsive.css">
-    
-    <!-- Preload -->
-    <link rel="preload" as="style" href="styles/styles.css">
+
+    <!-- JS di base (non bloccanti) -->
+    <script defer src="scripts/main.js"></script>
+    <script defer src="scripts/cookie-banner.js"></script>
 </head>
 <body>
+
+    <!-- Script NON tecnici bloccati finché non c'è consenso -->
+    <script type="text/plain" data-cookiecategory="analytics">
+      // Placeholder GA4 (resta bloccato fino ad "Accetta")
+      // window.dataLayer = window.dataLayer || [];
+      // function gtag(){dataLayer.push(arguments);}
+      // gtag('js', new Date());
+      // gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
+    </script>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principale">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="/" class="logo" aria-label="EAR Marketing Home">
+                <a href="index.html" class="logo" aria-label="EAR Marketing Home">
                     <span class="logo-symbol" aria-hidden="true">∅</span>
                     <span class="logo-text">EAR Marketing</span>
                 </a>
                 
-                <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+                <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
                     <span class="hamburger"></span>
                 </button>
                 
-                <ul class="nav-menu" id="navMenu">
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="chi-siamo.html">Chi Siamo</a></li>
                     <li><a href="servizi.html">Servizi</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -50,7 +61,7 @@
     <div class="breadcrumb" role="navigation" aria-label="Breadcrumb">
         <div class="container">
             <ol class="breadcrumb-list">
-                <li><a href="/">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li aria-current="page">Privacy Policy</li>
             </ol>
         </div>
@@ -200,19 +211,24 @@
                         
                         <h4>Cookie Analitici</h4>
                         <p>
-                            <strong>NON utilizziamo Google Analytics o altri tracker.</strong> 
-                            Rispettiamo la tua privacy al 100%.
+                            <strong>Al momento non utilizziamo Google Analytics o altri tracker.</strong>
+                            Se in futuro attiveremo strumenti analitici, verranno caricati solo dopo il tuo consenso 
+                            (tramite il banner) e aggiornate qui le relative informazioni.
                         </p>
                         
                         <h4>Cookie di Terze Parti</h4>
                         <p>
-                            <strong>ZERO cookie di terze parti.</strong> Nessun Facebook Pixel, 
-                            nessun remarketing, nessun tracking pubblicitario.
+                            <strong>Nessun cookie di terze parti attivo.</strong> 
+                            Nessun Facebook Pixel, remarketing o tracking pubblicitario.
                         </p>
                         
                         <h3>Gestione dei Cookie</h3>
                         <p>
-                            Puoi disabilitare i cookie dalle impostazioni del tuo browser:
+                            Puoi modificare in qualsiasi momento le preferenze: 
+                            <button type="button" id="open-cookie-prefs" class="link">Preferenze cookie</button>
+                        </p>
+                        <p>
+                            Oppure disabilitare i cookie dalle impostazioni del tuo browser:
                         </p>
                         <ul>
                             <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Chrome</a></li>
@@ -301,7 +317,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="/" class="footer-logo">
+                    <a href="index.html" class="footer-logo">
                         <span class="logo-symbol" aria-hidden="true">∅</span>
                         <span>EAR Marketing</span>
                     </a>
@@ -333,12 +349,8 @@
                     <div class="footer-column">
                         <h3 class="footer-title">Contatti</h3>
                         <ul class="footer-contact">
-                            <li>
-                                <a href="tel:+390212345678">+39 02 1234 5678</a>
-                            </li>
-                            <li>
-                                <a href="mailto:info@earmarketing.it">info@earmarketing.it</a>
-                            </li>
+                            <li><a href="tel:+390212345678">+39 02 1234 5678</a></li>
+                            <li><a href="mailto:info@earmarketing.it">info@earmarketing.it</a></li>
                             <li>Milano, Italia</li>
                         </ul>
                     </div>
@@ -349,23 +361,31 @@
                 <p class="copyright">
                     © 2025 EAR Marketing - P.IVA IT00000000000 - Tutti i diritti riservati
                 </p>
+                <p><button type="button" id="open-cookie-prefs" class="link">Preferenze cookie</button></p>
             </div>
         </div>
     </footer>
 
-    <!-- Cookie Banner -->
-    <div id="cookieBanner" class="cookie-banner" role="dialog" aria-label="Cookie Policy" hidden>
-        <div class="cookie-content">
-            <p>Utilizziamo solo cookie tecnici essenziali per il funzionamento del sito.</p>
-            <div class="cookie-actions">
-                <button id="acceptCookies" class="btn btn-small btn-primary">Accetta</button>
-                <a href="privacy.html#cookies" class="btn btn-small btn-secondary">Maggiori Info</a>
-            </div>
+    <!-- Cookie Banner compatibile con scripts/cookie-banner.js -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="true" hidden>
+      <div class="cookie-box">
+        <h2>Cookie</h2>
+        <p>Usiamo cookie tecnici e, previo consenso, analytics/marketing per migliorare l’esperienza.</p>
+        <div class="cookie-actions">
+          <button data-action="reject">Rifiuta</button>
+          <button data-action="prefs">Personalizza</button>
+          <button data-action="accept">Accetta</button>
         </div>
+        <form id="cookie-prefs" class="cookie-prefs" hidden>
+          <label><input type="checkbox" checked disabled> Tecnici (obbligatori)</label>
+          <label><input type="checkbox" name="analytics"> Analytics</label>
+          <label><input type="checkbox" name="marketing"> Marketing</label>
+          <div class="cookie-actions">
+            <button data-action="save">Salva preferenze</button>
+          </div>
+        </form>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <script defer src="scripts/main.js"></script>
-    <script defer src="scripts/cookie-banner.js"></script>
 </body>
 </html>
