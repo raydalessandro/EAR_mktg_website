@@ -2046,3 +2046,134 @@ strong {
 /* ========================================
    END OF MAIN STYLESHEET
    ======================================== */
+
+/* ====== SERVIZI: sezione scura + tipografia leggibile ====== */
+.section-gradient {
+  /* se già hai un gradient, tienilo; l'importante è il contrasto */
+  background: linear-gradient(180deg, #0b0b0b 0%, #141414 100%);
+  color: #fff;
+}
+.section-gradient .section-title,
+.section-gradient .features-title { color: #fff; }
+.section-gradient .section-subtitle,
+.text-white-80 { color: rgba(255,255,255,0.8); }
+.text-white { color: #fff; }
+
+/* ====== Griglia prezzi ====== */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: var(--space-xl, 24px);
+  align-items: stretch;
+}
+@media (max-width: 860px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+}
+
+/* ====== Card prezzi (EAR / EAR+) ====== */
+.price-card {
+  background: #ffffff; /* card chiara per contrastare la sezione scura */
+  color: #0b0b0b;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: clamp(20px, 2.5vw, 28px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.price-card .price-head { margin-bottom: 8px; }
+.price-card .price-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+.price-card .pricing-value {
+  display: flex; align-items: baseline; gap: 6px;
+  margin: 6px 0 4px;
+}
+.price-card .price-currency { font-size: 1.1rem; opacity: .85; }
+.price-card .price-amount { font-size: 2.2rem; line-height: 1; font-weight: 800; }
+.price-card .price-period { font-size: .95rem; opacity: .7; }
+
+.price-card .price-features {
+  display: grid;
+  gap: 10px;
+  margin: 8px 0 4px;
+}
+.price-card .price-features li { line-height: 1.45; }
+
+.price-card .pricing-cta { margin-top: auto; }
+.price-card .btn { width: 100%; }
+
+/* Evidenza per il piano "featured" (EAR+) */
+.price-card.featured {
+  border: 1px solid rgba(255,255,255,0.0);
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(135deg, #9AE6B4 0%, #63B3ED 50%, #F6AD55 100%) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+}
+.price-card .setup-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: #0b0b0b; color: #fff;
+  padding: 6px 10px; border-radius: 999px;
+  font-size: .8rem; letter-spacing: .2px;
+}
+
+/* Nota piccola sotto i prezzi */
+.price-note { font-size: .9rem; opacity: .7; }
+
+/* ====== Add-on Social ====== */
+.addons { margin-top: clamp(28px, 4vw, 40px); }
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: var(--space-lg, 20px);
+}
+@media (max-width: 720px) {
+  .addons-grid { grid-template-columns: 1fr; }
+}
+.addon-card {
+  background: #ffffff;
+  color: #0b0b0b;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+}
+.addon-title { font-weight: 700; margin-bottom: 6px; }
+.addon-price { font-weight: 800; margin-bottom: 10px; }
+.addon-list { display: grid; gap: 8px; }
+
+/* ====== One-shot (già c'erano, li rendiamo coerenti) ====== */
+.setup-pricing {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: var(--space-xl, 24px);
+}
+@media (max-width: 980px) { .setup-pricing { grid-template-columns: 1fr; } }
+.setup-card {
+  background: #fff;
+  color: #0b0b0b;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.12);
+}
+.setup-card.featured {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(135deg, #9AE6B4 0%, #63B3ED 50%, #F6AD55 100%) border-box;
+  box-shadow: 0 10px 28px rgba(0,0,0,.2);
+}
+.setup-title { font-weight: 800; }
+.setup-price { font-size: 1.6rem; font-weight: 800; margin: 6px 0 10px; }
+
+/* ====== piccoli helper colori ====== */
+.text-white-60 { color: rgba(255,255,255,0.6); }
+.text-white-80 { color: rgba(255,255,255,0.8); }
