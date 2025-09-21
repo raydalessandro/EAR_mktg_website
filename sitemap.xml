@@ -41,4 +41,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <url>
+    <loc>https://raydalessandro.github.io/EAR_mktg_website/ai.txt</loc>
+    <lastmod>2025-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
