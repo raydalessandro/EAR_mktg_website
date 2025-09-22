@@ -1,392 +1,134 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- SEO Meta Tags -->
-    <title>Blog - EAR Marketing | Riflessioni su Marketing, Risonanza e Autenticità</title>
-    <meta name="description" content="Articoli e riflessioni su come trasformare il marketing da rumore a risonanza. Guide pratiche, casi studio e filosofia del marketing autentico.">
-    <meta name="keywords" content="blog marketing digitale, articoli SEO, guide marketing PMI, strategie branding">
-    <meta name="author" content="EAR Marketing">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Blog EAR Marketing - Dal Rumore alla Risonanza">
-    <meta property="og:description" content="Riflessioni e guide pratiche per un marketing che rivela invece di vendere.">
-    <meta property="og:type" content="blog">
-    <meta property="og:url" content="https://earmarketing.it/blog.html">
-    <meta property="og:image" content="https://earmarketing.it/images/blog-og.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- JS di base (non bloccanti) -->
-    <script defer src="scripts/main.js"></script>
-    <script defer src="scripts/cookie-banner.js"></script>
+  <title>Blog | Nodo 432 – EAR Marketing</title>
+  <meta name="description" content="Guide pratiche su SEO locale, performance e contenuti essenziali. Niente fumo: solo cose utili.">
+  <link rel="canonical" href="https://nodo432.com/blog.html">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog | Nodo 432 – EAR Marketing">
+  <meta property="og:description" content="SEO locale, siti 100/100, copy essenziale. Guide pratiche.">
+  <meta property="og:url" content="https://nodo432.com/blog.html">
+  <meta property="og:image" content="https://nodo432.com/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | Nodo 432 – EAR Marketing">
+  <meta name="twitter:description" content="SEO locale, siti 100/100, copy essenziale.">
+  <meta name="twitter:image" content="https://nodo432.com/assets/img/og-cover.jpg">
+
+  <link rel="preload" href="/styles/main.css" as="style">
+  <link rel="stylesheet" href="/styles/main.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/styles/main.css"></noscript>
+
+  <!-- Plausible (attiveremo dopo) -->
+  <!-- <script defer data-domain="nodo432.com" src="https://plausible.io/js/script.js"></script> -->
+
+  <style>
+    :root{--line:#e5e7eb;--muted:#6b7280;--max:1120px}
+    *{box-sizing:border-box} body{margin:0} a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+    header.top{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:56px}
+    .nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    .nav a{text-decoration:none;padding:8px 10px;border-radius:10px}
+    .nav .btn{background:#111;color:#fff}
+    .hero{padding:36px 0;border-bottom:1px solid var(--line)}
+    .hero h1{margin:0 0 8px}
+    .hero p{margin:0;color:var(--muted)}
+    .grid{display:grid;gap:14px}
+    @media(min-width:760px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+    .card{border:1px solid var(--line);border-radius:16px;padding:16px}
+    .muted{color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:28px 0}
+    .footgrid{display:grid;gap:16px}
+    @media(min-width:760px){ .footgrid{grid-template-columns:2fr 1fr 1fr 1fr} }
+  </style>
 </head>
 <body>
+  <a class="skip" href="#contenuto" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">Salta al contenuto</a>
 
-    <!-- Script NON tecnici bloccati finché non c'è consenso -->
-    <script type="text/plain" data-cookiecategory="analytics">
-      // Placeholder GA4 (resta bloccato fino ad "Accetta")
-      // window.dataLayer = window.dataLayer || [];
-      // function gtag(){dataLayer.push(arguments);}
-      // gtag('js', new Date());
-      // gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
-    </script>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principale">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="index.html" class="logo" aria-label="EAR Marketing Home">
-                    <span class="logo-symbol" aria-hidden="true">∅</span>
-                    <span class="logo-text">EAR Marketing</span>
-                </a>
-                
-                <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
-                    <span class="hamburger"></span>
-                </button>
-                
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                    <li><a href="servizi.html">Servizi</a></li>
-                    <li><a href="blog.html" class="is-active">Blog</a></li>
-                    <li><a href="contatti.html" class="nav-cta">Inizia Ora</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Breadcrumb -->
-    <div class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb-list">
-                <li><a href="index.html">Home</a></li>
-                <li aria-current="page">Blog</li>
-            </ol>
-        </div>
+  <header class="top">
+    <div class="wrap nav" role="navigation" aria-label="Principale">
+      <a class="logo" href="/">Nodo 432</a>
+      <ul>
+        <li><a href="/chi-siamo.html">Chi Siamo</a></li>
+        <li><a href="/servizi.html">Servizi</a></li>
+        <li><a href="/casi-studio.html">Casi studio</a></li>
+        <li><a href="/ear.html">EAR</a></li>
+        <li><a href="/blog.html" aria-current="page" class="is-active">Blog</a></li>
+        <li><a class="btn" href="/contatti.html">Inizia</a></li>
+      </ul>
     </div>
+  </header>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title">Blog</h1>
-            <p class="page-subtitle">
-                Riflessioni dal vuoto fertile del marketing
-            </p>
-        </div>
-    </header>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Blog</h1>
+      <p class="muted">Guide pratiche su SEO locale, performance e contenuti essenziali.</p>
+    </div>
+  </section>
 
-    <!-- Main Content -->
-    <main role="main">
-        
-        <!-- Featured Article -->
-        <section class="section section-light">
-            <div class="container">
-                <article class="featured-article">
-                    <div class="article-meta">
-                        <span class="article-category">Filosofia Marketing</span>
-                        <span class="article-date">15 Gennaio 2025</span>
-                    </div>
-                    <h2 class="featured-title">
-                        <a href="#" class="article-link">
-                            Perché il 99% del Marketing è Rumore (e Come Emergere dal Silenzio)
-                        </a>
-                    </h2>
-                    <p class="featured-excerpt">
-                        Il marketing tradizionale grida sempre più forte in un mondo sempre più sordo. 
-                        Ma cosa succede quando invece di alzare la voce, creiamo silenzio? 
-                        Quando invece di vendere, riveliamo? Esploriamo il paradosso del marketing 
-                        che funziona proprio perché non cerca di vendere...
-                    </p>
-                    <a href="#" class="btn btn-secondary">
-                        Leggi l'articolo completo →
-                    </a>
-                </article>
-            </div>
-        </section>
+  <main id="contenuto" class="wrap" style="padding:24px 0 60px">
+    <div class="grid cols-3">
+      <article class="card">
+        <h2 style="margin:0 0 6px">
+          <a href="/blog/come-farsi-trovare-su-maps.html">Come farsi trovare su Google Maps (guida locale)</a>
+        </h2>
+        <p class="muted">Passi semplici per la scheda perfetta e le prime posizioni.</p>
+        <p style="margin:12px 0 0"><a href="/blog/come-farsi-trovare-su-maps.html">Leggi la guida →</a></p>
+      </article>
 
-        <!-- Articles Grid -->
-        <section class="section section-white">
-            <div class="container">
-                <div class="blog-grid">
-                    
-                    <!-- Article 1 -->
-                    <article class="blog-card">
-                        <div class="blog-card-header">
-                            <span class="article-category">Case Study</span>
-                            <time class="article-date" datetime="2025-01-12">12 Gennaio 2025</time>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="#" class="article-link">
-                                Da 0 a 100/100 Lighthouse: Come I Tre Fratelli Hanno Rivoluzionato la Loro Presenza Online
-                            </a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            Un panificio storico di Milano scopre che la velocità del sito può trasformare 
-                            completamente il business. Storia di una trasformazione digitale che parte dal pane 
-                            e arriva al cuore del quartiere.
-                        </p>
-                        <div class="blog-card-footer">
-                            <a href="#" class="read-more">Leggi di più →</a>
-                            <span class="reading-time">5 min lettura</span>
-                        </div>
-                    </article>
-                    
-                    <!-- Article 2 -->
-                    <article class="blog-card">
-                        <div class="blog-card-header">
-                            <span class="article-category">Guida Pratica</span>
-                            <time class="article-date" datetime="2025-01-10">10 Gennaio 2025</time>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="#" class="article-link">
-                                WordPress vs HTML Puro: Perché Abbiamo Scelto la Semplicità Radicale
-                            </a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            Nel 2025, mentre tutti aggiungono plugin su plugin, noi togliamo. 
-                            Ecco perché un sito in HTML puro batte WordPress su velocità, sicurezza 
-                            e manutenzione. Numeri alla mano.
-                        </p>
-                        <div class="blog-card-footer">
-                            <a href="#" class="read-more">Leggi di più →</a>
-                            <span class="reading-time">7 min lettura</span>
-                        </div>
-                    </article>
-                    
-                    <!-- Article 3 -->
-                    <article class="blog-card">
-                        <div class="blog-card-header">
-                            <span class="article-category">Strategia</span>
-                            <time class="article-date" datetime="2025-01-08">8 Gennaio 2025</time>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="#" class="article-link">
-                                Il Metodo EAR: Come Trovare l'Essenza del Tuo Brand in 3 Domande
-                            </a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            Non servono workshop di 3 giorni o consulenti da 10k euro. 
-                            L'essenza del tuo brand emerge da 3 domande semplici ma profonde. 
-                            Le stesse che usiamo con ogni nostro cliente.
-                        </p>
-                        <div class="blog-card-footer">
-                            <a href="#" class="read-more">Leggi di più →</a>
-                            <span class="reading-time">4 min lettura</span>
-                        </div>
-                    </article>
-                    
-                    <!-- Article 4 -->
-                    <article class="blog-card">
-                        <div class="blog-card-header">
-                            <span class="article-category">Tecnologia</span>
-                            <time class="article-date" datetime="2025-01-05">5 Gennaio 2025</time>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="#" class="article-link">
-                                100/100 Lighthouse Non è Un Obiettivo, è il Minimo
-                            </a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            Mentre altri si accontentano di un 70/100, noi partiamo da 100. 
-                            Ecco come ottimizziamo ogni singolo byte e perché la velocità 
-                            è la nuova cortesia digitale.
-                        </p>
-                        <div class="blog-card-footer">
-                            <a href="#" class="read-more">Leggi di più →</a>
-                            <span class="reading-time">6 min lettura</span>
-                        </div>
-                    </article>
-                    
-                    <!-- Article 5 -->
-                    <article class="blog-card">
-                        <div class="blog-card-header">
-                            <span class="article-category">Case Study</span>
-                            <time class="article-date" datetime="2025-01-03">3 Gennaio 2025</time>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="#" class="article-link">
-                                10 Negozi, Una Voce: La Trasformazione Digitale di TelecomStore
-                            </a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            Come abbiamo unificato la comunicazione di 10 punti vendita 
-                            mantenendo l'identità locale. Un caso studio su coerenza 
-                            e personalizzazione nel retail multi-sede.
-                        </p>
-                        <div class="blog-card-footer">
-                            <a href="#" class="read-more">Leggi di più →</a>
-                            <span class="reading-time">8 min lettura</span>
-                        </div>
-                    </article>
-                    
-                    <!-- Article 6 -->
-                    <article class="blog-card">
-                        <div class="blog-card-header">
-                            <span class="article-category">Filosofia</span>
-                            <time class="article-date" datetime="2024-12-28">28 Dicembre 2024</time>
-                        </div>
-                        <h3 class="blog-card-title">
-                            <a href="#" class="article-link">
-                                Il Vuoto Fertile: Perché Ogni Grande Strategia Inizia dal Silenzio
-                            </a>
-                        </h3>
-                        <p class="blog-card-excerpt">
-                            Prima di riempire, svuotiamo. Prima di parlare, ascoltiamo. 
-                            Una riflessione sul potere del vuoto nel marketing e perché 
-                            il silenzio è il nuovo lusso digitale.
-                        </p>
-                        <div class="blog-card-footer">
-                            <a href="#" class="read-more">Leggi di più →</a>
-                            <span class="reading-time">5 min lettura</span>
-                        </div>
-                    </article>
-                    
-                </div>
-                
-                <!-- Pagination -->
-                <nav class="pagination" role="navigation" aria-label="Paginazione blog">
-                    <ul class="pagination-list">
-                        <li class="pagination-item active">
-                            <span class="pagination-link" aria-current="page">1</span>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-link">2</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-link">3</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-link pagination-next">
-                                Successivo →
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
+      <article class="card">
+        <h2 style="margin:0 0 6px">
+          <a href="/blog/siti-100-lighthouse-perche-convertono.html">Perché i siti 100/100 convertono di più</a>
+        </h2>
+        <p class="muted">Core Web Vitals spiegate senza giri di parole.</p>
+        <p style="margin:12px 0 0"><a href="/blog/siti-100-lighthouse-perche-convertono.html">Leggi la guida →</a></p>
+      </article>
 
-        <!-- Newsletter CTA -->
-        <section class="section section-gradient">
-            <div class="container">
-                <div class="newsletter-block">
-                    <h2 class="newsletter-title text-white">
-                        Ricevi riflessioni dal vuoto fertile
-                    </h2>
-                    <p class="newsletter-subtitle text-white-80">
-                        Una volta al mese, un articolo che non vende nulla ma rivela molto. 
-                        Niente spam, solo risonanza.
-                    </p>
-                    <form class="newsletter-form" action="#" method="post">
-                        <div class="form-group-inline">
-                            <input 
-                                type="email" 
-                                class="form-input" 
-                                placeholder="La tua email"
-                                required
-                                aria-label="Email"
-                            >
-                            <button type="submit" class="btn btn-white">
-                                Iscriviti
-                            </button>
-                        </div>
-                        <p class="form-note text-white-60">
-                            Puoi cancellarti in qualsiasi momento. Privacy garantita.
-                        </p>
-                    </form>
-                </div>
-            </div>
-        </section>
+      <article class="card">
+        <h2 style="margin:0 0 6px">
+          <a href="/blog/html-vs-wordpress-performance-seo.html">HTML vs WordPress: cosa cambia davvero</a>
+        </h2>
+        <p class="muted">Scelta tecnica, impatto su performance e SEO.</p>
+        <p style="margin:12px 0 0"><a href="/blog/html-vs-wordpress-performance-seo.html">Leggi la guida →</a></p>
+      </article>
+    </div>
+  </main>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo-symbol" aria-hidden="true">∅</span>
-                        <span>EAR Marketing</span>
-                    </a>
-                    <p class="footer-tagline">
-                        Dal rumore alla risonanza
-                    </p>
-                </div>
-                
-                <nav class="footer-nav" aria-label="Menu footer">
-                    <div class="footer-column">
-                        <h3 class="footer-title">Pagine</h3>
-                        <ul class="footer-links">
-                            <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                            <li><a href="servizi.html">Servizi</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contatti.html">Contatti</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title">Legale</h3>
-                        <ul class="footer-links">
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="privacy.html#cookies">Cookie Policy</a></li>
-                            <li><a href="privacy.html#termini">Termini e Condizioni</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title">Contatti</h3>
-                        <ul class="footer-contact">
-                            <li>
-                                <a href="tel:+390212345678">+39 02 1234 5678</a>
-                            </li>
-                            <li>
-                                <a href="mailto:info@earmarketing.it">info@earmarketing.it</a>
-                            </li>
-                            <li>Milano, Italia</li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">
-                    © 2025 EAR Marketing - P.IVA IT00000000000 - Tutti i diritti riservati
-                </p>
-                <p><button type="button" id="open-cookie-prefs" class="link">Preferenze cookie</button></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Cookie Banner compatibile con scripts/cookie-banner.js -->
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="true" hidden>
-      <div class="cookie-box">
-        <h2>Cookie</h2>
-        <p>Usiamo cookie tecnici e, previo consenso, analytics/marketing per migliorare l’esperienza.</p>
-        <div class="cookie-actions">
-          <button data-action="reject">Rifiuta</button>
-          <button data-action="prefs">Personalizza</button>
-          <button data-action="accept">Accetta</button>
-        </div>
-        <form id="cookie-prefs" class="cookie-prefs" hidden>
-          <label><input type="checkbox" checked disabled> Tecnici (obbligatori)</label>
-          <label><input type="checkbox" name="analytics"> Analytics</label>
-          <label><input type="checkbox" name="marketing"> Marketing</label>
-          <div class="cookie-actions">
-            <button data-action="save">Salva preferenze</button>
-          </div>
-        </form>
+  <footer>
+    <div class="wrap footgrid">
+      <div><strong>Nodo 432 – EAR Marketing</strong><br><span class="muted">Dal rumore alla risonanza.</span></div>
+      <div>
+        <h4>Pagine</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="/chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="/servizi.html">Servizi</a></li>
+          <li><a href="/casi-studio.html">Casi studio</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/ear.html">EAR</a></li>
+          <li><a href="/contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legale</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="/privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="https://wa.me/393408415770">WhatsApp +39 340 841 5770</a></li>
+        </ul>
       </div>
     </div>
-
+    <div class="wrap" style="margin-top:16px">
+      <p class="muted" style="margin:0">© 2025 Nodo 432 – Tutti i diritti riservati</p>
+    </div>
+  </footer>
 </body>
-    </html>
+</html>
