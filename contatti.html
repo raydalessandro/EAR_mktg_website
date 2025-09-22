@@ -1,455 +1,241 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- SEO Meta Tags -->
-    <title>Contatti - EAR Marketing | Inizia il Tuo Percorso dal Rumore alla Risonanza</title>
-    <meta name="description" content="Contatta EAR Marketing per una consulenza gratuita. Scopriamo insieme se c'è risonanza. Milano - info@earmarketing.it - Nessun impegno.">
-    <meta name="keywords" content="contatti agenzia marketing Milano, consulenza marketing gratuita, preventivo sito web">
-    <meta name="author" content="EAR Marketing">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Contatta EAR Marketing">
-    <meta property="og:description" content="Inizia con una conversazione. Scopriamo insieme la tua essenza.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://earmarketing.it/contatti.html">
-    <meta property="og:image" content="https://earmarketing.it/images/contatti-og.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- JS di base (non bloccanti) -->
-    <script defer src="scripts/main.js"></script>
-    <script defer src="scripts/cookie-banner.js"></script>
+  <!-- SEO base -->
+  <title>Contatti | Nodo 432 – EAR Marketing</title>
+  <meta name="description" content="Parliamo su WhatsApp: +39 340 841 5770. Scrivici due righe e ti rispondiamo rapido. Niente form complicati, niente attese.">
+  <link rel="canonical" href="https://nodo432.com/contatti.html">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contatti | Nodo 432 – EAR Marketing">
+  <meta property="og:description" content="WhatsApp diretto: +39 340 841 5770. Scrivici subito.">
+  <meta property="og:url" content="https://nodo432.com/contatti.html">
+  <meta property="og:image" content="https://nodo432.com/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contatti | Nodo 432 – EAR Marketing">
+  <meta name="twitter:description" content="WhatsApp diretto: +39 340 841 5770.">
+  <meta name="twitter:image" content="https://nodo432.com/assets/img/og-cover.jpg">
+
+  <!-- CSS: non-blocking -->
+  <link rel="preload" href="/styles/main.css" as="style">
+  <link rel="stylesheet" href="/styles/main.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/styles/main.css"></noscript>
+
+  <!-- JSON-LD ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"Contatti – Nodo 432",
+    "url":"https://nodo432.com/contatti.html",
+    "mainEntity":{
+      "@type":"Organization",
+      "name":"Nodo 432 – EAR Marketing",
+      "url":"https://nodo432.com/",
+      "contactPoint":[{
+        "@type":"ContactPoint",
+        "contactType":"customer support",
+        "telephone":"+39 3408415770",
+        "url":"https://wa.me/393408415770",
+        "availableLanguage":["it","en"]
+      }]
+    }
+  }
+  </script>
+
+  <!-- Plausible (da attivare quando decidiamo)
+  <script defer data-domain="nodo432.com" src="https://plausible.io/js/script.js"></script>
+  -->
+
+  <!-- Critical CSS minimo per form -->
+  <style>
+    :root{--line:#e5e7eb;--muted:#6b7280;--max:1120px;--radius:12px;--brand:#25D366}
+    *{box-sizing:border-box}
+    body{margin:0}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+    header.top{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:56px}
+    .nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    .nav a{text-decoration:none;padding:8px 10px;border-radius:10px}
+    .nav .btn{background:#111;color:#fff}
+    .page-hero{padding:40px 0;border-bottom:1px solid var(--line)}
+    .page-hero h1{margin:0 0 10px;font-size:clamp(28px,5vw,44px);line-height:1.1}
+    .page-hero p{margin:0;color:var(--muted);max-width:60ch}
+    main{padding:28px 0 90px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:760px){ .grid.cols-2{grid-template-columns:1.2fr .8fr} }
+    .card{border:1px solid var(--line);border-radius:16px;padding:16px}
+    label{display:block;font-weight:600;margin:10px 0 6px}
+    input,textarea,select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    .row{display:grid;gap:12px}
+    @media(min-width:600px){ .row.two{grid-template-columns:1fr 1fr} }
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;background:#111;color:#fff;text-decoration:none;font-weight:700;border:0;cursor:pointer}
+    .btn.secondary{background:#fff;border:1px solid #111;color:#111}
+    .muted{color:var(--muted)}
+    .help{font-size:14px;color:var(--muted);margin-top:6px}
+    .panel{border:1px dashed var(--line);border-radius:12px;padding:12px}
+    .fab{position:fixed;right:16px;bottom:16px;display:flex;align-items:center;gap:8px;padding:12px 14px;border-radius:999px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.16);z-index:60}
+    .fab svg path{fill:#fff}
+    @media(max-width:480px){ .fab span{display:none} }
+    footer{border-top:1px solid var(--line);padding:28px 0}
+    .footgrid{display:grid;gap:16px}
+    @media(min-width:760px){ .footgrid{grid-template-columns:2fr 1fr 1fr 1fr} }
+  </style>
 </head>
 <body>
+  <a class="skip" href="#contenuto" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Salta al contenuto</a>
 
-    <!-- Script NON tecnici bloccati finché non c'è consenso -->
-    <script type="text/plain" data-cookiecategory="analytics">
-      // Placeholder GA4 (resta bloccato fino ad "Accetta")
-      // window.dataLayer = window.dataLayer || [];
-      // function gtag(){dataLayer.push(arguments);}
-      // gtag('js', new Date());
-      // gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
-    </script>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principale">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="index.html" class="logo" aria-label="EAR Marketing Home">
-                    <span class="logo-symbol" aria-hidden="true">∅</span>
-                    <span class="logo-text">EAR Marketing</span>
-                </a>
-                
-                <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
-                    <span class="hamburger"></span>
-                </button>
-                
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                    <li><a href="servizi.html">Servizi</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contatti.html" class="is-active nav-cta">Inizia Ora</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Breadcrumb -->
-    <div class="breadcrumb" role="navigation" aria-label="Breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb-list">
-                <li><a href="index.html">Home</a></li>
-                <li aria-current="page">Contatti</li>
-            </ol>
-        </div>
+  <!-- NAV -->
+  <header class="top">
+    <div class="wrap nav" role="navigation" aria-label="Principale">
+      <a class="logo" href="/">Nodo 432</a>
+      <ul>
+        <li><a href="/chi-siamo.html">Chi Siamo</a></li>
+        <li><a href="/servizi.html">Servizi</a></li>
+        <li><a href="/casi-studio.html">Casi studio</a></li>
+        <li><a href="/ear.html">EAR</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a class="btn" href="/contatti.html" aria-current="page" class="is-active">Inizia</a></li>
+      </ul>
     </div>
+  </header>
 
-    <!-- Page Header -->
-    <header class="page-header">
-        <div class="container">
-            <h1 class="page-title">Iniziamo dal Silenzio</h1>
-            <p class="page-subtitle">
-                Prima di parlare, ascoltiamo. Prima di proporre, comprendiamo.
-            </p>
-        </div>
-    </header>
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Contattaci</h1>
+      <p class="muted">Scrivici due righe e ti rispondiamo su WhatsApp. Niente form complicati, niente attese.</p>
+    </div>
+  </section>
 
-    <!-- Main Content -->
-    <main role="main">
-        
-        <!-- Contact Section -->
-        <section class="section section-light">
-            <div class="container">
-                <div class="contact-wrapper">
-                    
-                    <!-- Contact Form -->
-                    <div class="contact-form-container">
-                        <h2 class="section-title">Raccontaci di Te</h2>
-                        <p class="form-intro">
-                            Questo non è un form di vendita. È l'inizio di una conversazione. 
-                            Più ci racconti, meglio possiamo capire se c'è risonanza.
-                        </p>
-                        
-                        <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
-                            <!-- Honeypot anti-spam (non compilare) -->
-                            <div class="visually-hidden" aria-hidden="true">
-                                <label for="website">Lascia questo campo vuoto</label>
-                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-                            </div>
+  <main id="contenuto">
+    <div class="wrap grid cols-2">
+      <!-- FORM SOFT → WhatsApp -->
+      <section class="card" aria-labelledby="contatto-wa">
+        <h2 id="contatto-wa" style="margin:0 0 8px">Scrivici ora</h2>
+        <p class="muted" style="margin:0 0 12px">Compila i campi: si apre WhatsApp con il messaggio già pronto.</p>
 
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name" class="form-label">Come ti chiami? *</label>
-                                    <input 
-                                        type="text" 
-                                        id="name" 
-                                        name="name" 
-                                        class="form-input" 
-                                        required
-                                        aria-required="true"
-                                        autocomplete="name"
-                                    >
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="business" class="form-label">Qual è il tuo business? *</label>
-                                    <input 
-                                        type="text" 
-                                        id="business" 
-                                        name="business" 
-                                        class="form-input" 
-                                        placeholder="es. Panificio, Consulenza, E-commerce..."
-                                        required
-                                        aria-required="true"
-                                        autocomplete="organization"
-                                    >
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email" class="form-label">La tua email *</label>
-                                    <input 
-                                        type="email" 
-                                        id="email" 
-                                        name="email" 
-                                        class="form-input" 
-                                        required
-                                        aria-required="true"
-                                        autocomplete="email"
-                                    >
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="phone" class="form-label">Telefono (opzionale)</label>
-                                    <input 
-                                        type="tel" 
-                                        id="phone" 
-                                        name="phone" 
-                                        class="form-input" 
-                                        placeholder="+39..."
-                                        autocomplete="tel"
-                                    >
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="challenge" class="form-label">Qual è la tua sfida principale? *</label>
-                                <textarea 
-                                    id="challenge" 
-                                    name="challenge" 
-                                    class="form-textarea" 
-                                    rows="4"
-                                    placeholder="Raccontaci cosa ti impedisce di emergere dal rumore..."
-                                    required
-                                    aria-required="true"
-                                ></textarea>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="essence" class="form-label">
-                                    Se il tuo business fosse una persona, che tipo di persona sarebbe?
-                                </label>
-                                <textarea 
-                                    id="essence" 
-                                    name="essence" 
-                                    class="form-textarea" 
-                                    rows="3"
-                                    placeholder="Età, carattere, valori, modo di parlare..."
-                                ></textarea>
-                                <p class="form-help">
-                                    Questa domanda ci aiuta a capire la tua essenza profonda
-                                </p>
-                            </div>
-                            
-                            <div class="form-group">
-                                <span class="form-label">Cosa ti serve? *</span>
-                                <div class="checkbox-group">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="needs" value="sito">
-                                        <span>Sito web ultra-veloce</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="needs" value="marketing">
-                                        <span>Strategia marketing</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="needs" value="social">
-                                        <span>Gestione social media</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="needs" value="brand">
-                                        <span>Identità di brand</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="needs" value="altro">
-                                        <span>Non so ancora, parliamone</span>
-                                    </label>
-                                </div>
-                                <!-- Nota: per richiedere almeno una scelta servirebbe JS custom -->
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="budget" class="form-label">Budget indicativo mensile</label>
-                                <select id="budget" name="budget" class="form-select">
-                                    <option value="">Seleziona...</option>
-                                    <option value="200">€200/mese (nostro standard)</option>
-                                    <option value="200-500">€200-500/mese</option>
-                                    <option value="500+">Oltre €500/mese</option>
-                                    <option value="parliamone">Preferirei discuterne</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="privacy" required>
-                                    <span>
-                                        Ho letto e accetto la <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> *
-                                    </span>
-                                </label>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary btn-large btn-full">
-                                Inizia la Conversazione
-                            </button>
-                            
-                            <p class="form-note text-center">
-                                Ti risponderemo entro 24 ore. Nessuno spam, promesso.
-                            </p>
-                        </form>
-                    </div>
-                    
-                    <!-- Contact Info -->
-                    <div class="contact-info">
-                        <div class="info-block">
-                            <h3 class="info-title">Preferisci Parlare?</h3>
-                            <p class="info-text">
-                                Siamo vecchia scuola. Una telefonata vale più di 100 email.
-                            </p>
-                            <a href="tel:+390212345678" class="info-link">
-                                <span class="info-icon">📞</span>
-                                <span>+39 02 1234 5678</span>
-                            </a>
-                            <p class="info-note">Lun-Ven, 9:00-18:00</p>
-                        </div>
-                        
-                        <div class="info-block">
-                            <h3 class="info-title">Scrivi Quando Vuoi</h3>
-                            <p class="info-text">
-                                Per domande, idee, o semplicemente per dire ciao.
-                            </p>
-                            <a href="mailto:info@earmarketing.it" class="info-link">
-                                <span class="info-icon">✉️</span>
-                                <span>info@earmarketing.it</span>
-                            </a>
-                            <p class="info-note">Rispondiamo sempre</p>
-                        </div>
-                        
-                        <div class="info-block">
-                            <h3 class="info-title">Dove Siamo</h3>
-                            <p class="info-text">
-                                Basati a Milano, lavoriamo con tutta Italia.
-                            </p>
-                            <div class="info-link">
-                                <span class="info-icon">📍</span>
-                                <span>Milano, Italia</span>
-                            </div>
-                            <p class="info-note">Meeting anche via Zoom</p>
-                        </div>
-                        
-                        <div class="info-block special">
-                            <div class="special-symbol">∅</div>
-                            <h3 class="info-title">Il Vuoto Fertile</h3>
-                            <p class="info-text">
-                                Ogni grande trasformazione inizia dal silenzio. 
-                                Dal non sapere. Dal vuoto che precede la creazione.
-                            </p>
-                            <p class="info-text">
-                                Non abbiate paura di non avere tutte le risposte. 
-                                È proprio da lì che iniziamo.
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
+        <form id="wa-form">
+          <div class="row two">
+            <div>
+              <label for="nome">Nome *</label>
+              <input id="nome" name="nome" required autocomplete="name" placeholder="Es. Marta Rossi">
             </div>
-        </section>
-
-        <!-- FAQ Contact -->
-        <section class="section section-dark">
-            <div class="container">
-                <h2 class="section-title text-center">Prima di Contattarci</h2>
-                
-                <div class="faq-grid">
-                    <div class="faq-card">
-                        <h3 class="faq-title">Quanto costa la consulenza?</h3>
-                        <p class="faq-text">
-                            La prima chiamata di 30 minuti è completamente gratuita e senza impegno. 
-                            È una conversazione per capire se c'è risonanza.
-                        </p>
-                    </div>
-                    
-                    <div class="faq-card">
-                        <h3 class="faq-title">Lavorate solo a Milano?</h3>
-                        <p class="faq-text">
-                            No, lavoriamo con clienti in tutta Italia. La maggior parte 
-                            della collaborazione avviene online. Siamo digitali per natura.
-                        </p>
-                    </div>
-                    
-                    <div class="faq-card">
-                        <h3 class="faq-title">Quanto tempo per una risposta?</h3>
-                        <p class="faq-text">
-                            Rispondiamo sempre entro 24 ore lavorative. Spesso molto prima. 
-                            Per urgenze, meglio una chiamata diretta.
-                        </p>
-                    </div>
-                    
-                    <div class="faq-card">
-                        <h3 class="faq-title">Serve un budget minimo?</h3>
-                        <p class="faq-text">
-                            Il nostro modello standard è €200/mese dopo il setup iniziale. 
-                            Ma parliamone: ogni situazione è unica.
-                        </p>
-                    </div>
-                </div>
+            <div>
+              <label for="azienda">Azienda (opzionale)</label>
+              <input id="azienda" name="azienda" autocomplete="organization" placeholder="Es. Panificio Aurora">
             </div>
-        </section>
+          </div>
 
-        <!-- CTA Section -->
-        <section class="section section-cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 class="cta-title">
-                        Non serve essere pronti.<br>
-                        Serve essere autentici.
-                    </h2>
-                    <p class="cta-subtitle">
-                        Iniziamo con una conversazione. Il resto verrà.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="tel:+390212345678" class="btn btn-white btn-large">
-                            Chiama Ora
-                        </a>
-                        <a href="#contactForm" class="btn btn-outline-white btn-large">
-                            Compila il Form
-                        </a>
-                    </div>
-                </div>
+          <div class="row">
+            <div>
+              <label for="tema">Per cosa ci scrivi? *</label>
+              <select id="tema" name="tema" required>
+                <option value="Sito web">Sito web</option>
+                <option value="SEO locale">SEO locale</option>
+                <option value="Contenuti/Blog">Contenuti/Blog</option>
+                <option value="Social">Social</option>
+                <option value="Altro">Altro</option>
+              </select>
             </div>
-        </section>
+          </div>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo-symbol" aria-hidden="true">∅</span>
-                        <span>EAR Marketing</span>
-                    </a>
-                    <p class="footer-tagline">
-                        Dal rumore alla risonanza
-                    </p>
-                </div>
-                
-                <nav class="footer-nav" aria-label="Menu footer">
-                    <div class="footer-column">
-                        <h3 class="footer-title">Pagine</h3>
-                        <ul class="footer-links">
-                            <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                            <li><a href="servizi.html">Servizi</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contatti.html">Contatti</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title">Legale</h3>
-                        <ul class="footer-links">
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="privacy.html#cookies">Cookie Policy</a></li>
-                            <li><a href="privacy.html#termini">Termini e Condizioni</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title">Contatti</h3>
-                        <ul class="footer-contact">
-                            <li>
-                                <a href="tel:+390212345678">+39 02 1234 5678</a>
-                            </li>
-                            <li>
-                                <a href="mailto:info@earmarketing.it">info@earmarketing.it</a>
-                            </li>
-                            <li>Milano, Italia</li>
-                        </ul>
-                    </div>
-                </nav>
+          <div class="row">
+            <div>
+              <label for="messaggio">Messaggio *</label>
+              <textarea id="messaggio" name="messaggio" required placeholder="Raccontaci in due righe cosa ti serve…"></textarea>
+              <p class="help">Apriremo WhatsApp con questo testo. Nessun dato viene salvato sul sito.</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">
-                    © 2025 EAR Marketing - P.IVA IT00000000000 - Tutti i diritti riservati
-                </p>
-                <p><button type="button" id="open-cookie-prefs" class="link">Preferenze cookie</button></p>
-            </div>
-        </div>
-    </footer>
+          </div>
 
-    <!-- Cookie Banner compatibile con scripts/cookie-banner.js -->
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="true" hidden>
-      <div class="cookie-box">
-        <h2>Cookie</h2>
-        <p>Usiamo cookie tecnici e, previo consenso, analytics/marketing per migliorare l’esperienza.</p>
-        <div class="cookie-actions">
-          <button data-action="reject">Rifiuta</button>
-          <button data-action="prefs">Personalizza</button>
-          <button data-action="accept">Accetta</button>
-        </div>
-        <form id="cookie-prefs" class="cookie-prefs" hidden>
-          <label><input type="checkbox" checked disabled> Tecnici (obbligatori)</label>
-          <label><input type="checkbox" name="analytics"> Analytics</label>
-          <label><input type="checkbox" name="marketing"> Marketing</label>
-          <div class="cookie-actions">
-            <button data-action="save">Salva preferenze</button>
+          <div class="row two">
+            <button type="submit" class="btn">Apri WhatsApp</button>
+            <a class="btn secondary" href="https://wa.me/393408415770">Scrivi senza form</a>
           </div>
         </form>
+      </section>
+
+      <!-- INFO / FALLBACK -->
+      <aside class="card" aria-labelledby="altre-vie">
+        <h2 id="altre-vie" style="margin:0 0 8px">Altre vie rapide</h2>
+        <div class="panel">
+          <p style="margin:0 0 8px"><strong>WhatsApp diretto</strong></p>
+          <p style="margin:0"><a href="https://wa.me/393408415770">+39 340 841 5770</a></p>
+        </div>
+
+        <p class="muted" style="margin:14px 0 0">Se non usi WhatsApp, puoi copiare il numero e chiamarci/scriverci via SMS. In futuro attiveremo anche una newsletter (modulare).</p>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap footgrid">
+      <div><strong>Nodo 432 – EAR Marketing</strong><br><span class="muted">Dal rumore alla risonanza.</span></div>
+      <div>
+        <h4>Pagine</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="/chi-siamo.html">Chi Siamo</a></li>
+          <li><a href="/servizi.html">Servizi</a></li>
+          <li><a href="/casi-studio.html">Casi studio</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/ear.html">EAR</a></li>
+          <li><a href="/contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legale</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="/privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="https://wa.me/393408415770">WhatsApp +39 340 841 5770</a></li>
+        </ul>
       </div>
     </div>
+    <div class="wrap" style="margin-top:16px">
+      <p class="muted" style="margin:0">© 2025 Nodo 432 – Tutti i diritti riservati</p>
+    </div>
+  </footer>
 
+  <!-- FAB WhatsApp -->
+  <a class="fab" href="https://wa.me/393408415770" aria-label="Scrivici su WhatsApp">
+    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+      <path d="M19.1 17.4c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.9 1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.6-3.2-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.4s1.1 2.8 1.3 3 .2.5.5 1c.4.7 1.3 1.9 3 3 1 .6 1.7 .9 2.3 1.1 1 .3 1.9 .3 2.6 .2.8-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0 0-.1-.1-.2-.2zM16 3C9.9 3 5 7.9 5 14c0 2.3.7 4.4 1.9 6.1L5 29l9.2-1.9c1.7 1 3.6 1.6 5.8 1.6 6.1 0 11-4.9 11-11S22.1 3 16 3z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- JS minimo per costruire il messaggio WhatsApp -->
+  <script>
+  (function(){
+    var f = document.getElementById('wa-form');
+    if(!f) return;
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nome = (document.getElementById('nome').value || '').trim();
+      var az = (document.getElementById('azienda').value || '').trim();
+      var tema = (document.getElementById('tema').value || '').trim();
+      var msg = (document.getElementById('messaggio').value || '').trim();
+
+      var testo = "Ciao, sono " + (nome || "—") +
+                  (az ? " di " + az : "") +
+                  ". Vorrei parlare di " + (tema || "—") +
+                  ". " + (msg || "");
+      var url = "https://wa.me/393408415770?text=" + encodeURIComponent(testo);
+      window.location.href = url;
+    });
+  })();
+  </script>
 </body>
-    </html>
+</html>
