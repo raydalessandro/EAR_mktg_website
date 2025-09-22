@@ -1,419 +1,280 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- SEO Meta Tags -->
-    <title>EAR Marketing - Dal rumore alla risonanza | Marketing che rivela, non vende</title>
-    <meta name="description" content="Trasformiamo il tuo marketing da vendita a risonanza. Siti web ultra-veloci 100/100 Lighthouse e strategie che rivelano l'essenza del tuo brand. €200/mese tutto incluso.">
-    <meta name="keywords" content="marketing digitale, siti web veloci, branding, strategia marketing, Milano, siti HTML puri, lighthouse 100">
-    <meta name="author" content="EAR Marketing">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="EAR Marketing - Dal rumore alla risonanza">
-    <meta property="og:description" content="Marketing che rivela l'essenza del tuo brand. Siti ultra-veloci e strategie profonde.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://earmarketing.it/">
-    <meta property="og:image" content="https://earmarketing.it/images/og-image.jpg">
-    <meta property="og:locale" content="it_IT">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="EAR Marketing - Marketing che risuona">
-    <meta name="twitter:description" content="Non vendiamo. Riveliamo chi sei davvero.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/responsive.css">
-    
-    <!-- Preload Critical Resources -->
-    <!-- (mantengo il preload dell'immagine; evito doppio fetch del CSS) -->
-    <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp">
-    
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MarketingAgency",
-        "name": "EAR Marketing",
-        "description": "Agenzia marketing che trasforma il tuo brand dal vendere al risuonare",
-        "url": "https://earmarketing.it",
-        "logo": "https://earmarketing.it/images/logo.png",
-        "sameAs": [
-            "https://www.linkedin.com/company/ear-marketing",
-            "https://www.instagram.com/earmarketing"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Milano",
-            "addressRegion": "MI",
-            "postalCode": "20100",
-            "addressCountry": "IT"
-        },
-        "priceRange": "€€",
-        "telephone": "+39-02-12345678",
-        "email": "info@earmarketing.it",
-        "openingHours": "Mo-Fr 09:00-18:00",
-        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-        "currenciesAccepted": "EUR",
-        "areaServed": {
-            "@type": "Country",
-            "name": "Italy"
-        },
-        "offers": {
-            "@type": "Offer",
-            "name": "Partnership Marketing Mensile",
-            "description": "Gestione completa marketing con sito web ultra-veloce",
-            "price": "200",
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock",
-            "validFrom": "2025-01-01"
-        }
-    }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- JS di base (non bloccanti) -->
-    <script defer src="scripts/main.js"></script>
-    <script defer src="scripts/cookie-banner.js"></script>
+  <!-- SEO base -->
+  <title>Dal rumore alla risonanza | Nodo 432 – EAR Marketing</title>
+  <meta name="description" content="Siti ultra-veloci (100/100), SEO locale e contenuti che fanno emergere la tua essenza. Nodo 432: agenzia marketing leggera, chiara, efficace.">
+  <link rel="canonical" href="https://nodo432.com/">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dal rumore alla risonanza | Nodo 432 – EAR Marketing">
+  <meta property="og:description" content="Siti 100/100 Lighthouse e SEO pulita. Parliamo quando vuoi su WhatsApp.">
+  <meta property="og:url" content="https://nodo432.com/">
+  <meta property="og:image" content="https://nodo432.com/assets/img/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dal rumore alla risonanza | Nodo 432 – EAR Marketing">
+  <meta name="twitter:description" content="Siti 100/100 Lighthouse e SEO pulita.">
+  <meta name="twitter:image" content="https://nodo432.com/assets/img/og-cover.jpg">
+
+  <!-- CSS: non-blocking -->
+  <link rel="preload" href="/styles/main.css" as="style">
+  <link rel="stylesheet" href="/styles/main.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/styles/main.css"></noscript>
+
+  <!-- Critical CSS minimo (hero/nav) per LCP <1s, il resto in main.css) -->
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#121212; --muted:#6b7280; --line:#e5e7eb;
+      --accent:#111111; --brand:#25D366; --radius:12px; --max:1120px;
+      --safe: env(safe-area-inset-bottom, 0px);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:56px}
+    .logo{font-weight:800;text-decoration:none;letter-spacing:.2px}
+    .nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    .nav a{text-decoration:none;padding:8px 10px;border-radius:10px}
+    .nav .btn{background:var(--accent);color:#fff}
+    .hero{padding:48px 0 16px}
+    .hero h1{font-size:clamp(28px,5vw,44px);line-height:1.1;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 14px;max-width:60ch}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 6px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:var(--radius);text-decoration:none;font-weight:700;background:var(--accent);color:#fff}
+    .btn.secondary{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+    .metrics{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 0;padding:0;list-style:none}
+    .metrics li{padding:8px 10px;border:1px solid var(--line);border-radius:10px}
+    main{padding-bottom:90px} /* spazio anti-overlap FAB */
+    section{padding:28px 0;border-top:1px solid var(--line)}
+    section:first-of-type{border-top:0}
+    h2{font-size:clamp(22px,3.6vw,30px);margin:0 0 10px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:760px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+    .card{border:1px solid var(--line);border-radius:16px;padding:16px}
+    .muted{color:var(--muted)}
+    footer{border-top:1px solid var(--line);padding:28px 0}
+    .footgrid{display:grid;gap:16px}
+    @media(min-width:760px){ .footgrid{grid-template-columns:2fr 1fr 1fr 1fr} }
+    .fab{
+      position:fixed;right:16px;bottom:calc(16px + var(--safe));
+      display:flex;align-items:center;gap:8px;padding:12px 14px;border-radius:999px;
+      background:var(--brand);color:#fff;text-decoration:none;font-weight:700;
+      box-shadow:0 10px 30px rgba(0,0,0,.16);z-index:60;transition:transform .12s ease
+    }
+    .fab:hover{transform:translateY(-2px)}
+    .fab svg path{fill:#fff}
+    @media(max-width:480px){ .fab span{display:none} }
+  </style>
+
+  <!-- JSON-LD LocalBusiness (telefono: WhatsApp) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Nodo 432 – EAR Marketing",
+    "url":"https://nodo432.com/",
+    "image":"https://nodo432.com/assets/img/og-cover.jpg",
+    "telephone":"+39 3408415770",
+    "address":{"@type":"PostalAddress","addressCountry":"IT"},
+    "areaServed":"IT",
+    "priceRange":"€€",
+    "sameAs":["https://wa.me/393408415770"],
+    "contactPoint":[{
+      "@type":"ContactPoint",
+      "contactType":"customer support",
+      "telephone":"+39 3408415770",
+      "url":"https://wa.me/393408415770",
+      "availableLanguage":["it","en"]
+    }]
+  }
+  </script>
+
+  <!-- Plausible (lo attiveremo dopo il go-live)
+  <script defer data-domain="nodo432.com" src="https://plausible.io/js/script.js"></script>
+  -->
 </head>
 <body>
+  <a class="skip" href="#contenuto" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Salta al contenuto</a>
 
-    <!-- Script NON tecnici bloccati finché non c'è consenso -->
-    <script type="text/plain" data-cookiecategory="analytics">
-      // Placeholder GA4 (resta bloccato fino ad "Accetta")
-      // window.dataLayer = window.dataLayer || [];
-      // function gtag(){dataLayer.push(arguments);}
-      // gtag('js', new Date());
-      // gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
-    </script>
+  <!-- Header -->
+  <header>
+    <div class="wrap nav" role="navigation" aria-label="Principale">
+      <a class="logo" href="/">Nodo 432</a>
+      <ul>
+        <li><a href="/chi-siamo.html">Chi siamo</a></li>
+        <li><a href="/servizi.html">Servizi</a></li>
+        <li><a href="/casi-studio.html">Casi studio</a></li>
+        <li><a href="/ear.html">EAR</a></li>
+        <li><a class="btn" href="/contatti.html">Inizia</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Menu principale">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="index.html" class="logo" aria-label="EAR Marketing Home">
-                    <span class="logo-symbol" aria-hidden="true">∅</span>
-                    <span class="logo-text">EAR Marketing</span>
-                </a>
-                
-                <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
-                    <span class="hamburger"></span>
-                </button>
-                
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                    <li><a href="servizi.html">Servizi</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contatti.html" class="nav-cta">Inizia Ora</a></li>
-                </ul>
-            </div>
+  <main id="contenuto">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <h1>Dal rumore alla risonanza</h1>
+        <p class="muted">Siti ultra-veloci (100/100), SEO locale e contenuti essenziali. Non ti “inventiamo” un’immagine: facciamo emergere chi sei, con semplicità.</p>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/393408415770" aria-label="Parla con noi su WhatsApp">Parla con noi</a>
+          <a class="btn secondary" href="/servizi.html">Guarda come lavoriamo</a>
         </div>
-    </nav>
+        <ul class="metrics" aria-label="Indicatori prestazionali">
+          <li><strong>100/100</strong> Lighthouse</li>
+          <li><strong>&lt;1s</strong> LCP reale</li>
+          <li><strong>SEO</strong> pulita</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Hero Section -->
-    <header class="hero" role="banner">
-        <div class="hero-bg" aria-hidden="true">
-            <div class="hero-pattern"></div>
+    <!-- Metodo EAR -->
+    <section>
+      <div class="wrap">
+        <h2>Il metodo EAR</h2>
+        <p class="muted">Essenza → Armonia → Risonanza. La struttura semplice che fa funzionare tutto.</p>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>Essenza</h3>
+            <p>Ascolto vero. Distilliamo ciò che conta e lo traduciamo in pagine chiare e leggere.</p>
+          </article>
+          <article class="card">
+            <h3>Armonia</h3>
+            <p>Ogni touchpoint dice la stessa cosa, bene. Design coerente, zero fronzoli.</p>
+          </article>
+          <article class="card">
+            <h3>Risonanza</h3>
+            <p>SEO locale, tempi veloci, copy essenziale: le persone giuste arrivano da sole.</p>
+          </article>
         </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-symbol fade-in" aria-hidden="true">∅</div>
-                <h1 class="hero-title fade-in-delay-1">
-                    Dal rumore alla risonanza:<br>
-                    <span class="text-gradient">facciamo emergere chi sei davvero</span>
-                </h1>
-                <p class="hero-subtitle fade-in-delay-2">
-                    Non vendiamo marketing. Riveliamo l'essenza del tuo brand attraverso 
-                    <strong>siti ultra-veloci</strong> e strategie che creano connessioni profonde, non solo transazioni.
-                </p>
-                <div class="hero-cta fade-in-delay-3">
-                    <a href="contatti.html" class="btn btn-primary">
-                        Inizia il Percorso
-                        <span aria-hidden="true">→</span>
-                    </a>
-                    <a href="#metodo" class="btn btn-secondary">
-                        Scopri il Metodo
-                    </a>
-                </div>
-                
-                <!-- Trust Indicators -->
-                <div class="hero-trust fade-in-delay-4">
-                    <div class="trust-item">
-                        <span class="trust-number">100/100</span>
-                        <span class="trust-label">Lighthouse Score</span>
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-number">&lt;1s</span>
-                        <span class="trust-label">Tempo Caricamento</span>
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-number">€200</span>
-                        <span class="trust-label">Tutto Incluso</span>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </section>
+
+    <!-- Cosa ottieni -->
+    <section>
+      <div class="wrap">
+        <h2>Cosa ottieni, sul serio</h2>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>Sito ultra-veloce</h3>
+            <ul>
+              <li>HTML statico, zero zavorra</li>
+              <li>Core Web Vitals a posto</li>
+              <li>Immagini ottimizzate</li>
+              <li>Manutenzione minima</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>SEO locale</h3>
+            <ul>
+              <li>Struttura chiara e interna</li>
+              <li>Contenuti evergreen</li>
+              <li>Schema.org corretti</li>
+              <li>Link interni utili</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Contenuti essenziali</h3>
+            <ul>
+              <li>Copy pulito, senza fumo</li>
+              <li>CTA leggibili e vicine</li>
+              <li>Blog con guide utili</li>
+              <li>Report semplici</li>
+            </ul>
+          </article>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <!-- Main Content -->
-    <main role="main">
-        
-        <!-- Value Proposition -->
-        <section class="section section-light" id="metodo" aria-labelledby="metodo-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="metodo-title" class="section-title">Il Metodo EAR</h2>
-                    <p class="section-subtitle">
-                        Tre pilastri che trasformano il tuo marketing da grido nel vuoto a risonanza magnetica
-                    </p>
-                </div>
-                
-                <div class="trinity-grid">
-                    <article class="trinity-card">
-                        <div class="trinity-icon" aria-hidden="true">🌱</div>
-                        <h3 class="trinity-title">Essenza</h3>
-                        <p class="trinity-description">
-                            Partiamo dal silenzio. Ascoltiamo. Identifichiamo e cristallizziamo chi sei veramente. 
-                            Non inventiamo un'immagine: riveliamo quella che già esiste.
-                        </p>
-                    </article>
-                    
-                    <article class="trinity-card">
-                        <div class="trinity-icon" aria-hidden="true">⚡</div>
-                        <h3 class="trinity-title">Armonia</h3>
-                        <p class="trinity-description">
-                            Creiamo coerenza totale. Ogni touchpoint diventa un'espressione autentica 
-                            della tua essenza. Dal sito ai social, tutto risuona all'unisono.
-                        </p>
-                    </article>
-                    
-                    <article class="trinity-card">
-                        <div class="trinity-icon" aria-hidden="true">🔗</div>
-                        <h3 class="trinity-title">Risonanza</h3>
-                        <p class="trinity-description">
-                            Attiviamo la connessione profonda. Non cerchiamo clienti: 
-                            creiamo le condizioni perché le persone giuste ti trovino naturalmente.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
+    <!-- Prova sociale / Casi -->
+    <section>
+      <div class="wrap">
+        <h2>Casi studio</h2>
+        <p class="muted">I primi arriveranno a breve: metteremo numeri reali (LCP, CTR, rank locale). Niente storie inventate.</p>
+        <p><a class="btn secondary" href="/casi-studio.html" aria-label="Vai alla pagina casi studio">Scopri la struttura</a></p>
+      </div>
+    </section>
 
-        <!-- What We Do -->
-        <section class="section section-dark" aria-labelledby="services-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="services-title" class="section-title">Cosa Ottieni Davvero</h2>
-                    <p class="section-subtitle">
-                        Non servizi, ma trasformazioni concrete e misurabili
-                    </p>
-                </div>
-                
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🚀</div>
-                        <h3>Sito Ultra-Veloce</h3>
-                        <ul class="feature-list">
-                            <li>100/100 Lighthouse garantito</li>
-                            <li>Caricamento &lt; 1 secondo</li>
-                            <li>Zero manutenzione tecnica</li>
-                            <li>HTML puro, no WordPress</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">📱</div>
-                        <h3>Gestione Totale</h3>
-                        <ul class="feature-list">
-                            <li>Modifiche via WhatsApp</li>
-                            <li>Risposte in pochi minuti</li>
-                            <li>Content marketing mensile</li>
-                            <li>Social media management</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">📈</div>
-                        <h3>Crescita Organica</h3>
-                        <ul class="feature-list">
-                            <li>SEO locale dominante</li>
-                            <li>Blog ottimizzato mensile</li>
-                            <li>Strategie su misura</li>
-                            <li>Report trasparenti</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Social Proof -->
-        <section class="section section-light" aria-labelledby="proof-title">
-            <div class="container">
-                <div class="section-header">
-                    <h2 id="proof-title" class="section-title">Trasformazioni Reali</h2>
-                    <p class="section-subtitle">
-                        Storie di chi è passato dal vendere al risuonare
-                    </p>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <blockquote class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                "Da panificio invisibile a punto di riferimento del quartiere. 
-                                Il sito carica istantaneamente e riceviamo ordini 24/7."
-                            </p>
-                        </div>
-                        <footer class="testimonial-footer">
-                            <cite class="testimonial-author">I Tre Fratelli</cite>
-                            <span class="testimonial-role">Panificio Artigianale, Milano</span>
-                        </footer>
-                    </blockquote>
-                    
-                    <blockquote class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                "10 negozi, una sola voce coerente. EAR ha unificato 
-                                la nostra comunicazione mantenendo l'identità locale."
-                            </p>
-                        </div>
-                        <footer class="testimonial-footer">
-                            <cite class="testimonial-author">TelecomStore Network</cite>
-                            <span class="testimonial-role">Retail Telecomunicazioni</span>
-                        </footer>
-                    </blockquote>
-                    
-                    <blockquote class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p class="testimonial-text">
-                                "Un progetto innovativo aveva bisogno di comunicazione innovativa. 
-                                EAR ha creato risonanza dove altri creavano solo rumore."
-                            </p>
-                        </div>
-                        <footer class="testimonial-footer">
-                            <cite class="testimonial-author">FreedomHance</cite>
-                            <span class="testimonial-role">Network Marketing Innovation</span>
-                        </footer>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="section section-cta" aria-labelledby="cta-title">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 id="cta-title" class="cta-title">
-                        Pronto a emergere dal rumore?
-                    </h2>
-                    <p class="cta-subtitle">
-                        Inizia con una chiamata gratuita. Scopriamo insieme se c'è risonanza.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="contatti.html" class="btn btn-white btn-large">
-                            Prenota Una Chiamata
-                        </a>
-                        <a href="servizi.html" class="btn btn-outline-white btn-large">
-                            Scopri i Dettagli
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">
-                        <span class="logo-symbol" aria-hidden="true">∅</span>
-                        <span>EAR Marketing</span>
-                    </a>
-                    <p class="footer-tagline">
-                        Dal rumore alla risonanza
-                    </p>
-                </div>
-                
-                <nav class="footer-nav" aria-label="Menu footer">
-                    <div class="footer-column">
-                        <h3 class="footer-title">Pagine</h3>
-                        <ul class="footer-links">
-                            <li><a href="chi-siamo.html">Chi Siamo</a></li>
-                            <li><a href="servizi.html">Servizi</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="contatti.html">Contatti</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title">Legale</h3>
-                        <ul class="footer-links">
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="privacy.html#cookies">Cookie Policy</a></li>
-                            <li><a href="privacy.html#termini">Termini e Condizioni</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h3 class="footer-title">Contatti</h3>
-                        <ul class="footer-contact">
-                            <li>
-                                <a href="tel:+390212345678">+39 02 1234 5678</a>
-                            </li>
-                            <li>
-                                <a href="mailto:info@earmarketing.it">info@earmarketing.it</a>
-                            </li>
-                            <li>Milano, Italia</li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="copyright">
-                    © 2025 EAR Marketing - P.IVA IT00000000000 - Tutti i diritti riservati
-                </p>
-                <p>
-                  <button type="button" id="open-cookie-prefs" class="link">Preferenze cookie</button>
-                </p>
-            </div>
+    <!-- Blog teaser -->
+    <section>
+      <div class="wrap">
+        <h2>Guide pratiche</h2>
+        <div class="grid">
+          <article class="card">
+            <h3><a href="/blog/come-farsi-trovare-su-maps.html">Come farsi trovare su Google Maps (guida locale)</a></h3>
+            <p class="muted">Passi semplici per la scheda perfetta e le prime posizioni.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/blog/siti-100-lighthouse-perche-convertono.html">Perché i siti 100/100 convertono di più</a></h3>
+            <p class="muted">Core Web Vitals spiegate senza giri di parole.</p>
+          </article>
+          <article class="card">
+            <h3><a href="/blog/html-vs-wordpress-performance-seo.html">HTML vs WordPress: cosa cambia davvero</a></h3>
+            <p class="muted">Scelta tecnica, impatto su performance e SEO.</p>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Cookie Banner compatibile con scripts/cookie-banner.js -->
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-modal="true" hidden>
-      <div class="cookie-box">
-        <h2>Cookie</h2>
-        <p>Usiamo cookie tecnici e, previo consenso, analytics/marketing per migliorare l’esperienza.</p>
-        <div class="cookie-actions">
-          <button data-action="reject">Rifiuta</button>
-          <button data-action="prefs">Personalizza</button>
-          <button data-action="accept">Accetta</button>
-        </div>
-        <form id="cookie-prefs" class="cookie-prefs" hidden>
-          <label><input type="checkbox" checked disabled> Tecnici (obbligatori)</label>
-          <label><input type="checkbox" name="analytics"> Analytics</label>
-          <label><input type="checkbox" name="marketing"> Marketing</label>
-          <div class="cookie-actions">
-            <button data-action="save">Salva preferenze</button>
-          </div>
-        </form>
+    <!-- CTA finale -->
+    <section>
+      <div class="wrap">
+        <h2>Parliamone 10 minuti</h2>
+        <p class="muted">Se c’è risonanza, lo capiamo subito. E iniziamo semplice.</p>
+        <p><a class="btn" href="https://wa.me/393408415770">WhatsApp diretto</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footgrid">
+      <div>
+        <strong>Nodo 432 – EAR Marketing</strong><br>
+        Dal rumore alla risonanza.
+      </div>
+      <div>
+        <h4>Pagine</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="/chi-siamo.html">Chi siamo</a></li>
+          <li><a href="/servizi.html">Servizi</a></li>
+          <li><a href="/casi-studio.html">Casi studio</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/ear.html">EAR</a></li>
+          <li><a href="/contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legale</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="/privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li><a href="https://wa.me/393408415770">WhatsApp +39 340 841 5770</a></li>
+        </ul>
       </div>
     </div>
+    <div class="wrap" style="margin-top:16px">
+      <p class="muted" style="margin:0">© 2025 Nodo 432 – Tutti i diritti riservati</p>
+    </div>
+  </footer>
 
+  <!-- FAB WhatsApp (no overlap: main ha padding-bottom + safe-area) -->
+  <a class="fab" href="https://wa.me/393408415770" aria-label="Scrivici su WhatsApp">
+    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+      <path d="M19.1 17.4c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.9 1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.6-3.2-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.4s1.1 2.8 1.3 3 .2.5.5 1c.4.7 1.3 1.9 3 3 1 .6 1.7 .9 2.3 1.1 1 .3 1.9 .3 2.6 .2.8-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0 0-.1-.1-.2-.2zM16 3C9.9 3 5 7.9 5 14c0 2.3.7 4.4 1.9 6.1L5 29l9.2-1.9c1.7 1 3.6 1.6 5.8 1.6 6.1 0 11-4.9 11-11S22.1 3 16 3z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
 </body>
-</html>
+          </html>
