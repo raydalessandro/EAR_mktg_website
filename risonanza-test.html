@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test della Risonanza - Trova la tua frequenza | EAR Marketing</title>
+    <meta name="description" content="Scopri la frequenza naturale del tuo brand. Un test in 3 domande per emergere dal rumore.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Test della Risonanza - EAR Marketing">
+    <meta property="og:description" content="Qual è la frequenza naturale del tuo brand? Scoprilo in 3 domande.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Plausible Analytics -->
+    <script defer data-domain="nodo432.com" src="https://plausible.io/js/script.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --black: #0a0a0a;
+            --white: #fafafa;
+            --accent: #d4af37;
+            --gray-50: #f9f9f9;
+            --gray-200: #e5e5e5;
+            --gray-500: #737373;
+            --gray-900: #171717;
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 32px;
+            --spacing-xl: 48px;
+            --spacing-xxl: 64px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="2" fill="%230a0a0a"/></svg>') 16 16, auto;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--black);
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-50) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-md);
+            line-height: 1.6;
+        }
+        
+        /* Resonance Field Background */
+        #resonance-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.2;
+        }
+        
+        /* Mirror Introduction */
+        .mirror-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, 
+                rgba(10,10,10,0.95) 0%, 
+                rgba(10,10,10,0.85) 40%,
+                rgba(26,26,26,0.9) 70%,
+                rgba(10,10,10,0.95) 100%);
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 2s ease-out;
+            cursor: none;
+        }
+        
+        .mirror-container.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .mirror-surface {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: radial-gradient(circle at center, 
+                rgba(212,175,55,0.03) 0%, 
+                transparent 50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mirror-surface::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                transparent 30%,
+                rgba(212,175,55,0.02) 50%,
+                transparent 70%);
+            animation: shimmer 8s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% {
+                transform: translateX(-50%) translateY(-50%);
+            }
+            50% {
+                transform: translateX(-30%) translateY(-30%);
+            }
+        }
+        
+        .mirror-text {
+            position: relative;
+            z-index: 2;
+            color: rgba(250,250,250,0.9);
+            text-align: center;
+            padding: var(--spacing-xl);
+            max-width: 600px;
+        }
+        
+        .mirror-text h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0;
+            animation: fadeInSlow 3s ease-out 0.5s forwards;
+        }
+        
+        .mirror-text p {
+            font-size: 1.125rem;
+            opacity: 0;
+            animation: fadeInSlow 3s ease-out 2s forwards;
+            color: rgba(212,175,55,0.8);
+        }
+        
+        @keyframes fadeInSlow {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .mirror-hint {
+            position: absolute;
+            bottom: var(--spacing-xl);
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.875rem;
+            color: rgba(250,250,250,0.4);
+            opacity: 0;
+            animation: fadeInSlow 2s ease-out 5s forwards;
+        }
+        
+        /* Subtle reflection effect */
+        .reflection-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(250,250,250,0.01) 45%,
+                rgba(250,250,250,0.02) 50%,
+                rgba(250,250,250,0.01) 55%,
+                transparent 100%);
+            transform: translateX(-100%);
+            animation: reflection 10s ease-in-out infinite;
+        }
+        
+        @keyframes reflection {
+            0%, 100% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: var(--gray-200);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: var(--accent);
+            width: 33.33%;
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .test-content {
+            padding: var(--spacing-xxl);
+        }
+        
+        .step {
+            display: none;
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .step.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .step-number {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .question {
+            font-size: 1.25rem;
+            line-height: 1.4;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .answer-input {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 2px solid var(--gray-200);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: var(--gray-50);
+            transition: all 0.3s ease;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .answer-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: var(--white);
+        }
+        
+        .button-group {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .btn {
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M16 16 Q16 14, 14 14 T10 14 Q10 18, 14 18 T22 18 Q22 10, 14 10" stroke="%23d4af37" stroke-width="1.5" fill="none" opacity="0.8"/></svg>') 16 16, pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--black);
+            color: var(--white);
+            border: 2px solid var(--black);
+        }
+        
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--black);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--gray-500);
+            border: 2px solid var(--gray-200);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--gray-500);
+            color: var(--black);
+        }
+        
+        /* Results */
+        .result {
+            text-align: center;
+        }
+        
+        .frequency-display {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            color: var(--accent);
+            margin: var(--spacing-xl) 0;
+            letter-spacing: -0.02em;
+        }
+        
+        .frequency-label {
+            font-size: 1.125rem;
+            color: var(--gray-500);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .diagnosis {
+            background: var(--gray-50);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            margin: var(--spacing-lg) 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .diagnosis h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--accent);
+        }
+        
+        .prescription {
+            margin-top: var(--spacing-xl);
+        }
+        
+        .prescription h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .prescription ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .prescription li {
+            padding: var(--spacing-sm) 0;
+            padding-left: var(--spacing-lg);
+            position: relative;
+        }
+        
+        .prescription li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        .cta-section {
+            margin-top: var(--spacing-xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .logo-link {
+            position: absolute;
+            top: var(--spacing-md);
+            right: var(--spacing-md);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 600;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+        
+        .logo-link:hover {
+            opacity: 1;
+        }
+        
+        .logo-spiral {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .logo-spiral path {
+            stroke: var(--accent);
+            stroke-width: 1.5;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mirror Introduction -->
+    <div class="mirror-container" id="mirror">
+        <div class="mirror-surface">
+            <div class="reflection-overlay"></div>
+            <div class="mirror-text">
+                <h1>Prima di trovare la tua frequenza,<br>guardati.</h1>
+                <p>Ora che ti sei visto, ascoltiamo.</p>
+            </div>
+            <span class="mirror-hint">Clicca per iniziare</span>
+        </div>
+    </div>
+    
+    <canvas id="resonance-field"></canvas>
+    
+    <div class="container">
+        <a href="/" class="logo-link">
+            <svg class="logo-spiral" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 16 Q16 14, 14 14 T10 14 Q10 18, 14 18 T22 18 Q22 10, 14 10 T6 10 Q6 22, 18 22 T30 22 Q30 6, 14 6"/>
+            </svg>
+            EAR
+        </a>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress"></div>
+        </div>
+        
+        <div class="test-content">
+            <!-- Step 1 -->
+            <div class="step active" id="step1">
+                <div class="step-number">Domanda 1 di 3</div>
+                <h1>Cosa vuoi davvero comunicare?</h1>
+                <p class="question">Non quello che pensi di dover dire. Quello che senti di dover dire.</p>
+                <textarea class="answer-input" id="answer1" placeholder="Scrivi liberamente. Nessun giudizio, solo ascolto."></textarea>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="nextStep(2)">Continua →</button>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="step" id="step2">
+                <div class="step-number">Domanda 2 di 3</div>
+                <h1>Chi ha davvero bisogno di sentirlo?</h1>
+                <p class="question">Non "tutti". Non "il target 25-45". Le persone vere che ti vengono in mente.</p>
+                <textarea class="answer-input" id="answer2" placeholder="Descrivile come se le conoscessi. Perché probabilmente le conosci."></textarea>
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="prevStep(1)">← Indietro</button>
+                    <button class="btn btn-primary" onclick="nextStep(3)">Continua →</button>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="step" id="step3">
+                <div class="step-number">Domanda 3 di 3</div>
+                <h1>Perché dovrebbero fermarsi ad ascoltare?</h1>
+                <p class="question">In un mondo pieno di rumore, cosa rende la tua voce necessaria?</p>
+                <textarea class="answer-input" id="answer3" placeholder="La verità. Non il pitch. La verità."></textarea>
+                <div class="button-group">
+                    <button class="btn btn-secondary" onclick="prevStep(2)">← Indietro</button>
+                    <button class="btn btn-primary" onclick="calculateFrequency()">Trova la frequenza →</button>
+                </div>
+            </div>
+            
+            <!-- Results -->
+            <div class="step" id="result">
+                <div class="result">
+                    <h1>La tua frequenza naturale</h1>
+                    <div class="frequency-display" id="frequency">432 Hz</div>
+                    <p class="frequency-label" id="frequencyLabel">Risonanza Autentica</p>
+                    
+                    <div class="diagnosis">
+                        <h2 id="diagnosisTitle">Diagnosi: Chiarezza Emergente</h2>
+                        <p id="diagnosisText">
+                            Le tue risposte mostrano una direzione chiara ma ancora trattenuta. 
+                            C'è autenticità nel messaggio, ma teme ancora il giudizio.
+                        </p>
+                    </div>
+                    
+                    <div class="prescription">
+                        <h3>Prescrizione per emergere dal rumore:</h3>
+                        <ul id="prescriptionList">
+                            <li>Smetti di parlare a tutti. Parla ai tuoi.</li>
+                            <li>Togli il 50% delle parole. Poi togli ancora.</li>
+                            <li>Se non lo diresti a voce, non scriverlo.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cta-section">
+                        <p style="margin-bottom: var(--spacing-md); color: var(--gray-500);">
+                            Vuoi amplificare questa frequenza?
+                        </p>
+                        <a href="/contatti.html" class="btn btn-primary" style="display: inline-block; text-decoration: none;">
+                            Parliamo del tuo progetto →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Mirror interaction
+        const mirror = document.getElementById('mirror');
+        let mirrorClicked = false;
+        
+        // Auto-hide mirror after 8 seconds or on click
+        mirror.addEventListener('click', () => {
+            if (!mirrorClicked) {
+                mirrorClicked = true;
+                mirror.classList.add('hidden');
+                // Start the experience
+                setTimeout(() => {
+                    mirror.style.display = 'none';
+                }, 2000);
+            }
+        });
+        
+        // Auto-hide after 8 seconds if not clicked
+        setTimeout(() => {
+            if (!mirrorClicked) {
+                mirror.classList.add('hidden');
+                setTimeout(() => {
+                    mirror.style.display = 'none';
+                }, 2000);
+            }
+        }, 8000);
+        
+        // Navigation
+        function nextStep(step) {
+            const answer = document.getElementById(`answer${step-1}`).value;
+            if (!answer.trim()) {
+                alert('Prima di continuare, ascolta cosa hai da dire.');
+                return;
+            }
+            
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            document.getElementById(`step${step}`).classList.add('active');
+            document.getElementById('progress').style.width = `${step * 33.33}%`;
+        }
+        
+        function prevStep(step) {
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            document.getElementById(`step${step}`).classList.add('active');
+            document.getElementById('progress').style.width = `${step * 33.33}%`;
+        }
+        
+        function calculateFrequency() {
+            const answer3 = document.getElementById('answer3').value;
+            if (!answer3.trim()) {
+                alert('L\'ultima domanda è la più importante. Prenditi tempo.');
+                return;
+            }
+            
+            // Analyze answers (simplified logic)
+            const answer1 = document.getElementById('answer1').value;
+            const answer2 = document.getElementById('answer2').value;
+            
+            const totalLength = answer1.length + answer2.length + answer3.length;
+            const avgLength = totalLength / 3;
+            
+            let frequency, label, diagnosisTitle, diagnosisText, prescriptions;
+            
+            if (avgLength < 50) {
+                frequency = "888 Hz";
+                label = "Ultra-Sintetico";
+                diagnosisTitle = "Diagnosi: Minimalismo Estremo";
+                diagnosisText = "Hai già tagliato tutto il superfluo. Forse anche troppo. La tua frequenza è altissima, penetrante.";
+                prescriptions = [
+                    "Aggiungi solo dove il silenzio confonde",
+                    "Una parola in più può essere generosità",
+                    "Il minimalismo sterile non risuona"
+                ];
+            } else if (avgLength < 150) {
+                frequency = "528 Hz";
+                label = "Chiarezza Cristallina";
+                diagnosisTitle = "Diagnosi: Equilibrio Naturale";
+                diagnosisText = "Hai trovato il punto dove ogni parola lavora. Non c'è rumore, solo segnale.";
+                prescriptions = [
+                    "Mantieni questa essenzialità",
+                    "Ogni aggiunta deve guadagnarsi il posto",
+                    "La tua frequenza è già sintonizzata"
+                ];
+            } else if (avgLength < 300) {
+                frequency = "432 Hz";
+                label = "Risonanza Autentica";
+                diagnosisTitle = "Diagnosi: Potenziale Armonico";
+                diagnosisText = "C'è sostanza nel tuo messaggio. Ora serve accordare gli elementi per farli risuonare insieme.";
+                prescriptions = [
+                    "Identifica il cuore di ogni concetto",
+                    "Taglia le ripetizioni, mantieni il ritmo",
+                    "Lascia respirare le idee importanti"
+                ];
+            } else {
+                frequency = "256 Hz";
+                label = "Frequenza Dispersa";
+                diagnosisTitle = "Diagnosi: Rumore di Fondo";
+                diagnosisText = "Troppe frequenze si sovrappongono. Il messaggio c'è, ma è sepolto sotto strati di parole.";
+                prescriptions = [
+                    "Individua i 3 concetti chiave. Elimina il resto",
+                    "Se lo puoi dire in 5 parole, non usarne 50",
+                    "Il rumore nasconde la tua frequenza naturale"
+                ];
+            }
+            
+            // Update results
+            document.getElementById('frequency').textContent = frequency;
+            document.getElementById('frequencyLabel').textContent = label;
+            document.getElementById('diagnosisTitle').textContent = diagnosisTitle;
+            document.getElementById('diagnosisText').textContent = diagnosisText;
+            
+            const prescriptionList = document.getElementById('prescriptionList');
+            prescriptionList.innerHTML = prescriptions.map(p => `<li>${p}</li>`).join('');
+            
+            // Show results
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            document.getElementById('result').classList.add('active');
+            document.getElementById('progress').style.width = '100%';
+        }
+        
+        // Simplified Resonance Field
+        const canvas = document.getElementById('resonance-field');
+        const ctx = canvas.getContext('2d');
+        
+        let time = 0;
+        
+        const resizeCanvas = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        function compose() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.strokeStyle = '#d4af37';
+            ctx.lineWidth = 0.3;
+            
+            // Simple wave pattern
+            for (let i = 0; i < 10; i++) {
+                ctx.beginPath();
+                for (let x = 0; x < canvas.width; x += 10) {
+                    const y = canvas.height / 2 + Math.sin((x + time * 50 + i * 20) * 0.01) * (i * 10);
+                    if (x === 0) ctx.moveTo(x, y);
+                    else ctx.lineTo(x, y);
+                }
+                ctx.stroke();
+            }
+            
+            time += 0.016;
+            requestAnimationFrame(compose);
+        }
+        
+        compose();
+        
+        // Console Easter Egg
+        console.log(`%c🎯 Hai trovato il Test della Risonanza!`, 'font-size: 16px; color: #d4af37;');
+        console.log(`%cOgni brand ha una frequenza naturale.\nQual è la tua?`, 'font-size: 12px; color: #737373;');
+    </script>
+</body>
+</html>
