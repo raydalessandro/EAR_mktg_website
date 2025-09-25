@@ -1,153 +1,407 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Privacy & Termini | Nodo 432 – EAR Marketing</title>
-  <meta name="description" content="Privacy, cookie e termini di utilizzo. Sito leggero, nessun tracciamento di profilazione. Contatti via WhatsApp.">
-  <link rel="canonical" href="https://nodo432.com/privacy.html">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-
-  <!-- OG -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Privacy & Termini | Nodo 432 – EAR Marketing">
-  <meta property="og:description" content="Semplici, trasparenti: niente cookie di profilazione, contatti via WhatsApp.">
-  <meta property="og:url" content="https://nodo432.com/privacy.html">
-  <meta property="og:image" content="https://nodo432.com/assets/img/og-cover.jpg">
-
-  <!-- CSS unico -->
-  <link rel="preload" href="/styles/main.css" as="style">
-  <link rel="stylesheet" href="/styles/main.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="/styles/main.css"></noscript>
-
-  <!-- JSON-LD base -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Privacy & Termini – Nodo 432",
-    "url":"https://nodo432.com/privacy.html"
-  }
-  </script>
-
-  <style>
-    .legal h2{margin-top:16px}
-    .legal .meta{color:var(--muted);font-size:14px;margin:0 0 10px}
-    .toc{border:1px solid var(--line);border-radius:12px;padding:12px}
-    .toc ul{margin:8px 0 0;padding-left:18px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - EAR Marketing</title>
+    <meta name="description" content="Privacy Policy di EAR Marketing. Come trattiamo i tuoi dati con rispetto e trasparenza.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Plausible Analytics - Privacy First -->
+    <script defer data-domain="nodo432.com" src="https://plausible.io/js/script.js"></script>
+    
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Variables */
+        :root {
+            --black: #0a0a0a;
+            --white: #fafafa;
+            --accent: #d4af37;
+            --gray-50: #f9f9f9;
+            --gray-200: #e5e5e5;
+            --gray-500: #737373;
+            --gray-900: #171717;
+            --max-width: 1200px;
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 32px;
+            --spacing-xl: 48px;
+            --spacing-xxl: 64px;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        /* Base */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-md);
+            color: var(--accent);
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        p, li {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.7;
+        }
+        
+        ul {
+            margin-left: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        
+        a:hover {
+            opacity: 0.7;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .logo-spiral {
+            width: 32px;
+            height: 32px;
+            animation: spiral-breathe 4s ease-in-out infinite;
+        }
+        
+        .logo-spiral path {
+            stroke: var(--accent);
+            stroke-width: 1.5;
+            fill: none;
+            stroke-linecap: round;
+            opacity: 0.8;
+        }
+        
+        @keyframes spiral-breathe {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(5deg) scale(1.05);
+            }
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--gray-900);
+            font-weight: 500;
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--spacing-xs);
+        }
+        
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--black);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        
+        /* Content */
+        .content {
+            padding-top: calc(80px + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xxl);
+        }
+        
+        .info-box {
+            background: var(--gray-50);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin: var(--spacing-lg) 0;
+        }
+        
+        .last-update {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: var(--gray-200);
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+            margin-top: var(--spacing-xxl);
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        /* Mobile */
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: var(--spacing-md);
+                border-bottom: 1px solid var(--gray-200);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="top">
-    <div class="wrap nav" role="navigation" aria-label="Principale">
-      <a class="logo" href="/">Nodo 432</a>
-      <ul>
-        <li><a href="/chi-siamo.html">Chi Siamo</a></li>
-        <li><a href="/servizi.html">Servizi</a></li>
-        <li><a href="/casi-studio.html">Casi studio</a></li>
-        <li><a href="/ear.html">EAR</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a class="btn" href="/contatti.html">Inizia</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <section class="page-hero">
-    <div class="wrap">
-      <h1>Privacy, Cookie e Termini</h1>
-      <p class="muted">Trasparenza, semplicità, nessun tracciamento invasivo.</p>
-    </div>
-  </section>
-
-  <main class="wrap" style="padding:24px 0 80px">
-    <nav class="toc card" aria-label="Indice">
-      <strong>Indice</strong>
-      <ul>
-        <li><a href="#privacy">Privacy</a></li>
-        <li><a href="#cookie">Cookie</a></li>
-        <li><a href="#termini">Termini di utilizzo</a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-spiral" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 16 Q16 14, 14 14 T10 14 Q10 18, 14 18 T22 18 Q22 10, 14 10 T6 10 Q6 22, 18 22 T30 22 Q30 6, 14 6"/>
+                </svg>
+                EAR
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chi-siamo.html">Chi Siamo</a></li>
+                <li><a href="/servizi.html">Servizi</a></li>
+                <li><a href="/ear.html">Metodo EAR</a></li>
+                <li><a href="/casi-studio.html">Casi Studio</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contatti.html">Contatti</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
-    <section id="privacy" class="legal card" style="margin-top:14px">
-      <h2>Privacy</h2>
-      <p class="meta">Ultimo aggiornamento: 22 settembre 2025</p>
+    <!-- Content -->
+    <main class="content">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="last-update">Ultimo aggiornamento: Gennaio 2025</p>
+            
+            <div class="info-box">
+                <p><strong>In breve:</strong> Trattiamo i tuoi dati come trattiamo il tuo progetto. Con rispetto, trasparenza e solo per quello che serve davvero.</p>
+            </div>
+            
+            <h2>1. Chi siamo</h2>
+            <p>
+                EAR Marketing di Alessandro Ray<br>
+                P.IVA: 12345678901<br>
+                Email: alessiomarrone@outlook.com<br>
+                Telefono: +39 340 841 5770<br>
+                Titolare del trattamento: Alessandro Ray
+            </p>
+            
+            <h2>2. Quali dati raccogliamo</h2>
+            <p>Raccogliamo solo i dati strettamente necessari:</p>
+            <ul>
+                <li><strong>Dal form contatti:</strong> Nome, email, messaggio</li>
+                <li><strong>Dalla newsletter:</strong> Solo l'email</li>
+                <li><strong>Analytics (Plausible):</strong> Dati aggregati e anonimi sulle visite (nessun tracking personale)</li>
+            </ul>
+            
+            <h2>3. Perché li raccogliamo</h2>
+            <ul>
+                <li>Per rispondere alle tue richieste</li>
+                <li>Per inviarti la newsletter (solo se ti iscrivi)</li>
+                <li>Per capire come migliorare il sito (analytics anonimi)</li>
+            </ul>
+            <p>Base giuridica: consenso esplicito (per form e newsletter) e legittimo interesse (per analytics anonimi).</p>
+            
+            <h2>4. Come li proteggiamo</h2>
+            <ul>
+                <li>I dati dei form sono trasmessi via HTTPS criptato</li>
+                <li>Usiamo servizi GDPR-compliant (Formspree per i form, Buttondown per newsletter)</li>
+                <li>Non vendiamo MAI i tuoi dati a terzi</li>
+                <li>Accesso limitato solo a chi deve gestire le richieste</li>
+            </ul>
+            
+            <h2>5. Dove li conserviamo</h2>
+            <ul>
+                <li><strong>Form contatti:</strong> Server Formspree (USA con Privacy Shield)</li>
+                <li><strong>Newsletter:</strong> Server Buttondown (EU)</li>
+                <li><strong>Analytics:</strong> Plausible (EU, dati anonimi)</li>
+            </ul>
+            
+            <h2>6. Per quanto tempo</h2>
+            <ul>
+                <li><strong>Richieste contatto:</strong> 2 anni o fino a conclusione del rapporto</li>
+                <li><strong>Newsletter:</strong> Fino a disiscrizione</li>
+                <li><strong>Analytics:</strong> Dati aggregati, nessun dato personale</li>
+            </ul>
+            
+            <h2>7. I tuoi diritti (GDPR)</h2>
+            <p>Hai il diritto di:</p>
+            <ul>
+                <li><strong>Accesso:</strong> Sapere quali dati abbiamo</li>
+                <li><strong>Rettifica:</strong> Correggere dati errati</li>
+                <li><strong>Cancellazione:</strong> Chiedere la rimozione dei tuoi dati</li>
+                <li><strong>Portabilità:</strong> Ricevere i tuoi dati in formato leggibile</li>
+                <li><strong>Opposizione:</strong> Opporti al trattamento</li>
+                <li><strong>Revoca del consenso:</strong> In qualsiasi momento</li>
+            </ul>
+            <p>Per esercitare questi diritti: ciao@nodo432.com</p>
+            
+            <h2>8. Cookie Policy</h2>
+            <div class="info-box">
+                <p><strong>Zero cookie di tracking!</strong> Usiamo Plausible Analytics che non usa cookie e non traccia gli utenti. L'unico cookie presente è quello tecnico di sessione, che non richiede consenso.</p>
+            </div>
+            
+            <h2>9. Newsletter</h2>
+            <p>
+                Se ti iscrivi alla newsletter:
+            </p>
+            <ul>
+                <li>Riceverai massimo 1 email al mese</li>
+                <li>Ogni email ha il link per disiscriverti</li>
+                <li>Non facciamo spam. Mai.</li>
+            </ul>
+            
+            <h2>10. Modifiche alla privacy policy</h2>
+            <p>
+                Se cambiamo questa policy, lo comunicheremo sul sito e via email (se iscritto alla newsletter).
+            </p>
+            
+            <h2>11. Contatti e reclami</h2>
+            <p>
+                Per qualsiasi domanda sulla privacy: <a href="mailto:alessiomarrone@outlook.com">alessiomarrone@outlook.com</a>
+            </p>
+            <p>
+                Hai il diritto di presentare reclamo al Garante per la protezione dei dati personali: <a href="https://www.garanteprivacy.it" target="_blank">www.garanteprivacy.it</a>
+            </p>
+            
+            <div class="info-box" style="margin-top: var(--spacing-xl);">
+                <p><strong>La nostra filosofia sulla privacy:</strong> I tuoi dati sono tuoi. Noi li custodiamo temporaneamente per offrirti un servizio. Niente di più, niente di meno.</p>
+            </div>
+        </div>
+    </main>
 
-      <h3>Titolare del trattamento</h3>
-      <p><strong>Nodo 432 – EAR Marketing</strong><br>Milano, Italia<br>
-      Contatti privacy: <a href="mailto:privacy@nodo432.com">privacy@nodo432.com</a> · WhatsApp <a href="https://wa.me/393408415770">+39 340 841 5770</a></p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 EAR Marketing - Dal rumore alla risonanza</p>
+                <p style="margin-top: var(--spacing-sm);">
+                    <a href="/" style="color: var(--gray-200);">Torna alla Home</a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
-      <h3>Dati che trattiamo</h3>
-      <p>Questo sito non raccoglie dati tramite form. Se ci contatti su WhatsApp, tratteremo i tuoi dati (nome, telefono, messaggi) ai soli fini di risposta.</p>
-
-      <h3>Finalità e basi giuridiche</h3>
-      <ul>
-        <li><strong>Rispondere</strong> alle richieste ricevute via WhatsApp → <em>misure precontrattuali/contratto</em>.</li>
-        <li><strong>Obblighi legali</strong> (es. contabili/fiscali) ove si diventi clienti.</li>
-      </ul>
-
-      <h3>Conservazione</h3>
-      <ul>
-        <li>Conversazioni preliminari: fino a 12 mesi.</li>
-        <li>Dati contrattuali/fatture: 10 anni (obbligo di legge).</li>
-      </ul>
-
-      <h3>Condivisioni</h3>
-      <p>Nessuna vendita di dati. Possibili destinatari: provider di hosting e strumenti strettamente necessari al funzionamento; consulenti (es. contabile) per adempimenti.</p>
-
-      <h3>Diritti</h3>
-      <p>Puoi chiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilità scrivendo a <a href="mailto:privacy@nodo432.com">privacy@nodo432.com</a>.</p>
-    </section>
-
-    <section id="cookie" class="legal card" style="margin-top:14px">
-      <h2>Cookie</h2>
-      <p><strong>Non utilizziamo cookie di profilazione.</strong> Il sito funziona senza cookie non tecnici. Eventuali cookie tecnici sono limitati al funzionamento e sicurezza.</p>
-      <p>Se in futuro attiveremo analitiche <em>cookieless</em> (es. Plausible), lo indicheremo qui. Se attiveremo strumenti di marketing/remarketing, mostreremo un banner di consenso prima del caricamento.</p>
-    </section>
-
-    <section id="termini" class="legal card" style="margin-top:14px">
-      <h2>Termini di utilizzo</h2>
-      <ul>
-        <li>Contenuti e codice sono di proprietà di Nodo 432 – EAR Marketing.</li>
-        <li>Link esterni: non rispondiamo dei contenuti di terzi.</li>
-        <li>Possiamo aggiornare questa pagina: la versione corrente è sempre pubblicata qui.</li>
-        <li>Legge applicabile: Italiana. Foro competente: Milano.</li>
-      </ul>
-      <p>Per questioni legali: <a href="mailto:legal@nodo432.com">legal@nodo432.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footgrid">
-      <div><strong>Nodo 432 – EAR Marketing</strong><br><span class="muted">Dal rumore alla risonanza.</span></div>
-      <div>
-        <h4>Pagine</h4>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li><a href="/chi-siamo.html">Chi Siamo</a></li>
-          <li><a href="/servizi.html">Servizi</a></li>
-          <li><a href="/casi-studio.html">Casi studio</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/ear.html">EAR</a></li>
-          <li><a href="/contatti.html">Contatti</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legale</h4>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li><a href="/privacy.html" aria-current="page" class="is-active">Privacy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contatti</h4>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li><a href="https://wa.me/393408415770">WhatsApp +39 340 841 5770</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="wrap" style="margin-top:16px"><p class="muted" style="margin:0">© 2025 Nodo 432 – Tutti i diritti riservati</p></div>
-  </footer>
-
-  <!-- Nessun cookie banner, nessun JS obbligatorio -->
+    <script>
+        // Mobile Menu
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
 </body>
 </html>
