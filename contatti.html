@@ -535,30 +535,118 @@
             </form>
             
             <div class="contact-methods">
-                <div class="contact-method reveal">
-                    <h3>Preferisci WhatsApp?</h3>
-                    <p>Scriviamo come parliamo.</p>
-                    <a href="https://wa.me/393408415770" target="_blank" class="contact-link">
-                        Scrivici su WhatsApp
-                    </a>
-                </div>
+                <a href="https://wa.me/393408415770" target="_blank" class="contact-method-card reveal">
+                    <div class="contact-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347z" fill="#d4af37"/>
+                            <path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c-.001 2.096.549 4.142 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411zm-8.475 18.31h-.005c-1.773 0-3.513-.48-5.034-1.384l-.36-.214-3.741.979 1.001-3.645-.236-.374a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.437-9.884 9.894-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884z" fill="#d4af37"/>
+                        </svg>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Risposta veloce</p>
+                    <span class="contact-action">Apri chat →</span>
+                </a>
                 
-                <div class="contact-method reveal">
-                    <h3>Una chiamata?</h3>
-                    <p>A volte la voce dice di più.</p>
-                    <a href="tel:+393408415770" class="contact-link">
-                        +39 340 841 5770
-                    </a>
-                </div>
-                
-                <div class="contact-method reveal">
-                    <h3>Email diretta</h3>
-                    <p>Per chi ama la tradizione.</p>
-                    <a href="mailto:alessiomarrone@outlook.com" class="contact-link">
-                        alessiomarrone@outlook.com
-                    </a>
-                </div>
+                <a href="mailto:alessiomarrone@outlook.com" class="contact-method-card reveal">
+                    <div class="contact-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Per chi ama scrivere</p>
+                    <span class="contact-action">Scrivi email →</span>
+                </a>
             </div>
+            
+            <style>
+                .contact-methods {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: var(--spacing-lg);
+                    max-width: 500px;
+                    margin: 0 auto;
+                    margin-top: var(--spacing-xxl);
+                    padding-top: var(--spacing-xxl);
+                    border-top: 1px solid var(--gray-200);
+                }
+                
+                .contact-method-card {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    padding: var(--spacing-xl);
+                    background: var(--gray-50);
+                    border-radius: 12px;
+                    text-decoration: none;
+                    color: var(--black);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    border: 2px solid transparent;
+                }
+                
+                .contact-method-card:hover {
+                    transform: translateY(-4px);
+                    background: var(--white);
+                    border-color: var(--accent);
+                    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+                }
+                
+                .contact-icon {
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: var(--spacing-md);
+                    transition: transform 0.3s ease;
+                }
+                
+                .contact-method-card:hover .contact-icon {
+                    transform: scale(1.1);
+                }
+                
+                .contact-method-card h3 {
+                    color: var(--black);
+                    margin-bottom: var(--spacing-xs);
+                    font-size: 1.25rem;
+                }
+                
+                .contact-method-card p {
+                    color: var(--gray-500);
+                    font-size: 0.875rem;
+                    margin-bottom: var(--spacing-md);
+                }
+                
+                .contact-action {
+                    color: var(--accent);
+                    font-weight: 500;
+                    font-size: 0.875rem;
+                    opacity: 0;
+                    transform: translateY(10px);
+                    transition: all 0.3s ease;
+                }
+                
+                .contact-method-card:hover .contact-action {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                
+                /* Remove old styles */
+                .contact-method {
+                    display: none;
+                }
+                
+                @media (max-width: 500px) {
+                    .contact-methods {
+                        grid-template-columns: 1fr;
+                    }
+                    
+                    .contact-method-card {
+                        padding: var(--spacing-lg);
+                    }
+                }
+            </style>
         </div>
     </section>
 
