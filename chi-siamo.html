@@ -1,178 +1,647 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chi siamo | Nodo 432 – EAR Marketing</title>
-  <meta name="description" content="Siamo un’agenzia snella: siti ultra-veloci, SEO chiara, contenuti essenziali. Metodo EAR: Essenza, Armonia, Risonanza.">
-  <link rel="canonical" href="https://nodo432.com/chi-siamo.html">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Chi siamo | Nodo 432 – EAR Marketing">
-  <meta property="og:description" content="Dal rumore alla risonanza, senza fronzoli.">
-  <meta property="og:url" content="https://nodo432.com/chi-siamo.html">
-  <meta property="og:image" content="https://nodo432.com/assets/img/og-cover.jpg">
-  <link rel="preload" href="/styles/main.css" as="style">
-  <link rel="stylesheet" href="/styles/main.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="/styles/main.css"></noscript>
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"AboutPage","name":"Chi siamo – Nodo 432","url":"https://nodo432.com/chi-siamo.html","mainEntity":{"@type":"Organization","name":"Nodo 432 – EAR Marketing","url":"https://nodo432.com/"}}
-  </script>
-
-  <style>
-    :root{--line:#e5e7eb;--muted:#6b7280;--max:1120px;--brand:#25D366;--radius:12px}
-    *{box-sizing:border-box} body{margin:0} a{color:inherit}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 16px}
-    header.top{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid var(--line);z-index:50}
-    .nav{display:flex;align-items:center;justify-content:space-between;min-height:56px}
-    .nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
-    .nav a{text-decoration:none;padding:8px 10px;border-radius:10px}
-    .nav .btn{background:#111;color:#fff}
-    .hero{padding:36px 0;border-bottom:1px solid var(--line)}
-    .hero h1{margin:0 0 8px}
-    .hero p{margin:0;color:var(--muted)}
-    section{padding:28px 0}
-    .grid{display:grid;gap:14px}
-    @media(min-width:760px){ .grid.cols-2{grid-template-columns:1fr 1fr} .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
-    .card{border:1px solid var(--line);border-radius:16px;padding:16px}
-    .muted{color:var(--muted)}
-    .list{list-style:none;padding:0;margin:0}
-    .list li{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}
-    .list li:first-child{border-top:0}
-    footer{border-top:1px solid var(--line);padding:28px 0}
-    .footgrid{display:grid;gap:16px}
-    @media(min-width:760px){ .footgrid{grid-template-columns:2fr 1fr 1fr 1fr} }
-    .btn{display:inline-block;padding:12px 16px;border-radius:var(--radius);background:#111;color:#fff;text-decoration:none;font-weight:700}
-    .btn.secondary{background:#fff;border:1px solid #111;color:#111}
-    .fab{position:fixed;right:16px;bottom:16px;display:flex;align-items:center;gap:8px;padding:12px 14px;border-radius:999px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.16);z-index:60}
-    .fab svg path{fill:#fff}
-    @media(max-width:480px){ .fab span{display:none} }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo - EAR Marketing | Il Nodo 432</title>
+    <meta name="description" content="Marketing come risonanza, non come grido. Scopri la filosofia EAR e perché 432 Hz è più di una frequenza.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chi Siamo - EAR Marketing">
+    <meta property="og:description" content="Marketing come risonanza, non come grido. La filosofia della semplicità utile.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nodo432.com/chi-siamo.html">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Plausible Analytics - Privacy First -->
+    <script defer data-domain="nodo432.com" src="https://plausible.io/js/script.js"></script>
+    
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Variables */
+        :root {
+            --black: #0a0a0a;
+            --white: #fafafa;
+            --accent: #d4af37;
+            --gray-50: #f9f9f9;
+            --gray-200: #e5e5e5;
+            --gray-500: #737373;
+            --gray-900: #171717;
+            --max-width: 1200px;
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 32px;
+            --spacing-xl: 48px;
+            --spacing-xxl: 64px;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        /* Base */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--black);
+            background: var(--white);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        .narrow-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-xxl);
+        }
+        
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: var(--spacing-sm);
+            margin-top: var(--spacing-xl);
+        }
+        
+        p {
+            margin-bottom: var(--spacing-md);
+            line-height: 1.7;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: var(--gray-500);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+        
+        a:hover {
+            opacity: 0.7;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: var(--spacing-md);
+            margin: var(--spacing-xl) 0;
+            font-style: italic;
+            font-size: 1.125rem;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .logo-spiral {
+            width: 32px;
+            height: 32px;
+            animation: spiral-breathe 4s ease-in-out infinite;
+        }
+        
+        .logo-spiral path {
+            stroke: var(--accent);
+            stroke-width: 1.5;
+            fill: none;
+            stroke-linecap: round;
+            opacity: 0.8;
+        }
+        
+        @keyframes spiral-breathe {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            50% {
+                transform: rotate(5deg) scale(1.05);
+            }
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--gray-900);
+            font-weight: 500;
+        }
+        
+        .nav-links .active {
+            color: var(--accent);
+        }
+        
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--spacing-xs);
+        }
+        
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--black);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        
+        /* Page Header */
+        .page-header {
+            padding-top: calc(80px + var(--spacing-xxl));
+            padding-bottom: var(--spacing-xxl);
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: var(--spacing-xxl) 0;
+        }
+        
+        .content-section.alt {
+            background: var(--gray-50);
+        }
+        
+        /* Frequency Visual */
+        .frequency-visual {
+            position: relative;
+            height: 200px;
+            margin: var(--spacing-xl) 0;
+            overflow: hidden;
+        }
+        
+        .wave {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            top: 50%;
+            transform-origin: left center;
+            animation: resonate 2s ease-in-out infinite;
+        }
+        
+        .wave:nth-child(2) {
+            animation-delay: 0.1s;
+            opacity: 0.7;
+        }
+        
+        .wave:nth-child(3) {
+            animation-delay: 0.2s;
+            opacity: 0.5;
+        }
+        
+        @keyframes resonate {
+            0%, 100% {
+                transform: translateY(0) scaleY(1);
+            }
+            50% {
+                transform: translateY(-10px) scaleY(3);
+            }
+        }
+        
+        /* Manifesto */
+        .manifesto {
+            background: var(--black);
+            color: var(--white);
+            padding: var(--spacing-xxl) 0;
+            margin: var(--spacing-xxl) 0;
+        }
+        
+        .manifesto h2 {
+            color: var(--accent);
+        }
+        
+        .manifesto-points {
+            list-style: none;
+            margin-top: var(--spacing-xl);
+        }
+        
+        .manifesto-points li {
+            padding: var(--spacing-md) 0;
+            border-bottom: 1px solid var(--gray-500);
+            font-size: 1.125rem;
+        }
+        
+        .manifesto-points li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Profile Card */
+        .profile-card {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+            margin: var(--spacing-xxl) 0;
+        }
+        
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 1;
+            background: var(--gray-200);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: var(--gray-200);
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .footer-column h4 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .footer-column a {
+            color: var(--gray-200);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            border-top: 1px solid var(--gray-500);
+            font-size: 0.875rem;
+        }
+        
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile */
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: var(--spacing-md);
+                border-bottom: 1px solid var(--gray-200);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .profile-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .profile-image {
+                margin: 0 auto;
+            }
+        }
+    </style>
 </head>
 <body>
-  <a class="skip" href="#contenuto" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">Salta al contenuto</a>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <svg class="logo-spiral" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 16 Q16 14, 14 14 T10 14 Q10 18, 14 18 T22 18 Q22 10, 14 10 T6 10 Q6 22, 18 22 T30 22 Q30 6, 14 6"/>
+                </svg>
+                EAR
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/">Home</a></li>
+                <li><a href="/chi-siamo.html" class="active">Chi Siamo</a></li>
+                <li><a href="/servizi.html">Servizi</a></li>
+                <li><a href="/ear.html">Metodo EAR</a></li>
+                <li><a href="/casi-studio.html">Casi Studio</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contatti.html">Contatti</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-  <header class="top">
-    <div class="wrap nav" role="navigation" aria-label="Principale">
-      <a class="logo" href="/">Nodo 432</a>
-      <ul>
-        <li><a href="/chi-siamo.html" aria-current="page" class="is-active">Chi Siamo</a></li>
-        <li><a href="/servizi.html">Servizi</a></li>
-        <li><a href="/casi-studio.html">Casi studio</a></li>
-        <li><a href="/ear.html">EAR</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-        <li><a class="btn" href="/contatti.html">Inizia</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="wrap">
-      <h1>Chi siamo</h1>
-      <p class="muted">Un’agenzia snella: siti ultra-veloci, SEO chiara, contenuti essenziali. Metodo EAR: Essenza, Armonia, Risonanza.</p>
-    </div>
-  </section>
-
-  <main id="contenuto">
-    <!-- Differenza -->
-    <section>
-      <div class="wrap grid cols-3">
-        <article class="card">
-          <h2>Semplicità utile</h2>
-          <p class="muted">Tagliamo il superfluo. Quello che resta lavora meglio e costa meno.</p>
-        </article>
-        <article class="card">
-          <h2>Velocità reale</h2>
-          <p class="muted">100/100 Lighthouse, LCP &lt; 1s: non “promesse”, metriche.</p>
-        </article>
-        <article class="card">
-          <h2>Misura & adatta</h2>
-          <p class="muted">Plausible e pochi eventi utili. Niente vanity metrics.</p>
-        </article>
-      </div>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="narrow-container">
+            <h1 class="reveal">Il Nodo 432</h1>
+            <p class="lead reveal">
+                Non siamo l'agenzia che promette "10x growth" o "viral hacks". 
+                Siamo quelli che trovano la TUA frequenza naturale e la amplificano.
+            </p>
+        </div>
     </section>
 
-    <!-- Timeline minima -->
-    <section>
-      <div class="wrap card">
-        <h2>La nostra storia, in breve</h2>
-        <ul class="list">
-          <li><strong>2024</strong> – Nasce l’idea di EAR: dal rumore alla risonanza.</li>
-          <li><strong>2025</strong> – Nodo 432 prende forma: progetti pilota, basi solide.</li>
-          <li><strong>Oggi</strong> – Siti leggeri, SEO chiara, contenuti che funzionano.</li>
-        </ul>
-      </div>
+    <!-- Il Nodo 432 -->
+    <section class="content-section">
+        <div class="narrow-container">
+            <h2 class="reveal">Perché 432 Hz?</h2>
+            
+            <div class="frequency-visual reveal">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+            
+            <p class="reveal">
+                432 Hz non è solo un numero. È la frequenza naturale dell'universo, quella che risuona 
+                con la matematica della natura. Mentre il mondo grida a 440 Hz, noi scegliamo di 
+                vibrare alla frequenza che il corpo umano riconosce istintivamente.
+            </p>
+            
+            <p class="reveal">
+                <strong>Nel marketing funziona allo stesso modo.</strong> Invece di alzare il volume 
+                per farci sentire sopra il rumore, troviamo la frequenza naturale del tuo brand. 
+                Quella che risuona autenticamente con il tuo pubblico.
+            </p>
+            
+            <blockquote class="reveal">
+                "La perfezione si ottiene non quando non c'è nient'altro da aggiungere, 
+                ma quando non c'è nient'altro da togliere."
+                <br>— Antoine de Saint-Exupéry
+            </blockquote>
+        </div>
     </section>
 
-    <!-- Valori rapidi -->
-    <section>
-      <div class="wrap grid cols-2">
-        <article class="card">
-          <h3>Come lavoriamo</h3>
-          <ul class="list">
-            <li><strong>Ascolto</strong> – prima capiamo, poi scegliamo.</li>
-            <li><strong>Coerenza</strong> – tutto dice la stessa cosa, bene.</li>
-            <li><strong>Chiarezza</strong> – parole semplici, obiettivi misurabili.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Cosa non facciamo</h3>
-          <ul class="list">
-            <li>Non gonfiamo i numeri.</li>
-            <li>Non vendiamo plugin come soluzioni.</li>
-            <li>Non complichiamo ciò che può restare semplice.</li>
-          </ul>
-        </article>
-      </div>
+    <!-- Alessandro Ray -->
+    <section class="content-section alt">
+        <div class="narrow-container">
+            <h2 class="reveal">Alessandro Ray</h2>
+            <div class="profile-card reveal">
+                <div class="profile-image">
+                    AR
+                </div>
+                <div>
+                    <p>
+                        <strong>Background non convenzionale nel marketing.</strong> 
+                        Non vengo da una scuola di comunicazione. Non ho fatto stage in agenzie creative. 
+                        Ho imparato ascoltando, sperimentando, fallendo, raffinando.
+                    </p>
+                    <p>
+                        Ho scoperto che il marketing migliore non è quello che grida più forte, 
+                        ma quello che sussurra le parole giuste alle orecchie giuste.
+                    </p>
+                    <p>
+                        Oggi aiuto brand e persone a emergere dal rumore digitale non aggiungendo 
+                        volume, ma trovando la loro frequenza naturale. Quella che fa vibrare 
+                        le corde giuste nel pubblico giusto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- La Filosofia -->
+    <section class="content-section">
+        <div class="narrow-container">
+            <h2 class="reveal">Marketing come risonanza</h2>
+            
+            <p class="reveal">
+                Il marketing tradizionale funziona per accumulo. Più canali, più contenuti, 
+                più frequenza, più tutto. Noi lavoriamo per sottrazione.
+            </p>
+            
+            <h3 class="reveal">Cosa togliamo:</h3>
+            <ul class="reveal">
+                <li>Le promesse impossibili ("Raddoppia il fatturato in 30 giorni!")</li>
+                <li>I funnel manipolatori che creano urgenza artificiale</li>
+                <li>I contenuti creati solo per l'algoritmo</li>
+                <li>Le vanity metrics che non portano risultati reali</li>
+                <li>Il gergo aziendale che non dice nulla</li>
+            </ul>
+            
+            <h3 class="reveal">Cosa rimane:</h3>
+            <ul class="reveal">
+                <li>La tua voce autentica</li>
+                <li>Messaggi che risuonano davvero</li>
+                <li>Design che funziona, non che impressiona</li>
+                <li>Metriche che contano per il tuo business</li>
+                <li>Relazioni genuine con il tuo pubblico</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section class="manifesto">
+        <div class="narrow-container">
+            <h2 class="reveal">Manifesto della Semplicità Utile</h2>
+            <ul class="manifesto-points">
+                <li class="reveal">
+                    <strong>1.</strong> Ogni elemento deve guadagnarsi il diritto di esistere
+                </li>
+                <li class="reveal">
+                    <strong>2.</strong> La bellezza emerge dalla funzione, non dall'ornamento
+                </li>
+                <li class="reveal">
+                    <strong>3.</strong> Le parole giuste sono poche e precise
+                </li>
+                <li class="reveal">
+                    <strong>4.</strong> Il silenzio tra le note è musica quanto le note stesse
+                </li>
+                <li class="reveal">
+                    <strong>5.</strong> L'autenticità batte sempre la perfezione costruita
+                </li>
+                <li class="reveal">
+                    <strong>6.</strong> Meglio sussurrare la verità che gridare una bugia
+                </li>
+                <li class="reveal">
+                    <strong>7.</strong> Il pubblico giusto è meglio di tutto il pubblico
+                </li>
+                <li class="reveal">
+                    <strong>8.</strong> La velocità di caricamento vale più di mille animazioni
+                </li>
+                <li class="reveal">
+                    <strong>9.</strong> Prima l'ascolto, poi la strategia, infine l'esecuzione
+                </li>
+                <li class="reveal">
+                    <strong>10.</strong> Dal rumore alla risonanza. Sempre.
+                </li>
+            </ul>
+        </div>
     </section>
 
     <!-- CTA -->
-    <section>
-      <div class="wrap" style="text-align:center">
-        <h2>Parliamone 10 minuti</h2>
-        <p class="muted">Se c’è risonanza, lo capiamo subito.</p>
-        <p>
-          <a class="btn" href="https://wa.me/393408415770">WhatsApp diretto</a>
-          <a class="btn secondary" href="/servizi.html" style="margin-left:8px">Scopri i servizi</a>
-        </p>
-      </div>
+    <section class="content-section">
+        <div class="narrow-container" style="text-align: center;">
+            <h2 class="reveal">Pronto a trovare la tua frequenza?</h2>
+            <p class="reveal" style="font-size: 1.25rem;">
+                Non promettiamo miracoli. Promettiamo chiarezza, autenticità e risultati misurabili.
+            </p>
+            <a href="/contatti.html" class="reveal" style="display: inline-block; margin-top: var(--spacing-lg); padding: var(--spacing-sm) var(--spacing-lg); background: var(--black); color: var(--white); font-weight: 500; border-radius: 4px; transition: all 0.3s ease;">
+                Iniziamo dall'ascolto
+            </a>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="wrap footgrid">
-      <div><strong>Nodo 432 – EAR Marketing</strong><br><span class="muted">Dal rumore alla risonanza.</span></div>
-      <div>
-        <h4>Pagine</h4>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li><a href="/chi-siamo.html">Chi Siamo</a></li>
-          <li><a href="/servizi.html">Servizi</a></li>
-          <li><a href="/casi-studio.html">Casi studio</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/ear.html">EAR</a></li>
-          <li><a href="/contatti.html">Contatti</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legale</h4>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li><a href="/privacy.html">Privacy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contatti</h4>
-        <ul style="list-style:none;padding:0;margin:0">
-          <li><a href="https://wa.me/393408415770">WhatsApp +39 340 841 5770</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="wrap" style="margin-top:16px"><p class="muted" style="margin:0">© 2025 Nodo 432 – Tutti i diritti riservati</p></div>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>EAR Marketing</h4>
+                    <p>Dal rumore alla risonanza.</p>
+                    <p style="margin-top: var(--spacing-sm);">P.IVA: 12345678901</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Pagine</h4>
+                    <ul>
+                        <li><a href="/chi-siamo.html">Chi Siamo</a></li>
+                        <li><a href="/servizi.html">Servizi</a></li>
+                        <li><a href="/ear.html">Metodo EAR</a></li>
+                        <li><a href="/casi-studio.html">Casi Studio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Risorse</h4>
+                    <ul>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contatti.html">Contatti</a></li>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 EAR Marketing. Semplicità utile.</p>
+            </div>
+        </div>
+    </footer>
 
-  <a class="fab" href="https://wa.me/393408415770" aria-label="Scrivici su WhatsApp">
-    <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M19.1 17.4c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.9 1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.6-3.2-.3-.5.3-.5.9-1.7.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.4s1.1 2.8 1.3 3 .2.5.5 1c.4.7 1.3 1.9 3 3 1 .6 1.7 .9 2.3 1.1 1 .3 1.9 .3 2.6 .2.8-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0 0-.1-.1-.2-.2zM16 3C9.9 3 5 7.9 5 14c0 2.3.7 4.4 1.9 6.1L5 29l9.2-1.9c1.7 1 3.6 1.6 5.8 1.6 6.1 0 11-4.9 11-11S22.1 3 16 3z"/></svg>
-    <span>WhatsApp</span>
-  </a>
+    <script>
+        // Mobile Menu
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Reveal on Scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
 </body>
 </html>
