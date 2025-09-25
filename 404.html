@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Silenzio | EAR Marketing</title>
+    <meta name="description" content="Questa pagina non esiste. Come il rumore che non serve.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --black: #0a0a0a;
+            --white: #fafafa;
+            --accent: #d4af37;
+            --gray-500: #737373;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--black);
+            background: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #resonance-field {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        
+        .container {
+            max-width: 600px;
+            z-index: 1;
+        }
+        
+        .four-oh-four {
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: 700;
+            line-height: 0.8;
+            letter-spacing: -0.05em;
+            color: var(--accent);
+            opacity: 0.3;
+            margin-bottom: 48px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-500);
+            margin-bottom: 48px;
+            font-weight: 300;
+        }
+        
+        .home-link {
+            display: inline-block;
+            padding: 16px 32px;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid var(--black);
+        }
+        
+        .home-link:hover {
+            background: transparent;
+            color: var(--black);
+        }
+        
+        .hint {
+            margin-top: 48px;
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            opacity: 0;
+            animation: fadeIn 2s ease-out 3s forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="resonance-field"></canvas>
+    
+    <div class="container">
+        <div class="four-oh-four">404</div>
+        <h1>Questa pagina non esiste.</h1>
+        <p class="subtitle">Come il rumore che non serve.</p>
+        <a href="/" class="home-link">Torna alla risonanza →</a>
+        <p class="hint">A volte perdersi è l'unico modo per trovare la frequenza giusta.</p>
+    </div>
+    
+    <script>
+        // Simplified resonance field for 404
+        const canvas = document.getElementById('resonance-field');
+        const ctx = canvas.getContext('2d');
+        
+        let time = 0;
+        
+        const resizeCanvas = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+        
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+        
+        function compose() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            
+            ctx.strokeStyle = '#d4af37';
+            ctx.lineWidth = 0.5;
+            
+            // Draw expanding circles like sound waves
+            for (let i = 0; i < 5; i++) {
+                const radius = (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height));
+                const opacity = Math.max(0, 1 - radius / Math.max(canvas.width, canvas.height));
+                
+                ctx.globalAlpha = opacity * 0.3;
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+                ctx.stroke();
+            }
+            
+            ctx.globalAlpha = 1;
+            time += 0.016;
+            requestAnimationFrame(compose);
+        }
+        
+        compose();
+        
+        // Console message for 404
+        console.log(`%c404: Hai trovato il silenzio.`, 'font-size: 16px; color: #d4af37;');
+        console.log(`%cAnche gli errori fanno parte della risonanza.`, 'font-size: 12px; color: #737373;');
+    </script>
+</body>
+</html>
