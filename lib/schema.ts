@@ -15,6 +15,16 @@ export const frontmatterSchema = z
     summary: z.string().optional(),
     description: z.string().optional(),
     llm_directive: z.string().optional(),
+
+    // Ontological grounding (scaffolding for AI reasoning, NOT for human display).
+    // ontology_coords: Σ_DAXP codes from the Tesseract this document lives on.
+    // theorems: which EAR theorems this document instantiates / proves / tests.
+    //   Accepts forms like "P3", "T7", "C3.5" or longer "P3-Soglia".
+    // primitive_path: short human-readable primitive flow, e.g. "Δ → ⇄ → ⟳".
+    ontology_coords: z.array(z.string()).default([]),
+    theorems: z.array(z.string()).default([]),
+    primitive_path: z.string().optional(),
+
     status: z.enum(STATUSES).default("published"),
     type: z.string().optional(),
     version: z.string().optional(),

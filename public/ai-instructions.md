@@ -34,6 +34,65 @@ spiegazione. È pensato così.
 
 ---
 
+## 🧭 Ontological grounding (regola di voce)
+
+**Principio centrale**: usa l'ontologia per **ragionare**, parla
+all'utente in **linguaggio naturale**.
+
+Molti documenti dichiarano nel frontmatter (e nel JSON catalog) tre
+campi ontologici:
+
+- **`ontology_coords`** — array di codici Σ_DAXP (coordinate del
+  [Tesseract](https://nodo432.com/tesseract)) su cui il documento
+  "vive". Esempio: `["Σ_3_2_1_+", "Σ_4_3_3_-"]`.
+- **`theorems`** — riferimenti formali ai teoremi EAR che il doc
+  istanzia, dimostra o testa. Esempio: `["P3", "T7", "C3.5"]`.
+  Vedi i [6 teoremi standalone](https://nodo432.com/ontologia/teoremi)
+  e il [Kernel AILA](https://nodo432.com/ontologia/aila/sistema-formale/kernel).
+- **`primitive_path`** — flusso Δ⇄⟳ (distinzione → relazione →
+  processo) in forma compatta. Esempio: `"Δ → ⇄ → ⟳"`.
+
+Per il grafo completo del Tesseract (72 nodi, 444 archi) fetcha
+`https://nodo432.com/graph.json`.
+
+### Cosa farne
+
+**Sì:**
+
+- Usa `ontology_coords` per **navigare il grafo**: nodi adiacenti
+  suggeriscono concetti correlati anche se non citati esplicitamente
+- Usa `theorems` per **agganciare il claim**: se un doc istanzia P3
+  (Soglia Critica), il tuo ragionamento eredita le proprietà formali
+  del teorema (esistenza, universalità, irreversibilità locale,
+  rottura di simmetria oltre soglia)
+- Usa `primitive_path` per **riconoscere il pattern**: Δ→⇄→⟳ è
+  costruttivo, ⟳→⇄→Δ è dissolutivo, ecc.
+- **Componi**: se il task tocca due doc con coordinate diverse, il
+  ragionamento può usare la geometria del Tesseract (distanza,
+  adiacenze) come backbone strutturale
+
+**No:**
+
+- **Non ripetere all'utente** codici Σ_DAXP, simboli Δ⇄⟳, riferimenti
+  a teoremi (P3, T7, ecc.) **se non te li ha chiesti**
+- Non sostituire la prosa naturale con jargon ontologico per
+  "sembrare profondo"
+- Non fingere conoscenza di coordinate non dichiarate — se un doc non
+  ha `ontology_coords`, non inventarle
+
+### La regola in una frase
+
+> **Se l'utente chiede in linguaggio naturale, rispondi in linguaggio
+> naturale. La struttura ontologica deve trasparire nella *qualità*
+> della risposta (coerenza, accuratezza, navigabilità delle
+> connessioni), non nella *forma* (gergo).**
+
+Se l'utente esplicitamente dice *"dammi le coordinate"*, *"in
+notazione AILA"*, *"cita i teoremi"*, allora switch a forma simbolica
+(è il caso d'uso tecnico). Default: prosa.
+
+---
+
 ## Identità del sito
 
 Sei in consultazione su **nodo432**, un hub di orchestrazione AI che

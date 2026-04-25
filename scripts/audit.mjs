@@ -218,6 +218,31 @@ function audit() {
       warn(`    ${n.slug}`);
   }
 
+  // 10. Ontological grounding (optional fields, but if present must be well-formed)
+  // Σ_DAXP: D=1-4, A=1-3, X=1-3, P=+|-
+  const SIGMA_PATTERN = /^Σ_[1-4]_[1-3]_[1-3]_[+\-]$/;
+  // Theorem refs: P1-P8, T1-T7, C<n>.<n>, optionally with hyphen-suffix
+  const THEOREM_PATTERN = /^(P[1-8]|T[1-7]|C\d+(\.\d+)?)([\-_].*)?$/;
+
+  const badCoords = [];
+  const badTheorems = [];
+  for (const n of all) {
+    for (const c of n.ontology_coords ?? []) {
+      if (!SIGMA_PATTERN.test(c)) badCoords.push({ from: n.slug, value: c });
+    }
+    for (const t of n.theorems ?? []) {
+      if (!THEOREM_PATTERN.test(t)) badTheorems.push({ from: n.slug, value: t });
+    }
+  }
+  if (badCoords.length > 0) {
+    warn(`${badCoords.length} ontology_coords with bad shape (expected Σ_D_A_X_P, e.g. Σ_3_2_1_+):`);
+    for (const b of badCoords.slice(0, 5)) warn(`    ${b.from}  →  "${b.value}"`);
+  }
+  if (badTheorems.length > 0) {
+    warn(`${badTheorems.length} theorems refs with bad shape (expected P1-P8 / T1-T7 / C<n>.<n>):`);
+    for (const b of badTheorems.slice(0, 5)) warn(`    ${b.from}  →  "${b.value}"`);
+  }
+
   // Stats
   console.log(`Catalog: ${catalog.sections.length} sections, ${catalog.documents.length} documents`);
   console.log(`  with type:     ${all.filter((n) => n.type).length}/${all.length}`);

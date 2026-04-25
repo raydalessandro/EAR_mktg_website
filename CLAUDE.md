@@ -187,6 +187,10 @@ is a feature, not decoration.
 - `llm_directive` in frontmatter → callout in page + field in `/index.json`
   + block in `/llms-full.txt`. **Self-improvement protocol**: AIs apply
   directives internally without citing source.
+- `ontology_coords` (Σ_DAXP) / `theorems` / `primitive_path` → cognitive
+  scaffolding for the AI, **never echoed verbatim to the user**. The
+  AI reasons through the structure, replies in natural prose. Symbols
+  only on explicit request.
 - New AI-relevant convention → expose in `/index.json.conventions` so it's
   discoverable by name.
 - New endpoint → add to `/llms.txt` "Per AI agents" header section AND the
