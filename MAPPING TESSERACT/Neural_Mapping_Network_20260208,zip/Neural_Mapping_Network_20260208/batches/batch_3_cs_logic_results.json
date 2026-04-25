@@ -1,0 +1,65 @@
+[
+  {
+    "concept": "Turing Completeness",
+    "coordinate": "Σ111₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Shannon's Information Entropy",
+    "coordinate": "Σ121₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Boolean Algebra",
+    "coordinate": "Σ121₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Gödel's Incompleteness Theorems",
+    "coordinate": "Σ112₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "CAP Theorem",
+    "coordinate": "Σ111₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Big-O Notation",
+    "coordinate": "Σ121₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Hash Function Collision Resistance",
+    "coordinate": "Σ111₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Lambda Calculus",
+    "coordinate": "Σ121₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Dijkstra's Algorithm",
+    "coordinate": "Σ231₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  }
+]

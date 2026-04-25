@@ -1,0 +1,72 @@
+[
+  {
+    "concept": "Wave-Particle Duality",
+    "coordinate": "Σ411₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Heisenberg Uncertainty Principle",
+    "coordinate": "T7.C7.4",
+    "category": "constraint",
+    "status": "VALID",
+    "confidence": 0.9
+  },
+  {
+    "concept": "Superposition Principle",
+    "coordinate": "Σ421₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Pauli Exclusion Principle",
+    "coordinate": "Σ411₋",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Quantum Entanglement",
+    "coordinate": "Σ421₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "No-Cloning Theorem",
+    "coordinate": "T7.C7.3",
+    "category": "constraint",
+    "status": "VALID",
+    "confidence": 0.9
+  },
+  {
+    "concept": "Schrödinger Equation",
+    "coordinate": "Σ431₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Quantum Tunneling",
+    "coordinate": "Σ431₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Measurement Problem / Wavefunction Collapse",
+    "coordinate": "Σ431₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.616
+  },
+  {
+    "concept": "Spin (Intrinsic Angular Momentum)",
+    "coordinate": "Σ411₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "concept": "Kepler's Laws of Planetary Motion",
+    "coordinate": "Σ321₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Galilean Relativity",
+    "coordinate": "Σ311₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Bernoulli's Principle",
+    "coordinate": "Σ321₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Pascal's Principle",
+    "coordinate": "Σ321₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Ideal Gas Law",
+    "coordinate": "Σ321₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Snell's Law",
+    "coordinate": "Σ221₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Doppler Effect",
+    "coordinate": "Σ221₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Faraday's Law of Induction",
+    "coordinate": "Σ431₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Lenz's Law",
+    "coordinate": "Σ421₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Ampère's Law",
+    "coordinate": "Σ321₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  }
+]

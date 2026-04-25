@@ -1,0 +1,72 @@
+[
+  {
+    "concept": "Second Law of Thermodynamics",
+    "coordinate": "Σ431₋",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "First Law of Thermodynamics (Energy Conservation)",
+    "coordinate": "Σ121₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Entropy (Boltzmann)",
+    "coordinate": "Σ121₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Carnot Cycle",
+    "coordinate": "Σ331₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Gibbs Free Energy",
+    "coordinate": "Σ321₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Maxwell-Boltzmann Distribution",
+    "coordinate": "Σ321₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Heat Engine (Clausius Statement)",
+    "coordinate": "Σ311₋",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Reversible vs Irreversible Processes",
+    "coordinate": "Σ411₋",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Le Chatelier's Principle",
+    "coordinate": "Σ331₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  },
+  {
+    "concept": "Zeroth Law of Thermodynamics",
+    "coordinate": "Σ121₊",
+    "category": "node",
+    "status": "UNCERTAIN",
+    "confidence": 0.88
+  }
+]
