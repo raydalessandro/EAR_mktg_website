@@ -80,7 +80,15 @@ npm run typecheck
 
 ## Deploy
 
-Push su `main` → GitHub Actions builda e pubblica su GitHub Pages.
+Hosted su **Vercel** (Next.js framework preset). Ogni push su `main`
+deploya in produzione, ogni push su altri branch o PR genera un URL di
+preview automatico.
+
+Dominio: `nodo432.com` configurato come custom domain in Vercel.
+
+> Il file `public/CNAME` resta nel repo come backup: se in futuro si
+> torna a GitHub Pages basta riabilitare la action e i DNS, niente
+> altro da cambiare nel codice.
 
 ## Licenza
 
