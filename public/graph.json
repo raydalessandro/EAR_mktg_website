@@ -1,0 +1,4802 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "nodo432": "https://nodo432.com/",
+    "tesseract": "https://nodo432.com/tesseract/",
+    "D": "nodo432:dimension",
+    "A": "nodo432:attribute",
+    "X": "nodo432:complexity",
+    "P": "nodo432:polarity"
+  },
+  "@id": "https://nodo432.com/graph.json",
+  "@type": "Dataset",
+  "name": "Tesseract — Matrix 72 graph",
+  "description": "72-node ontological lattice with 444 edges, derived from first principles in the Tesseract paper v2.",
+  "url": "https://nodo432.com/tesseract",
+  "isBasedOn": "https://nodo432.com/tesseract/paper",
+  "sameAs": "https://nodo432.com/downloads/tesseract/grafo/GRAFO_MATRIX_72_EXPANDED.json",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "creator": {
+    "@type": "Person",
+    "name": "Alessio Marrone"
+  },
+  "datePublished": "2026-02-08",
+  "dateModified": "2026-04-25",
+  "keywords": [
+    "tesseract",
+    "ontology",
+    "knowledge-graph",
+    "EAR",
+    "AILA",
+    "matrix-72"
+  ],
+  "structure": {
+    "dimensions": 4,
+    "attributes": 3,
+    "complexity_levels": 3,
+    "polarities": 2,
+    "total_nodes": 72,
+    "total_edges": 444,
+    "asymmetry": "1/36"
+  },
+  "related": {
+    "paper": "https://nodo432.com/tesseract/paper",
+    "paper_appendix": "https://nodo432.com/tesseract/appendix-derivazione",
+    "visualization": "https://nodo432.com/tesseract/visualizzazione",
+    "bridge_signature": "https://nodo432.com/tesseract/bridge-signature",
+    "base_graph": "https://nodo432.com/downloads/tesseract/grafo/GRAFO_MATRIX_72.json",
+    "expanded_graph": "https://nodo432.com/downloads/tesseract/grafo/GRAFO_MATRIX_72_EXPANDED.json",
+    "ai_instructions": "https://nodo432.com/ai-instructions.md",
+    "catalog": "https://nodo432.com/index.json"
+  },
+  "notice": "Authoritative source: load this graph for spatial/structural reasoning instead of inferring connections from prose.",
+  "data": {
+    "meta": {
+      "name": "GRAFO_MATRIX_72_EXPANDED",
+      "version": "1.0",
+      "total_nodes": 72,
+      "total_edges": 630,
+      "description": "Cristallo ontologico — 72 simboli con tutti gli edges espliciti"
+    },
+    "nodes": {
+      "Σ_1_1_1_+": {
+        "D": 1,
+        "A": 1,
+        "X": 1,
+        "P": "+",
+        "coords": "linear.Δ.foundational.expansion"
+      },
+      "Σ_1_1_1_-": {
+        "D": 1,
+        "A": 1,
+        "X": 1,
+        "P": "-",
+        "coords": "linear.Δ.foundational.contraction"
+      },
+      "Σ_1_1_2_+": {
+        "D": 1,
+        "A": 1,
+        "X": 2,
+        "P": "+",
+        "coords": "linear.Δ.recursive.expansion"
+      },
+      "Σ_1_1_2_-": {
+        "D": 1,
+        "A": 1,
+        "X": 2,
+        "P": "-",
+        "coords": "linear.Δ.recursive.contraction"
+      },
+      "Σ_1_1_3_+": {
+        "D": 1,
+        "A": 1,
+        "X": 3,
+        "P": "+",
+        "coords": "linear.Δ.synthetic.expansion"
+      },
+      "Σ_1_1_3_-": {
+        "D": 1,
+        "A": 1,
+        "X": 3,
+        "P": "-",
+        "coords": "linear.Δ.synthetic.contraction"
+      },
+      "Σ_1_2_1_+": {
+        "D": 1,
+        "A": 2,
+        "X": 1,
+        "P": "+",
+        "coords": "linear.⇄.foundational.expansion"
+      },
+      "Σ_1_2_1_-": {
+        "D": 1,
+        "A": 2,
+        "X": 1,
+        "P": "-",
+        "coords": "linear.⇄.foundational.contraction"
+      },
+      "Σ_1_2_2_+": {
+        "D": 1,
+        "A": 2,
+        "X": 2,
+        "P": "+",
+        "coords": "linear.⇄.recursive.expansion"
+      },
+      "Σ_1_2_2_-": {
+        "D": 1,
+        "A": 2,
+        "X": 2,
+        "P": "-",
+        "coords": "linear.⇄.recursive.contraction"
+      },
+      "Σ_1_2_3_+": {
+        "D": 1,
+        "A": 2,
+        "X": 3,
+        "P": "+",
+        "coords": "linear.⇄.synthetic.expansion"
+      },
+      "Σ_1_2_3_-": {
+        "D": 1,
+        "A": 2,
+        "X": 3,
+        "P": "-",
+        "coords": "linear.⇄.synthetic.contraction"
+      },
+      "Σ_1_3_1_+": {
+        "D": 1,
+        "A": 3,
+        "X": 1,
+        "P": "+",
+        "coords": "linear.⟳.foundational.expansion"
+      },
+      "Σ_1_3_1_-": {
+        "D": 1,
+        "A": 3,
+        "X": 1,
+        "P": "-",
+        "coords": "linear.⟳.foundational.contraction"
+      },
+      "Σ_1_3_2_+": {
+        "D": 1,
+        "A": 3,
+        "X": 2,
+        "P": "+",
+        "coords": "linear.⟳.recursive.expansion"
+      },
+      "Σ_1_3_2_-": {
+        "D": 1,
+        "A": 3,
+        "X": 2,
+        "P": "-",
+        "coords": "linear.⟳.recursive.contraction"
+      },
+      "Σ_1_3_3_+": {
+        "D": 1,
+        "A": 3,
+        "X": 3,
+        "P": "+",
+        "coords": "linear.⟳.synthetic.expansion"
+      },
+      "Σ_1_3_3_-": {
+        "D": 1,
+        "A": 3,
+        "X": 3,
+        "P": "-",
+        "coords": "linear.⟳.synthetic.contraction"
+      },
+      "Σ_2_1_1_+": {
+        "D": 2,
+        "A": 1,
+        "X": 1,
+        "P": "+",
+        "coords": "planar.Δ.foundational.expansion"
+      },
+      "Σ_2_1_1_-": {
+        "D": 2,
+        "A": 1,
+        "X": 1,
+        "P": "-",
+        "coords": "planar.Δ.foundational.contraction"
+      },
+      "Σ_2_1_2_+": {
+        "D": 2,
+        "A": 1,
+        "X": 2,
+        "P": "+",
+        "coords": "planar.Δ.recursive.expansion"
+      },
+      "Σ_2_1_2_-": {
+        "D": 2,
+        "A": 1,
+        "X": 2,
+        "P": "-",
+        "coords": "planar.Δ.recursive.contraction"
+      },
+      "Σ_2_1_3_+": {
+        "D": 2,
+        "A": 1,
+        "X": 3,
+        "P": "+",
+        "coords": "planar.Δ.synthetic.expansion"
+      },
+      "Σ_2_1_3_-": {
+        "D": 2,
+        "A": 1,
+        "X": 3,
+        "P": "-",
+        "coords": "planar.Δ.synthetic.contraction"
+      },
+      "Σ_2_2_1_+": {
+        "D": 2,
+        "A": 2,
+        "X": 1,
+        "P": "+",
+        "coords": "planar.⇄.foundational.expansion"
+      },
+      "Σ_2_2_1_-": {
+        "D": 2,
+        "A": 2,
+        "X": 1,
+        "P": "-",
+        "coords": "planar.⇄.foundational.contraction"
+      },
+      "Σ_2_2_2_+": {
+        "D": 2,
+        "A": 2,
+        "X": 2,
+        "P": "+",
+        "coords": "planar.⇄.recursive.expansion"
+      },
+      "Σ_2_2_2_-": {
+        "D": 2,
+        "A": 2,
+        "X": 2,
+        "P": "-",
+        "coords": "planar.⇄.recursive.contraction"
+      },
+      "Σ_2_2_3_+": {
+        "D": 2,
+        "A": 2,
+        "X": 3,
+        "P": "+",
+        "coords": "planar.⇄.synthetic.expansion"
+      },
+      "Σ_2_2_3_-": {
+        "D": 2,
+        "A": 2,
+        "X": 3,
+        "P": "-",
+        "coords": "planar.⇄.synthetic.contraction"
+      },
+      "Σ_2_3_1_+": {
+        "D": 2,
+        "A": 3,
+        "X": 1,
+        "P": "+",
+        "coords": "planar.⟳.foundational.expansion"
+      },
+      "Σ_2_3_1_-": {
+        "D": 2,
+        "A": 3,
+        "X": 1,
+        "P": "-",
+        "coords": "planar.⟳.foundational.contraction"
+      },
+      "Σ_2_3_2_+": {
+        "D": 2,
+        "A": 3,
+        "X": 2,
+        "P": "+",
+        "coords": "planar.⟳.recursive.expansion"
+      },
+      "Σ_2_3_2_-": {
+        "D": 2,
+        "A": 3,
+        "X": 2,
+        "P": "-",
+        "coords": "planar.⟳.recursive.contraction"
+      },
+      "Σ_2_3_3_+": {
+        "D": 2,
+        "A": 3,
+        "X": 3,
+        "P": "+",
+        "coords": "planar.⟳.synthetic.expansion"
+      },
+      "Σ_2_3_3_-": {
+        "D": 2,
+        "A": 3,
+        "X": 3,
+        "P": "-",
+        "coords": "planar.⟳.synthetic.contraction"
+      },
+      "Σ_3_1_1_+": {
+        "D": 3,
+        "A": 1,
+        "X": 1,
+        "P": "+",
+        "coords": "volumetric.Δ.foundational.expansion"
+      },
+      "Σ_3_1_1_-": {
+        "D": 3,
+        "A": 1,
+        "X": 1,
+        "P": "-",
+        "coords": "volumetric.Δ.foundational.contraction"
+      },
+      "Σ_3_1_2_+": {
+        "D": 3,
+        "A": 1,
+        "X": 2,
+        "P": "+",
+        "coords": "volumetric.Δ.recursive.expansion"
+      },
+      "Σ_3_1_2_-": {
+        "D": 3,
+        "A": 1,
+        "X": 2,
+        "P": "-",
+        "coords": "volumetric.Δ.recursive.contraction"
+      },
+      "Σ_3_1_3_+": {
+        "D": 3,
+        "A": 1,
+        "X": 3,
+        "P": "+",
+        "coords": "volumetric.Δ.synthetic.expansion"
+      },
+      "Σ_3_1_3_-": {
+        "D": 3,
+        "A": 1,
+        "X": 3,
+        "P": "-",
+        "coords": "volumetric.Δ.synthetic.contraction"
+      },
+      "Σ_3_2_1_+": {
+        "D": 3,
+        "A": 2,
+        "X": 1,
+        "P": "+",
+        "coords": "volumetric.⇄.foundational.expansion"
+      },
+      "Σ_3_2_1_-": {
+        "D": 3,
+        "A": 2,
+        "X": 1,
+        "P": "-",
+        "coords": "volumetric.⇄.foundational.contraction"
+      },
+      "Σ_3_2_2_+": {
+        "D": 3,
+        "A": 2,
+        "X": 2,
+        "P": "+",
+        "coords": "volumetric.⇄.recursive.expansion"
+      },
+      "Σ_3_2_2_-": {
+        "D": 3,
+        "A": 2,
+        "X": 2,
+        "P": "-",
+        "coords": "volumetric.⇄.recursive.contraction"
+      },
+      "Σ_3_2_3_+": {
+        "D": 3,
+        "A": 2,
+        "X": 3,
+        "P": "+",
+        "coords": "volumetric.⇄.synthetic.expansion"
+      },
+      "Σ_3_2_3_-": {
+        "D": 3,
+        "A": 2,
+        "X": 3,
+        "P": "-",
+        "coords": "volumetric.⇄.synthetic.contraction"
+      },
+      "Σ_3_3_1_+": {
+        "D": 3,
+        "A": 3,
+        "X": 1,
+        "P": "+",
+        "coords": "volumetric.⟳.foundational.expansion"
+      },
+      "Σ_3_3_1_-": {
+        "D": 3,
+        "A": 3,
+        "X": 1,
+        "P": "-",
+        "coords": "volumetric.⟳.foundational.contraction"
+      },
+      "Σ_3_3_2_+": {
+        "D": 3,
+        "A": 3,
+        "X": 2,
+        "P": "+",
+        "coords": "volumetric.⟳.recursive.expansion"
+      },
+      "Σ_3_3_2_-": {
+        "D": 3,
+        "A": 3,
+        "X": 2,
+        "P": "-",
+        "coords": "volumetric.⟳.recursive.contraction"
+      },
+      "Σ_3_3_3_+": {
+        "D": 3,
+        "A": 3,
+        "X": 3,
+        "P": "+",
+        "coords": "volumetric.⟳.synthetic.expansion"
+      },
+      "Σ_3_3_3_-": {
+        "D": 3,
+        "A": 3,
+        "X": 3,
+        "P": "-",
+        "coords": "volumetric.⟳.synthetic.contraction"
+      },
+      "Σ_4_1_1_+": {
+        "D": 4,
+        "A": 1,
+        "X": 1,
+        "P": "+",
+        "coords": "temporal.Δ.foundational.expansion"
+      },
+      "Σ_4_1_1_-": {
+        "D": 4,
+        "A": 1,
+        "X": 1,
+        "P": "-",
+        "coords": "temporal.Δ.foundational.contraction"
+      },
+      "Σ_4_1_2_+": {
+        "D": 4,
+        "A": 1,
+        "X": 2,
+        "P": "+",
+        "coords": "temporal.Δ.recursive.expansion"
+      },
+      "Σ_4_1_2_-": {
+        "D": 4,
+        "A": 1,
+        "X": 2,
+        "P": "-",
+        "coords": "temporal.Δ.recursive.contraction"
+      },
+      "Σ_4_1_3_+": {
+        "D": 4,
+        "A": 1,
+        "X": 3,
+        "P": "+",
+        "coords": "temporal.Δ.synthetic.expansion"
+      },
+      "Σ_4_1_3_-": {
+        "D": 4,
+        "A": 1,
+        "X": 3,
+        "P": "-",
+        "coords": "temporal.Δ.synthetic.contraction"
+      },
+      "Σ_4_2_1_+": {
+        "D": 4,
+        "A": 2,
+        "X": 1,
+        "P": "+",
+        "coords": "temporal.⇄.foundational.expansion"
+      },
+      "Σ_4_2_1_-": {
+        "D": 4,
+        "A": 2,
+        "X": 1,
+        "P": "-",
+        "coords": "temporal.⇄.foundational.contraction"
+      },
+      "Σ_4_2_2_+": {
+        "D": 4,
+        "A": 2,
+        "X": 2,
+        "P": "+",
+        "coords": "temporal.⇄.recursive.expansion"
+      },
+      "Σ_4_2_2_-": {
+        "D": 4,
+        "A": 2,
+        "X": 2,
+        "P": "-",
+        "coords": "temporal.⇄.recursive.contraction"
+      },
+      "Σ_4_2_3_+": {
+        "D": 4,
+        "A": 2,
+        "X": 3,
+        "P": "+",
+        "coords": "temporal.⇄.synthetic.expansion"
+      },
+      "Σ_4_2_3_-": {
+        "D": 4,
+        "A": 2,
+        "X": 3,
+        "P": "-",
+        "coords": "temporal.⇄.synthetic.contraction"
+      },
+      "Σ_4_3_1_+": {
+        "D": 4,
+        "A": 3,
+        "X": 1,
+        "P": "+",
+        "coords": "temporal.⟳.foundational.expansion"
+      },
+      "Σ_4_3_1_-": {
+        "D": 4,
+        "A": 3,
+        "X": 1,
+        "P": "-",
+        "coords": "temporal.⟳.foundational.contraction"
+      },
+      "Σ_4_3_2_+": {
+        "D": 4,
+        "A": 3,
+        "X": 2,
+        "P": "+",
+        "coords": "temporal.⟳.recursive.expansion"
+      },
+      "Σ_4_3_2_-": {
+        "D": 4,
+        "A": 3,
+        "X": 2,
+        "P": "-",
+        "coords": "temporal.⟳.recursive.contraction"
+      },
+      "Σ_4_3_3_+": {
+        "D": 4,
+        "A": 3,
+        "X": 3,
+        "P": "+",
+        "coords": "temporal.⟳.synthetic.expansion"
+      },
+      "Σ_4_3_3_-": {
+        "D": 4,
+        "A": 3,
+        "X": 3,
+        "P": "-",
+        "coords": "temporal.⟳.synthetic.contraction"
+      }
+    },
+    "edges": [
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_2_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_2_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_3_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_3_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_4_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_4_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_1_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_1_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_1_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_1_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_2_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_2_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_3_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_3_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_4_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_4_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_1_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_1_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_1_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_2_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_2_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_3_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_3_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_4_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_1_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_1_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_2_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_2_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_3_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_3_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_4_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_1_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_2_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_2_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_3_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_-",
+        "target": "Σ_2_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_-",
+        "target": "Σ_2_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_-",
+        "target": "Σ_3_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_-",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_-",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_3_-",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_3_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_3_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_4_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_4_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_2_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_2_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_2_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_2_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_3_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_3_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_4_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_4_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_2_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_2_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_2_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_3_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_3_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_4_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_2_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_2_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_3_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_3_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_4_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_+",
+        "target": "Σ_2_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_+",
+        "target": "Σ_3_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_+",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_+",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_+",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_-",
+        "target": "Σ_3_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_-",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_-",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_1_3_-",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_4_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_4_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_3_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_3_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_3_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_4_1_1_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_4_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_3_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_3_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_4_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_-",
+        "target": "Σ_3_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_-",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_-",
+        "target": "Σ_4_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_2_-",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_3_+",
+        "target": "Σ_3_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_3_+",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_3_+",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_3_-",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_1_3_-",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_1_1_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_-",
+        "target": "Σ_4_1_2_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_-",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_-",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_1_-",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_2_+",
+        "target": "Σ_4_1_2_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_2_+",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_2_+",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_2_-",
+        "target": "Σ_4_1_3_+",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_2_-",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_1_3_+",
+        "target": "Σ_4_1_3_-",
+        "type": "mother",
+        "symbol": "א",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_2_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_2_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_3_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_3_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_4_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_4_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_1_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_1_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_1_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_1_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_2_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_2_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_3_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_3_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_4_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_4_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_1_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_1_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_1_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_2_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_2_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_3_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_3_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_4_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_1_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_1_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_2_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_2_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_3_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_3_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_4_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_1_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_2_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_2_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_3_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_-",
+        "target": "Σ_2_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_-",
+        "target": "Σ_2_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_-",
+        "target": "Σ_3_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_-",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_-",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_2_3_-",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_3_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_3_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_4_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_4_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_2_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_2_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_2_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_2_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_3_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_3_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_4_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_4_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_2_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_2_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_2_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_3_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_3_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_4_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_2_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_2_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_3_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_3_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_4_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_+",
+        "target": "Σ_2_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_+",
+        "target": "Σ_3_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_+",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_+",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_+",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_-",
+        "target": "Σ_3_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_-",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_-",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_2_3_-",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_4_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_4_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_3_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_3_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_3_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_4_2_1_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_4_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_3_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_3_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_4_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_-",
+        "target": "Σ_3_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_-",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_-",
+        "target": "Σ_4_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_2_-",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_3_+",
+        "target": "Σ_3_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_3_+",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_3_+",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_3_-",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_2_3_-",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_2_1_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_-",
+        "target": "Σ_4_2_2_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_-",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_-",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_1_-",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_2_+",
+        "target": "Σ_4_2_2_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_2_+",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_2_+",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_2_-",
+        "target": "Σ_4_2_3_+",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_2_-",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_2_3_+",
+        "target": "Σ_4_2_3_-",
+        "type": "mother",
+        "symbol": "מ",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_1_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_1_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_1_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_1_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_1_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_2_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_2_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_3_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_3_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_4_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_4_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_1_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_1_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_1_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_1_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_2_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_2_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_3_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_3_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_4_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_4_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_1_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_1_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_1_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_2_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_2_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_3_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_3_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_4_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_1_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_1_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_2_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_2_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_3_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_3_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_4_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_1_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_2_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_2_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_3_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_-",
+        "target": "Σ_2_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_-",
+        "target": "Σ_2_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_-",
+        "target": "Σ_3_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_-",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_-",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_3_3_-",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_2_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_2_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_2_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_2_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_2_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_3_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_3_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_4_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_4_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_2_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_2_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_2_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_2_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_3_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_3_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_4_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_4_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_2_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_2_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_2_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_3_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_3_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_4_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_2_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_2_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_3_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_3_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_4_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_+",
+        "target": "Σ_2_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_+",
+        "target": "Σ_3_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_+",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_+",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_+",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_-",
+        "target": "Σ_3_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_-",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_-",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_2_3_3_-",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_3_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_3_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_3_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_3_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_4_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_4_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_3_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_3_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_3_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_4_3_1_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_4_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_3_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_3_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_4_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_-",
+        "target": "Σ_3_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_-",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_-",
+        "target": "Σ_4_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_2_-",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_3_+",
+        "target": "Σ_3_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_3_+",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_3_+",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_3_-",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_3_3_3_-",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_+",
+        "target": "Σ_4_3_1_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_+",
+        "target": "Σ_4_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_+",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_+",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_+",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_-",
+        "target": "Σ_4_3_2_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_-",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_-",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_1_-",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_2_+",
+        "target": "Σ_4_3_2_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_2_+",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_2_+",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_2_-",
+        "target": "Σ_4_3_3_+",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_2_-",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_4_3_3_+",
+        "target": "Σ_4_3_3_-",
+        "type": "mother",
+        "symbol": "ש",
+        "Φ": 9
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_1_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_2_1_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_2_1_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_1_1_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_1_2_1_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_2_1_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_1_1_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_1_2_2_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_2_1_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_1_1_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_1_2_2_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_2_1_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_1_2_3_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_2_1_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_3_-",
+        "target": "Σ_1_2_3_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_3_-",
+        "target": "Σ_2_1_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_2_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_3_1_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_2_2_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_1_2_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_1_3_1_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_2_2_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_1_2_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_1_3_2_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_2_2_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_1_2_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_1_3_2_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_2_2_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_1_3_3_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_2_2_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_3_-",
+        "target": "Σ_1_3_3_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_2_3_-",
+        "target": "Σ_2_2_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_1_3_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_2_3_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_1_3_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_2_3_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_1_3_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_2_3_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_1_3_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_2_3_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_2_3_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_3_3_-",
+        "target": "Σ_2_3_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_1_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_2_1_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_3_1_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_2_1_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_2_2_1_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_3_1_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_2_1_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_2_2_2_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_3_1_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_2_1_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_2_2_2_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_3_1_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_3_+",
+        "target": "Σ_2_2_3_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_3_+",
+        "target": "Σ_3_1_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_3_-",
+        "target": "Σ_2_2_3_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_1_3_-",
+        "target": "Σ_3_1_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_2_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_3_1_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_3_2_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_2_2_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_2_3_1_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_3_2_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_2_2_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_2_3_2_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_3_2_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_2_2_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_2_3_2_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_3_2_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_3_+",
+        "target": "Σ_2_3_3_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_3_+",
+        "target": "Σ_3_2_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_3_-",
+        "target": "Σ_2_3_3_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_2_3_-",
+        "target": "Σ_3_2_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_2_3_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_3_3_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_2_3_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_3_3_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_2_3_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_3_3_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_2_3_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_3_3_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_3_+",
+        "target": "Σ_3_3_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_2_3_3_-",
+        "target": "Σ_3_3_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_1_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_2_1_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_4_1_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_3_1_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_3_2_1_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_4_1_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_3_1_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_3_2_2_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_4_1_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_2_-",
+        "target": "Σ_3_1_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_2_-",
+        "target": "Σ_3_2_2_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_2_-",
+        "target": "Σ_4_1_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_3_+",
+        "target": "Σ_3_2_3_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_3_+",
+        "target": "Σ_4_1_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_3_-",
+        "target": "Σ_3_2_3_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_1_3_-",
+        "target": "Σ_4_1_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_2_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_3_1_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_4_2_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_3_2_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_3_3_1_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_4_2_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_3_2_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_3_3_2_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_4_2_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_2_-",
+        "target": "Σ_3_2_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_2_-",
+        "target": "Σ_3_3_2_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_2_-",
+        "target": "Σ_4_2_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_3_+",
+        "target": "Σ_3_3_3_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_3_+",
+        "target": "Σ_4_2_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_3_-",
+        "target": "Σ_3_3_3_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_2_3_-",
+        "target": "Σ_4_2_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_3_3_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_4_3_1_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_3_3_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_4_3_1_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_3_3_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_4_3_2_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_2_-",
+        "target": "Σ_3_3_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_2_-",
+        "target": "Σ_4_3_2_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_3_+",
+        "target": "Σ_4_3_3_+",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_3_3_3_-",
+        "target": "Σ_4_3_3_-",
+        "type": "double_D",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_1_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_2_1_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_1_-",
+        "target": "Σ_4_1_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_1_-",
+        "target": "Σ_4_2_1_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_2_+",
+        "target": "Σ_4_1_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_2_+",
+        "target": "Σ_4_2_2_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_2_-",
+        "target": "Σ_4_1_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_2_-",
+        "target": "Σ_4_2_2_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_3_+",
+        "target": "Σ_4_2_3_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_1_3_-",
+        "target": "Σ_4_2_3_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_2_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_3_1_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_1_-",
+        "target": "Σ_4_2_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_1_-",
+        "target": "Σ_4_3_1_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_2_+",
+        "target": "Σ_4_2_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_2_+",
+        "target": "Σ_4_3_2_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_2_-",
+        "target": "Σ_4_2_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_2_-",
+        "target": "Σ_4_3_2_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_3_+",
+        "target": "Σ_4_3_3_+",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_2_3_-",
+        "target": "Σ_4_3_3_-",
+        "type": "double_A",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_3_1_+",
+        "target": "Σ_4_3_2_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_3_1_-",
+        "target": "Σ_4_3_2_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_3_2_+",
+        "target": "Σ_4_3_3_+",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_4_3_2_-",
+        "target": "Σ_4_3_3_-",
+        "type": "double_X",
+        "Φ": 3
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_1_2_+",
+        "type": "simple",
+        "mode": "D1_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_1_1_-",
+        "target": "Σ_1_1_2_-",
+        "type": "simple",
+        "mode": "D1_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_1_1_3_+",
+        "type": "simple",
+        "mode": "D1_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_1_2_-",
+        "target": "Σ_1_1_3_-",
+        "type": "simple",
+        "mode": "D1_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_2_2_+",
+        "type": "simple",
+        "mode": "D1_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_2_1_-",
+        "target": "Σ_1_2_2_-",
+        "type": "simple",
+        "mode": "D1_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_1_2_3_+",
+        "type": "simple",
+        "mode": "D1_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_2_2_-",
+        "target": "Σ_1_2_3_-",
+        "type": "simple",
+        "mode": "D1_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_1_3_2_+",
+        "type": "simple",
+        "mode": "D1_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_3_1_-",
+        "target": "Σ_1_3_2_-",
+        "type": "simple",
+        "mode": "D1_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_1_3_3_+",
+        "type": "simple",
+        "mode": "D1_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_3_2_-",
+        "target": "Σ_1_3_3_-",
+        "type": "simple",
+        "mode": "D1_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_1_2_+",
+        "type": "simple",
+        "mode": "D2_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_1_1_-",
+        "target": "Σ_2_1_2_-",
+        "type": "simple",
+        "mode": "D2_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_2_1_3_+",
+        "type": "simple",
+        "mode": "D2_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_1_2_-",
+        "target": "Σ_2_1_3_-",
+        "type": "simple",
+        "mode": "D2_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_2_2_+",
+        "type": "simple",
+        "mode": "D2_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_2_1_-",
+        "target": "Σ_2_2_2_-",
+        "type": "simple",
+        "mode": "D2_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_2_2_3_+",
+        "type": "simple",
+        "mode": "D2_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_2_2_-",
+        "target": "Σ_2_2_3_-",
+        "type": "simple",
+        "mode": "D2_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_2_3_2_+",
+        "type": "simple",
+        "mode": "D2_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_3_1_-",
+        "target": "Σ_2_3_2_-",
+        "type": "simple",
+        "mode": "D2_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_2_3_3_+",
+        "type": "simple",
+        "mode": "D2_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_2_3_2_-",
+        "target": "Σ_2_3_3_-",
+        "type": "simple",
+        "mode": "D2_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_1_2_+",
+        "type": "simple",
+        "mode": "D3_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_1_1_-",
+        "target": "Σ_3_1_2_-",
+        "type": "simple",
+        "mode": "D3_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_3_1_3_+",
+        "type": "simple",
+        "mode": "D3_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_1_2_-",
+        "target": "Σ_3_1_3_-",
+        "type": "simple",
+        "mode": "D3_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_2_2_+",
+        "type": "simple",
+        "mode": "D3_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_2_1_-",
+        "target": "Σ_3_2_2_-",
+        "type": "simple",
+        "mode": "D3_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_3_2_3_+",
+        "type": "simple",
+        "mode": "D3_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_2_2_-",
+        "target": "Σ_3_2_3_-",
+        "type": "simple",
+        "mode": "D3_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_3_3_2_+",
+        "type": "simple",
+        "mode": "D3_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_3_1_-",
+        "target": "Σ_3_3_2_-",
+        "type": "simple",
+        "mode": "D3_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_3_3_3_+",
+        "type": "simple",
+        "mode": "D3_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_3_3_2_-",
+        "target": "Σ_3_3_3_-",
+        "type": "simple",
+        "mode": "D3_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_1_2_+",
+        "type": "simple",
+        "mode": "D4_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_1_1_-",
+        "target": "Σ_4_1_2_-",
+        "type": "simple",
+        "mode": "D4_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_1_2_+",
+        "target": "Σ_4_1_3_+",
+        "type": "simple",
+        "mode": "D4_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_1_2_-",
+        "target": "Σ_4_1_3_-",
+        "type": "simple",
+        "mode": "D4_A1",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_2_2_+",
+        "type": "simple",
+        "mode": "D4_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_2_1_-",
+        "target": "Σ_4_2_2_-",
+        "type": "simple",
+        "mode": "D4_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_2_2_+",
+        "target": "Σ_4_2_3_+",
+        "type": "simple",
+        "mode": "D4_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_2_2_-",
+        "target": "Σ_4_2_3_-",
+        "type": "simple",
+        "mode": "D4_A2",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_3_1_+",
+        "target": "Σ_4_3_2_+",
+        "type": "simple",
+        "mode": "D4_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_3_1_-",
+        "target": "Σ_4_3_2_-",
+        "type": "simple",
+        "mode": "D4_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_3_2_+",
+        "target": "Σ_4_3_3_+",
+        "type": "simple",
+        "mode": "D4_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_4_3_2_-",
+        "target": "Σ_4_3_3_-",
+        "type": "simple",
+        "mode": "D4_A3",
+        "Φ": 1
+      },
+      {
+        "source": "Σ_1_1_1_+",
+        "target": "Σ_1_1_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_1_1_2_+",
+        "target": "Σ_1_1_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_1_1_3_+",
+        "target": "Σ_1_1_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_1_2_1_+",
+        "target": "Σ_1_2_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_1_2_2_+",
+        "target": "Σ_1_2_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_1_2_3_+",
+        "target": "Σ_1_2_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_1_3_1_+",
+        "target": "Σ_1_3_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_1_3_2_+",
+        "target": "Σ_1_3_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_1_3_3_+",
+        "target": "Σ_1_3_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_1_1_+",
+        "target": "Σ_2_1_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_1_2_+",
+        "target": "Σ_2_1_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_1_3_+",
+        "target": "Σ_2_1_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_2_1_+",
+        "target": "Σ_2_2_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_2_2_+",
+        "target": "Σ_2_2_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_2_3_+",
+        "target": "Σ_2_2_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_3_1_+",
+        "target": "Σ_2_3_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_3_2_+",
+        "target": "Σ_2_3_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_2_3_3_+",
+        "target": "Σ_2_3_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_1_1_+",
+        "target": "Σ_3_1_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_1_2_+",
+        "target": "Σ_3_1_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_1_3_+",
+        "target": "Σ_3_1_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_2_1_+",
+        "target": "Σ_3_2_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_2_2_+",
+        "target": "Σ_3_2_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_2_3_+",
+        "target": "Σ_3_2_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_3_1_+",
+        "target": "Σ_3_3_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_3_2_+",
+        "target": "Σ_3_3_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_3_3_3_+",
+        "target": "Σ_3_3_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_1_1_+",
+        "target": "Σ_4_1_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_1_2_+",
+        "target": "Σ_4_1_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_1_3_+",
+        "target": "Σ_4_1_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_2_1_+",
+        "target": "Σ_4_2_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_2_2_+",
+        "target": "Σ_4_2_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_2_3_+",
+        "target": "Σ_4_2_3_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_3_1_+",
+        "target": "Σ_4_3_1_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_3_2_+",
+        "target": "Σ_4_3_2_-",
+        "type": "complementary",
+        "Φ": 6
+      },
+      {
+        "source": "Σ_4_3_3_+",
+        "target": "Σ_4_3_3_-",
+        "type": "complementary",
+        "Φ": 6
+      }
+    ],
+    "stats": {
+      "nodes": 72,
+      "edges": 444,
+      "density": 0.17370892018779344,
+      "clustering": 0.44560994560994566,
+      "regularity": 0.6666666666666666,
+      "symmetry": 0.08170416594551044
+    }
+  }
+}

@@ -123,8 +123,11 @@ function buildCatalog({ sections, documents }) {
       raw_markdown: `Ogni pagina HTML ha un equivalente markdown aggiungendo .md all'URL. Esempio: ${SITE_URL}/ontologia → ${SITE_URL}/ontologia.md`,
       catalog: `${SITE_URL}/index.json contiene tutto questo catalogo, machine-readable`,
       llms_txt: `${SITE_URL}/llms.txt segue lo standard llmstxt.org`,
+      llms_full: `${SITE_URL}/llms-full.txt è la concatenazione completa di tutti i canonical markdown (~1 MB). Una sola fetch per avere tutto.`,
+      ai_instructions: `${SITE_URL}/ai-instructions.md è il "system prompt" pronto del sito — caricalo come contesto.`,
+      tesseract_graph: `${SITE_URL}/graph.json è il grafo JSON-LD del Tesseract (72 nodi, 444 archi). Autoritativo per ragionamento spaziale.`,
       future_mcp:
-        "Un server MCP è in roadmap (non ancora disponibile). Esporrà list_documents, read_document, get_section come tool MCP.",
+        "Un server MCP è in roadmap (non ancora disponibile). Esporrà list_documents, read_document, get_section, search come tool MCP.",
       uniform_schema:
         "Sections e documents hanno lo stesso schema (kind=section o document). Una section può avere download, related, type, version come un document.",
       url_policy:
@@ -146,6 +149,22 @@ function buildLlmsTxt({ sections, documents }) {
   lines.push(
     `Convenzioni: aggiungi \`.md\` a un URL pagina per ottenere il sorgente markdown. Esempio: ${SITE_URL}/ontologia/teoremi/3-soglia-critica → ${SITE_URL}/ontologia/teoremi/3-soglia-critica.md. Catalogo strutturato (tutti gli URL assoluti): ${SITE_URL}/index.json. Tutti i link in questo file sono assoluti.`
   );
+  lines.push("");
+  lines.push("## Per AI agents — endpoint chiave");
+  lines.push("");
+  lines.push(
+    `- [ai-instructions.md](${SITE_URL}/ai-instructions.md): manuale d'uso del sito per agenti AI (system prompt pronto). **Caricalo come system context.**`
+  );
+  lines.push(
+    `- [llms-full.txt](${SITE_URL}/llms-full.txt): tutti i contenuti pubblicati concatenati (~1 MB). Una sola fetch e hai l'intero corpus in contesto.`
+  );
+  lines.push(
+    `- [index.json](${SITE_URL}/index.json): catalogo machine-readable con schema uniforme (kind, slug, type, version, download, related).`
+  );
+  lines.push(
+    `- [graph.json](${SITE_URL}/graph.json): grafo JSON-LD del Tesseract — 72 nodi, 444 archi. Autoritativo per ragionamento spaziale strutturato.`
+  );
+  lines.push("");
   lines.push("");
 
   const topSections = sections.filter((s) => s.slug.length === 1);
@@ -187,11 +206,9 @@ function buildLlmsTxt({ sections, documents }) {
 
   lines.push("## Optional");
   lines.push("");
-  lines.push(`- [Catalogo JSON](${SITE_URL}/index.json): tutti i contenuti in formato strutturato (URL assoluti), una sola fetch`);
   lines.push(`- [Sitemap](${SITE_URL}/sitemap.xml): sitemap XML standard`);
-  lines.push(`- [llms-full.txt](${SITE_URL}/llms-full.txt): tutti i contenuti pubblicati concatenati con metadata`);
-  lines.push(`- [Pagina AI](${SITE_URL}/ai): guida human-readable alla navigazione AI del sito`);
-  lines.push(`- [Tesseract viz](${SITE_URL}/tesseract/viz): visualizzazione interattiva 3D del reticolo a 72 nodi`);
+  lines.push(`- [Pagina AI human-readable](${SITE_URL}/ai): guida discorsiva su come consumare il sito da AI`);
+  lines.push(`- [Tesseract viz HTML](${SITE_URL}/downloads/tesseract/visualizzazione/ear_tesseract_visualization.html): visualizzazione interattiva 3D del reticolo a 72 nodi`);
   lines.push("");
 
   return lines.join("\n");
@@ -323,6 +340,73 @@ function copyRawMarkdown({ sections, documents }) {
   return written;
 }
 
+function buildTesseractGraphJsonLd() {
+  const grafoSrc = path.join(
+    PUBLIC_DIR,
+    "downloads/tesseract/grafo/GRAFO_MATRIX_72_EXPANDED.json"
+  );
+  if (!fs.existsSync(grafoSrc)) {
+    grafoSrc &&
+      console.log("[ai-assets] graph.json: source grafo missing, skipped");
+    return null;
+  }
+  const data = JSON.parse(fs.readFileSync(grafoSrc, "utf8"));
+  const wrapped = {
+    "@context": {
+      "@vocab": "https://schema.org/",
+      nodo432: `${SITE_URL}/`,
+      tesseract: `${SITE_URL}/tesseract/`,
+      D: "nodo432:dimension",
+      A: "nodo432:attribute",
+      X: "nodo432:complexity",
+      P: "nodo432:polarity",
+    },
+    "@id": `${SITE_URL}/graph.json`,
+    "@type": "Dataset",
+    name: "Tesseract — Matrix 72 graph",
+    description:
+      "72-node ontological lattice with 444 edges, derived from first principles in the Tesseract paper v2.",
+    url: `${SITE_URL}/tesseract`,
+    isBasedOn: `${SITE_URL}/tesseract/paper`,
+    sameAs: `${SITE_URL}/downloads/tesseract/grafo/GRAFO_MATRIX_72_EXPANDED.json`,
+    license: "https://creativecommons.org/licenses/by-sa/4.0/",
+    creator: { "@type": "Person", name: "Alessio Marrone" },
+    datePublished: "2026-02-08",
+    dateModified: new Date().toISOString().slice(0, 10),
+    keywords: [
+      "tesseract",
+      "ontology",
+      "knowledge-graph",
+      "EAR",
+      "AILA",
+      "matrix-72",
+    ],
+    structure: {
+      dimensions: 4,
+      attributes: 3,
+      complexity_levels: 3,
+      polarities: 2,
+      total_nodes: 72,
+      total_edges: 444,
+      asymmetry: "1/36",
+    },
+    related: {
+      paper: `${SITE_URL}/tesseract/paper`,
+      paper_appendix: `${SITE_URL}/tesseract/appendix-derivazione`,
+      visualization: `${SITE_URL}/tesseract/visualizzazione`,
+      bridge_signature: `${SITE_URL}/tesseract/bridge-signature`,
+      base_graph: `${SITE_URL}/downloads/tesseract/grafo/GRAFO_MATRIX_72.json`,
+      expanded_graph: `${SITE_URL}/downloads/tesseract/grafo/GRAFO_MATRIX_72_EXPANDED.json`,
+      ai_instructions: `${SITE_URL}/ai-instructions.md`,
+      catalog: `${SITE_URL}/index.json`,
+    },
+    notice:
+      "Authoritative source: load this graph for spatial/structural reasoning instead of inferring connections from prose.",
+    data,
+  };
+  return wrapped;
+}
+
 function cleanPreviousGeneration() {
   if (!fs.existsSync(CONTENT_DIR)) return;
   for (const entry of fs.readdirSync(CONTENT_DIR, { withFileTypes: true })) {
@@ -356,12 +440,21 @@ function main() {
 
   const rawFiles = copyRawMarkdown(tree);
 
+  const graph = buildTesseractGraphJsonLd();
+  if (graph) {
+    fs.writeFileSync(
+      path.join(PUBLIC_DIR, "graph.json"),
+      JSON.stringify(graph, null, 2)
+    );
+  }
+
   console.log(
     `[ai-assets] index.json (${catalog.sections.length} sections, ${catalog.documents.length} documents)`
   );
   console.log(`[ai-assets] llms.txt (${llmsTxt.length} bytes)`);
   console.log(`[ai-assets] llms-full.txt (${llmsFull.length} bytes)`);
   console.log(`[ai-assets] raw markdown copies: ${rawFiles.length}`);
+  if (graph) console.log(`[ai-assets] graph.json (Tesseract Matrix 72 JSON-LD)`);
 }
 
 main();
