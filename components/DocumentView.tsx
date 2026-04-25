@@ -4,6 +4,7 @@ import { breadcrumbs, findNode } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { JsonLd, documentJsonLd } from "./JsonLd";
 import { FrontmatterMarker } from "./FrontmatterMarker";
+import { TypeBadge } from "./TypeBadge";
 
 type Props = {
   doc: DocumentNode;
@@ -50,11 +51,9 @@ export function DocumentView({ doc, html }: Props) {
 
       <header className="mb-8 max-w-prose">
         {(doc.meta.type || doc.meta.version) && (
-          <p className="text-xs uppercase tracking-wider text-accent font-mono mb-2">
-            {doc.meta.type}
-            {doc.meta.type && doc.meta.version && " · "}
-            {doc.meta.version && `v${doc.meta.version}`}
-          </p>
+          <div className="mb-3">
+            <TypeBadge type={doc.meta.type} version={doc.meta.version} size="md" />
+          </div>
         )}
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-ink">
           {doc.meta.title}

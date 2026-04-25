@@ -28,7 +28,7 @@ navigabile in 3D**: tutti i 72 nodi con etichette delle coordinate
 controlli di rotazione e zoom, evidenziazione per attributo (A=1, A=2,
 A=3) e per polarità (P+/P-).
 
-[**Apri la visualizzazione →**](/tesseract/viz)
+[**Apri la visualizzazione →**](/downloads/tesseract/visualizzazione/ear_tesseract_visualization.html)
 
 ## Perché vale la pena aprirla
 

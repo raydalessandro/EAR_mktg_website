@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { SpiralLogo } from "./SpiralLogo";
 import { PersonaSwitcher, usePersona, type Persona } from "./PersonaSwitcher";
-import { TesseractEmbed } from "./TesseractEmbed";
+import { TesseractTeaser } from "./TesseractTeaser";
+import { TypeBadge } from "./TypeBadge";
 
 type SectionLite = {
   slug: string;
@@ -134,17 +135,7 @@ export function HomeView({ sections, featured, recent }: Props) {
 
       {tesseractSection && (
         <section className="pb-12">
-          <div className="flex items-baseline justify-between mb-4">
-            <h2 className="text-2xl font-bold tracking-tight">
-              <Link href="/tesseract" className="hover:text-accent">
-                Tesseract
-              </Link>
-            </h2>
-            <span className="text-sm text-[color:var(--gray-500)]">
-              {tesseractSection.docCount} pagine
-            </span>
-          </div>
-          <TesseractEmbed />
+          <TesseractTeaser />
         </section>
       )}
 
@@ -190,10 +181,14 @@ export function HomeView({ sections, featured, recent }: Props) {
                 href={doc.href}
                 className="group block border border-[color:var(--gray-200)] rounded-xl p-4 hover:border-accent hover:shadow-sm transition-all bg-paper"
               >
-                <div className="flex items-baseline justify-between gap-2 mb-2">
-                  <span className="text-[10px] uppercase tracking-wider text-accent font-mono truncate">
-                    {doc.type ?? doc.parentSlug.join(" / ")}
-                  </span>
+                <div className="flex items-center gap-2 mb-2">
+                  {doc.type ? (
+                    <TypeBadge type={doc.type} />
+                  ) : (
+                    <span className="text-[10px] uppercase tracking-wider text-[color:var(--gray-500)] font-mono truncate">
+                      {doc.parentSlug.join(" / ")}
+                    </span>
+                  )}
                 </div>
                 <h3 className="font-semibold text-ink group-hover:text-accent transition-colors mb-1">
                   {doc.title}
