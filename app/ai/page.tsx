@@ -1,13 +1,22 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { renderMarkdown } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Per AI agents",
   description:
-    "Come consumare nodo432 da agenti AI: llms.txt, raw markdown, catalogo JSON, MCP server (roadmap).",
+    "Come consumare nodo432 da agenti AI: ai-instructions.md, llms.txt, llms-full.txt, index.json, graph.json, MCP server (roadmap).",
 };
 
 const SITE = "https://nodo432.com";
+
+function readPublic(name: string): string {
+  const p = path.join(process.cwd(), "public", name);
+  if (!fs.existsSync(p)) return "";
+  return fs.readFileSync(p, "utf8");
+}
 
 const endpoints = [
   {
@@ -53,7 +62,13 @@ const endpoints = [
   },
 ];
 
-export default function AiPage() {
+export default async function AiPage() {
+  const aiInstructionsRaw = readPublic("ai-instructions.md");
+  const llmsTxtRaw = readPublic("llms.txt");
+  const aiInstructionsHtml = aiInstructionsRaw
+    ? await renderMarkdown(aiInstructionsRaw)
+    : "";
+
   return (
     <div className="mx-auto max-w-canvas px-6 py-16">
       <header className="max-w-prose">
@@ -191,6 +206,61 @@ export default function AiPage() {
           endpoint HTTP/SSE per integrazione web.
         </p>
       </section>
+
+      {aiInstructionsHtml && (
+        <section className="mt-16">
+          <div className="border-t border-[color:var(--gray-200)] pt-8">
+            <h2 className="text-2xl font-bold mb-2">
+              Manuale d'uso (inline)
+            </h2>
+            <p className="text-sm text-[color:var(--gray-500)] mb-6">
+              Contenuto integrale di{" "}
+              <a href="/ai-instructions.md" className="text-accent underline underline-offset-4">
+                /ai-instructions.md
+              </a>
+              . Inlinato qui per agenti AI con policy di fetch ristrette
+              (può fetchare solo URL esplicitamente forniti) — atterrando
+              sulla pagina <code className="font-mono text-xs bg-[color:var(--gray-50)] border border-[color:var(--gray-200)] rounded px-1 py-0.5">/ai</code>{" "}
+              hanno tutto il manuale qui sotto, senza dover seguire link.
+            </p>
+            <div
+              className="prose-nodo max-w-prose"
+              data-purpose="ai-instructions-inline"
+              dangerouslySetInnerHTML={{ __html: aiInstructionsHtml }}
+            />
+          </div>
+        </section>
+      )}
+
+      {llmsTxtRaw && (
+        <section className="mt-16">
+          <div className="border-t border-[color:var(--gray-200)] pt-8">
+            <h2 className="text-2xl font-bold mb-2">llms.txt (inline)</h2>
+            <p className="text-sm text-[color:var(--gray-500)] mb-4">
+              Contenuto integrale di{" "}
+              <a href="/llms.txt" className="text-accent underline underline-offset-4">
+                /llms.txt
+              </a>
+              . Indice navigabile di tutto il sito, standard llmstxt.org.
+              Inlinato per agenti che non possono seguire link inferiti.
+              Per il dump completo dei contenuti vedi{" "}
+              <a
+                href="/llms-full.txt"
+                className="text-accent underline underline-offset-4"
+              >
+                /llms-full.txt
+              </a>{" "}
+              (~1 MB, da fetchare separatamente).
+            </p>
+            <pre
+              data-purpose="llms-txt-inline"
+              className="text-xs leading-relaxed font-mono bg-[color:var(--gray-50)] border border-[color:var(--gray-200)] rounded-lg p-4 overflow-x-auto whitespace-pre-wrap break-words text-ink max-h-[600px]"
+            >
+              {llmsTxtRaw}
+            </pre>
+          </div>
+        </section>
+      )}
 
       <section className="mt-12 max-w-prose">
         <h2 className="text-2xl font-bold mb-4">Licenze</h2>
