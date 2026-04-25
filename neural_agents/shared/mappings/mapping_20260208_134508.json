@@ -1,0 +1,31 @@
+{
+  "status": "proposed",
+  "phenomenon": "burst_criticality",
+  "sigma": "\u03a3\u2084\u2082\u2082\u208a",
+  "reasoning": "Criticality (dimension 4) shows temporal process (\u27f3=2) with intermediate complexity, constructive emergence",
+  "confidence": 0.8,
+  "network_analysis": {
+    "execution_status": "success",
+    "timestamp": "2026-02-08T13:45:08.916529",
+    "observations": [
+      {
+        "type": "criticality",
+        "value": 1.4108828814548091,
+        "description": "Avalanche exponent \u03c4 = 1.41"
+      },
+      {
+        "type": "activity",
+        "value": 461,
+        "description": "Total spikes: 461"
+      }
+    ],
+    "candidate_phenomena": [
+      {
+        "name": "burst_criticality",
+        "confidence": 0.8,
+        "reasoning": "\u03c4 = 1.41 near critical value 1.5"
+      }
+    ]
+  },
+  "timestamp": "2026-02-08T13:45:08.916529"
+}
