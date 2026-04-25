@@ -12,8 +12,6 @@ download:
   file: /downloads/template-frontmatter.md
   format: md
   size: "1 KB"
-related:
-  - antologia/come-organizziamo-i-contenuti
 featured: true
 ---
 

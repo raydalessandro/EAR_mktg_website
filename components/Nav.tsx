@@ -13,8 +13,8 @@ export function Nav() {
         </Link>
         <ul className="hidden sm:flex items-center gap-6 text-sm text-[color:var(--gray-500)]">
           <li>
-            <Link href="/antologia" className="hover:text-ink transition-colors">
-              Antologia
+            <Link href="/ontologia" className="hover:text-ink transition-colors">
+              Ontologia
             </Link>
           </li>
           <li>

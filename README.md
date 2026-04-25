@@ -27,7 +27,7 @@ su GitHub Pages al dominio `nodo432.com`.
   content.ts              # tree walker + loader markdown
   schema.ts               # schema Zod del frontmatter
 /content                  # il "database" del sito
-  /antologia/_section.md
+  /ontologia/_section.md
   /risorse/_section.md
   /tool/_section.md
   /pipeline/_section.md
@@ -41,8 +41,8 @@ Una **sezione** è una cartella con un `_section.md` che la descrive:
 
 ```yaml
 ---
-title: Antologia
-summary: Concetti, framework e metodologie.
+title: Ontologia
+summary: Il sistema concettuale fondante.
 status: published
 order: 10
 ---

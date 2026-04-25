@@ -10,8 +10,8 @@ export function Footer() {
           <span>Hub di orchestrazione AI</span>
         </div>
         <div className="flex gap-5">
-          <Link href="/antologia" className="hover:text-ink">
-            Antologia
+          <Link href="/ontologia" className="hover:text-ink">
+            Ontologia
           </Link>
           <Link href="/risorse" className="hover:text-ink">
             Risorse
