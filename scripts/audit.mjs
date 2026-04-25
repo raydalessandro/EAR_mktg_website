@@ -169,6 +169,55 @@ function audit() {
   if (noSummary > 0) warn(`${noSummary} nodes without summary`);
   if (noVersion > 0) warn(`${noVersion} content nodes without version`);
 
+  // 6. Featured nodes should have summary (otherwise the home card is empty)
+  const featuredNoSummary = all.filter(
+    (n) => n.featured && !n.summary
+  );
+  if (featuredNoSummary.length > 0) {
+    warn(`${featuredNoSummary.length} featured nodes without summary:`);
+    for (const n of featuredNoSummary.slice(0, 5))
+      warn(`    ${n.slug}`);
+  }
+
+  // 7. download.file should not contain spaces or chars that need URL encoding
+  const URL_UNSAFE = /[ #?&%]/;
+  const unsafeUrls = [];
+  for (const n of all) {
+    if (!n.download?.file) continue;
+    if (URL_UNSAFE.test(n.download.file)) {
+      unsafeUrls.push({ from: n.slug, file: n.download.file });
+    }
+  }
+  if (unsafeUrls.length > 0) {
+    fail(`${unsafeUrls.length} download.file paths contain URL-unsafe chars (space/#/?/&/%):`);
+    for (const u of unsafeUrls.slice(0, 10))
+      fail(`    ${u.from}  →  ${u.file}`);
+  }
+
+  // 8. Version (when present) should look like dotted digits, optionally suffixed
+  const VERSION_PATTERN = /^\d+(\.\d+){0,3}([-+][0-9A-Za-z.-]+)?$/;
+  const oddVersions = all.filter(
+    (n) => n.version && !VERSION_PATTERN.test(String(n.version))
+  );
+  if (oddVersions.length > 0) {
+    warn(`${oddVersions.length} nodes with non-standard version strings:`);
+    for (const n of oddVersions.slice(0, 5))
+      warn(`    ${n.slug}  →  "${n.version}"`);
+  }
+
+  // 9. Every published node with a download should have a license declared
+  const noLicenseWithDownload = all.filter(
+    (n) =>
+      n.download &&
+      n.status === "published" &&
+      !n.license
+  );
+  if (noLicenseWithDownload.length > 0) {
+    warn(`${noLicenseWithDownload.length} published nodes with download but no license:`);
+    for (const n of noLicenseWithDownload.slice(0, 5))
+      warn(`    ${n.slug}`);
+  }
+
   // Stats
   console.log(`Catalog: ${catalog.sections.length} sections, ${catalog.documents.length} documents`);
   console.log(`  with type:     ${all.filter((n) => n.type).length}/${all.length}`);

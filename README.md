@@ -65,23 +65,31 @@ endpoint pensati per LLM e agenti AI:
 
 | URL | Cosa | Standard |
 |---|---|---|
-| `/llms.txt` | Mappa testuale del sito ottimizzata per LLM, URL assoluti | [llmstxt.org](https://llmstxt.org/) |
-| `/llms-full.txt` | Concatenazione completa: scheda + canonical markdown inlineato per ogni doc | — |
-| `/index.json` | Catalogo strutturato uniforme: sezioni e documenti con `kind`, `slug`, `type`, `version`, `download`, `related`, ecc. | — |
+| `/ai-instructions.md` | "System prompt" pronto del sito: identità, vocabolario, regole d'uso, citation format, self-improvement protocol | — |
+| `/llms.txt` | Mappa testuale del sito con sezione "Per AI agents — endpoint chiave" in cima | [llmstxt.org](https://llmstxt.org/) |
+| `/llms-full.txt` | Concatenazione completa: scheda + canonical markdown inlineato per ogni doc (~1 MB) | — |
+| `/index.json` | Catalogo strutturato uniforme: sezioni e documenti con `kind`, `slug`, `type`, `version`, `download`, `related`, `llm_directive`, ecc. | — |
+| `/graph.json` | Grafo JSON-LD del Tesseract — 72 nodi, 444 archi. Autoritativo per ragionamento spaziale | — |
 | `/<slug>.md` | Sorgente markdown raw di ogni pagina (basta aggiungere `.md` allo slug) | — |
 | `/sitemap.xml` | Sitemap XML standard | sitemaps.org |
 | `/robots.txt` | Allow esplicito a GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended, Applebot-Extended, MistralAI-User, ecc. | — |
-| `/ai` | Pagina human-readable che spiega come consumare il sito da AI | — |
+| `/ai` | Pagina human-readable + **inline copy** di `ai-instructions.md` e `llms.txt` (per AI con web_fetch ristretto che non segue link inferiti) | — |
+
+Tutti gli URL nei file AI-fruibility e nel footer "Endpoint AI" sono
+**assoluti** (`https://nodo432.com/...`). Le navigazioni umane fra
+sezioni restano relative.
 
 Inoltre, ogni pagina HTML ha:
 - **JSON-LD** (schema.org `TechArticle` / `CollectionPage`) inline con
-  autore, data, licenza, link al raw markdown e al download canonico.
+  autore, data, licenza, link al raw markdown e al download canonico
 - **`<script type="application/yaml" data-purpose="frontmatter">`** con
   il frontmatter completo serializzato — machine-readable e invisibile
-  agli umani.
-
-Tutti gli URL nei file AI-fruibility sono **assoluti**
-(`https://nodo432.com/...`), incluso il testo descrittivo e gli esempi.
+  agli umani
+- **OpenGraph + Twitter card + canonical** per pagina (URL specifico
+  della pagina, non hardcoded alla home)
+- **Content-Type espliciti** via `vercel.json` per `.md`, `.py`,
+  `.js/.ts`, `.ipynb`, `.json`, `.yaml`, `.html` — i file di codice
+  vengono renderizzati nel browser, non scaricati come binari
 
 ### Self-improvement protocol per LLM
 
@@ -168,6 +176,27 @@ di questa sezione" che cammina ricorsivamente.
 Nessuna route da scrivere. La route catch-all `app/[...slug]/page.tsx`
 gestisce qualsiasi profondità.
 
+### Media auto-embed
+
+Se `download.format` è uno tra:
+
+- **Audio** (`mp3, wav, ogg, flac, m4a, aac`) → `<audio controls>` HTML5
+- **Video** (`mp4, webm, mov`) → `<video controls>` HTML5
+- **Immagini** (`png, jpg, jpeg, webp, gif, svg`) → `<img loading="lazy">`
+
+…viene renderizzato un player nativo in cima al body. Niente JS extra,
+funziona su mobile, AI continua a ricevere scheda + URL canonico.
+
+### Policy di versioning
+
+Le release storiche **non si rimuovono**: ogni versione di un asset
+resta scaricabile al suo URL canonico anche dopo un bump. Quando esce
+una nuova versione, si **aggiunge** lo zip nuovo e si aggiorna
+`download.file` nella scheda al latest. Esempio:
+`saga-engine-v1.0.zip` e `saga-engine-v1.0.1.zip` coesistono in
+`/public/downloads/`. La sezione "Versioni disponibili" della scheda
+elenca tutte le versioni online.
+
 ## Persone (home)
 
 La home ha un **persona switcher** (4 modalità) con stato persistito
@@ -202,11 +231,15 @@ npm run test:watch
 npm run test:ui
 ```
 
-Suite (29 test):
+Suite:
 - `tests/schema.test.ts` — schema Zod del frontmatter
-- `tests/content-loader.test.ts` — tree walker, findNode, collectDownloads, ecc. (su fixture)
+- `tests/content-loader.test.ts` — tree walker, findNode, collectDownloads (su fixture)
 - `tests/generate-ai-assets.test.ts` — output di build (index.json, llms.txt, raw mirror)
 - `tests/audit.test.ts` — invariant audit
+- `tests/json-ld.test.ts` — generators JSON-LD `TechArticle` / `CollectionPage`
+- `tests/frontmatter-marker.test.ts` — serializer YAML del frontmatter
+- `tests/media-detection.test.ts` — riconoscimento format → audio/video/image
+- `tests/type-badge.test.ts` — mapping `type` → famiglia cromatica
 
 Il content loader (`lib/content.ts`) espone `_setRootForTesting(path)`
 e rispetta la env `CONTENT_ROOT` per puntare a fixture alternative.
