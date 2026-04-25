@@ -1,6 +1,7 @@
 ---
 title: Empirico
 summary: Validazioni del sistema su dati reali. Coerenza gerarchica e indice di riferimenti.
+type: collection
 status: published
 order: 50
 tags: [aila, empirico, validazione]

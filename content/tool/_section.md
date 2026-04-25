@@ -1,6 +1,7 @@
 ---
 title: Tool
 summary: Script Python, automazioni, plugin Claude Code. Codice pronto all'uso.
+type: collection
 status: wip
 order: 30
 icon: terminal

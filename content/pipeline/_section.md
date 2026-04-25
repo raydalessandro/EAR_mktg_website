@@ -1,6 +1,7 @@
 ---
 title: Pipeline
 summary: Workflow orchestrati. Step, tool e prompt connessi in un flusso ripetibile.
+type: collection
 status: wip
 order: 40
 icon: workflow

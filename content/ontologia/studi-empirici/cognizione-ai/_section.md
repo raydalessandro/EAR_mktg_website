@@ -1,6 +1,7 @@
 ---
 title: Cognizione e AI
 summary: Studi su semantica, simbolismo, primitive cognitive — con LLM come banco di prova.
+type: collection
 status: published
 order: 40
 icon: lab

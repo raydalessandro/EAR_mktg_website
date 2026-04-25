@@ -82,6 +82,36 @@ function rawUrlFor(slugArr) {
   return `${SITE_URL}/${slugArr.join("/")}.md`;
 }
 
+function nodeEntry(node, kind) {
+  return {
+    kind,
+    slug: "/" + node.slug.join("/"),
+    title: node.meta.title,
+    summary: node.meta.summary ?? null,
+    description: node.meta.description ?? null,
+    status: node.meta.status ?? "published",
+    type: node.meta.type ?? null,
+    version: node.meta.version ?? null,
+    tags: node.meta.tags ?? [],
+    authors: node.meta.authors ?? [],
+    created: node.meta.created ?? null,
+    updated: node.meta.updated ?? null,
+    license: node.meta.license ?? null,
+    url: urlFor(node.slug),
+    raw_url: rawUrlFor(node.slug),
+    download: node.meta.download
+      ? {
+          ...node.meta.download,
+          url: node.meta.download.file?.startsWith("http")
+            ? node.meta.download.file
+            : `${SITE_URL}${node.meta.download.file ?? ""}`,
+        }
+      : null,
+    related: node.meta.related ?? [],
+    featured: !!node.meta.featured,
+  };
+}
+
 function buildCatalog({ sections, documents }) {
   return {
     site: "nodo432",
@@ -96,39 +126,11 @@ function buildCatalog({ sections, documents }) {
       llms_txt: "/llms.txt segue lo standard llmstxt.org",
       future_mcp:
         "Un server MCP è in roadmap (non ancora disponibile). Esporrà list_documents, read_document, get_section come tool MCP.",
+      uniform_schema:
+        "Sections e documents hanno lo stesso schema (kind=section o document). Una section può avere download, related, type, version come un document.",
     },
-    sections: sections.map((s) => ({
-      slug: "/" + s.slug.join("/"),
-      title: s.meta.title,
-      summary: s.meta.summary ?? null,
-      status: s.meta.status ?? "published",
-      url: urlFor(s.slug),
-      raw_url: rawUrlFor(s.slug),
-    })),
-    documents: documents.map((d) => ({
-      slug: "/" + d.slug.join("/"),
-      title: d.meta.title,
-      summary: d.meta.summary ?? null,
-      description: d.meta.description ?? null,
-      status: d.meta.status ?? "published",
-      tags: d.meta.tags ?? [],
-      authors: d.meta.authors ?? [],
-      created: d.meta.created ?? null,
-      updated: d.meta.updated ?? null,
-      license: d.meta.license ?? null,
-      url: urlFor(d.slug),
-      raw_url: rawUrlFor(d.slug),
-      download: d.meta.download
-        ? {
-            ...d.meta.download,
-            url: d.meta.download.file?.startsWith("http")
-              ? d.meta.download.file
-              : `${SITE_URL}${d.meta.download.file ?? ""}`,
-          }
-        : null,
-      related: d.meta.related ?? [],
-      featured: !!d.meta.featured,
-    })),
+    sections: sections.map((s) => nodeEntry(s, "section")),
+    documents: documents.map((d) => nodeEntry(d, "document")),
   };
 }
 

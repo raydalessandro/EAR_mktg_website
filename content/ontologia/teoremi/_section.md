@@ -1,6 +1,7 @@
 ---
 title: Teoremi
 summary: Le 6 proposizioni strutturali EAR. Versione estesa standalone delle P1-P6 del kernel AILA.
+type: collection
 status: published
 order: 20
 icon: theorems

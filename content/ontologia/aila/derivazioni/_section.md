@@ -1,6 +1,7 @@
 ---
 title: Derivazioni
 summary: Teoremi e identità derivati dal sistema. Scaling 3/4 ed equivalenze cross-dominio.
+type: collection
 status: published
 order: 40
 tags: [aila, derivazioni, scaling, equivalenze]

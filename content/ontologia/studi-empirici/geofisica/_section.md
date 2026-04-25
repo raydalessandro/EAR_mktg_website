@@ -1,6 +1,7 @@
 ---
 title: Geofisica
 summary: Frequenze planetarie, risonanze e applicazioni speculative al monitoraggio.
+type: collection
 status: wip
 order: 50
 icon: lab

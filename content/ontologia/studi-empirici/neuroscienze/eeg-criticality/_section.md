@@ -16,8 +16,8 @@ download:
   format: zip
   size: "~21 KB"
 related:
-  - /ontologia/aila/empirico/empirical-reference.md
-  - /ontologia/teoremi/3-soglia-critica
+  - ontologia/aila/empirico/empirical-reference
+  - ontologia/teoremi/3-soglia-critica
 featured: false
 ---
 

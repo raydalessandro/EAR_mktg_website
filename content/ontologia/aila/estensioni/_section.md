@@ -1,6 +1,7 @@
 ---
 title: Estensioni
 summary: Estensioni dell'AILA core verso domini specifici. Quantum è la prima.
+type: collection
 status: published
 order: 80
 icon: branches

@@ -1,6 +1,7 @@
 ---
 title: In prosa
 summary: Versioni in prosa italiana del sistema. Più verbose, pedagogiche, deployment-ready.
+type: collection
 status: published
 order: 90
 icon: text

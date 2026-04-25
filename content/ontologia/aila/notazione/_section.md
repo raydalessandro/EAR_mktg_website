@@ -1,6 +1,7 @@
 ---
 title: Notazione
 summary: La grammatica e l'alfabeto AILA. Il prerequisito di tutto il resto.
+type: collection
 status: published
 order: 10
 tags: [aila, notazione, grammatica]

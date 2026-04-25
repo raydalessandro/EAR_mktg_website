@@ -1,6 +1,7 @@
 ---
 title: AILA
 summary: Artificial Intelligence Lingua Architecta. Linguaggio simbolico operazionale per LLM, derivato dall'ontologia EAR.
+type: collection
 status: published
 order: 30
 icon: language

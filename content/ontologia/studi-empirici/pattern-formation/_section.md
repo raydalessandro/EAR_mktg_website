@@ -1,6 +1,7 @@
 ---
 title: Pattern formation
 summary: Morfogenesi, simulazioni Turing, soglie critiche e rottura di simmetria.
+type: collection
 status: published
 order: 60
 icon: lab

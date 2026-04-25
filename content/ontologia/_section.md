@@ -1,6 +1,7 @@
 ---
 title: Ontologia
 summary: Il sistema concettuale fondante. Trattato, teoremi, notazione AILA, studi empirici.
+type: collection
 status: published
 order: 10
 icon: book

@@ -1,6 +1,7 @@
 ---
 title: Operazionale
 summary: Vocabolario di 72 simboli e 22 sentieri di transizione. Strumenti per analisi.
+type: collection
 status: published
 order: 30
 tags: [aila, operazionale, vocabolario, transizioni]

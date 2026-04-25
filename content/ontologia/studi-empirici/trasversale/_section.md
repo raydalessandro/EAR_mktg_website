@@ -1,6 +1,7 @@
 ---
 title: Trasversale
 summary: Sintesi cross-dominio, verifiche di letteratura, lavori che attraversano più aree.
+type: collection
 status: published
 order: 99
 icon: lab

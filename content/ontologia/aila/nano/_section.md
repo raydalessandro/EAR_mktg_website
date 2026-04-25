@@ -1,6 +1,7 @@
 ---
 title: AILA Nano
 summary: AILA in formato compatto. Per LLM piccoli o contesti limitati.
+type: collection
 status: published
 order: 70
 icon: zap

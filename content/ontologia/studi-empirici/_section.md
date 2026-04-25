@@ -1,6 +1,7 @@
 ---
 title: Studi empirici
 summary: Studi originali condotti sull'ontologia EAR, organizzati per dominio scientifico.
+type: collection
 status: published
 order: 40
 icon: lab

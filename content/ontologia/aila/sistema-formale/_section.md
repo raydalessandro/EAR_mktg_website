@@ -1,6 +1,7 @@
 ---
 title: Sistema formale
 summary: Primitivi, assiomi, proposizioni, teoremi. Il cuore dell'ontologia in AILA.
+type: collection
 status: published
 order: 20
 tags: [aila, sistema-formale, kernel, assiomi]

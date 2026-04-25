@@ -1,6 +1,7 @@
 ---
 title: Fisica
 summary: Applicazioni del framework EAR alla fisica, in particolare alle anomalie quantistiche.
+type: collection
 status: published
 order: 20
 icon: lab

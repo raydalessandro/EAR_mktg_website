@@ -1,6 +1,7 @@
 ---
 title: Risorse
 summary: Documenti scaricabili pronti per LLM. Prompt, schede, brief, manifesti.
+type: collection
 status: wip
 order: 20
 icon: download
