@@ -10,6 +10,9 @@ export function Footer() {
           <span>Hub di orchestrazione AI</span>
         </div>
         <div className="flex flex-wrap gap-5">
+          <Link href="/tesseract" className="hover:text-ink">
+            Tesseract
+          </Link>
           <Link href="/ontologia" className="hover:text-ink">
             Ontologia
           </Link>

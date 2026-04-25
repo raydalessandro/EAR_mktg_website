@@ -41,8 +41,12 @@ next-env.d.ts
 /public/risorse.md
 /public/tool.md
 /public/pipeline.md
+/public/tesseract.md
 # Raw markdown mirror inside section dirs (excluding canonical /public/downloads)
 /public/ontologia/
 /public/risorse/
 /public/tool/
 /public/pipeline/
+/public/tesseract/
+# Note: /public/downloads/tesseract/ is intentionally NOT ignored — those
+# are canonical assets, distinct from the gen-ai-assets raw mirrors.
