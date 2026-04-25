@@ -1,0 +1,183 @@
+[
+  {
+    "concept_name": "Wave-Particle Duality",
+    "synthesis": {
+      "concept_type": "principle",
+      "formal_statement": "Quantum entities exhibit both wave and particle properties depending on measurement context",
+      "ontological_structures": [
+        {"pattern": "Δ", "evidence": "PRIMARY — duality IS the distinction: wave behavior vs particle behavior, context-dependent", "primary": true},
+        {"pattern": "⇄", "evidence": "Relates wave properties (interference) to particle properties (localization)"},
+        {"pattern": "⟳", "evidence": "Measurement process determines which property manifests"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — manifests in spacetime measurement contexts",
+      "attribute_dominant": "Δ",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove Δ (wave/particle distinction) → principle vanishes, it IS about dual nature. Remove ⇄ (relation between aspects) → important but distinction is essence. Remove ⟳ (measurement) → context, duality remains. Δ is essential.",
+      "polarity": "+ (expansion — opens dual description space, not a limitation)",
+      "related": ["Complementarity", "Double-slit experiment", "De Broglie wavelength", "Quantum measurement"]
+    }
+  },
+  {
+    "concept_name": "Heisenberg Uncertainty Principle",
+    "synthesis": {
+      "concept_type": "principle",
+      "formal_statement": "ΔxΔp ≥ ℏ/2 — cannot simultaneously know position and momentum with arbitrary precision",
+      "ontological_structures": [
+        {"pattern": "Δ", "evidence": "PRIMARY — principle IS the distinction/limit: precise position excludes precise momentum", "primary": true},
+        {"pattern": "⇄", "evidence": "Relates position uncertainty to momentum uncertainty inversely"},
+        {"pattern": "⟳", "evidence": "Minimal — static constraint on measurement"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — phase space constraint in spacetime",
+      "attribute_dominant": "Δ",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove Δ (precision limit distinction) → principle vanishes, it IS the impossibility of joint precision. Remove ⇄ (inverse relation) → important but limit is essence. Remove ⟳ → already static. Δ is essential.",
+      "polarity": "- (contraction — eliminates region of phase space: precise x AND precise p forbidden)",
+      "related": ["Quantum measurement", "Complementarity", "Phase space", "Commutation relations"]
+    }
+  },
+  {
+    "concept_name": "Superposition Principle",
+    "synthesis": {
+      "concept_type": "principle",
+      "formal_statement": "|ψ⟩ = Σ cᵢ|ψᵢ⟩ — quantum state can be linear superposition of basis states",
+      "ontological_structures": [
+        {"pattern": "⇄", "evidence": "PRIMARY — principle IS the linear relation: state ↔ weighted sum of basis states", "primary": true},
+        {"pattern": "Δ", "evidence": "Distinguishes quantum (superposition allowed) from classical (single state)"},
+        {"pattern": "⟳", "evidence": "Minimal — superposition is static until measurement collapses"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — state space in Hilbert space over spacetime",
+      "attribute_dominant": "⇄",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove ⇄ (linear combination structure) → principle vanishes, it IS the superposition formula. Remove Δ (quantum/classical) → context. Remove ⟳ → already static. ⇄ is essential.",
+      "polarity": "+ (expansion — opens space of superposed states, enabling interference)",
+      "related": ["Quantum interference", "Hilbert space", "Measurement collapse", "Schrödinger equation"]
+    }
+  },
+  {
+    "concept_name": "Pauli Exclusion Principle",
+    "synthesis": {
+      "concept_type": "principle",
+      "formal_statement": "No two identical fermions can occupy the same quantum state simultaneously",
+      "ontological_structures": [
+        {"pattern": "Δ", "evidence": "PRIMARY — principle IS the exclusion distinction: fermions must differ in at least one quantum number", "primary": true},
+        {"pattern": "⇄", "evidence": "Relates fermion occupation to available states"},
+        {"pattern": "⟳", "evidence": "Minimal — static constraint on state occupation"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — state space constraint in quantum fields",
+      "attribute_dominant": "Δ",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove Δ (exclusion constraint) → principle vanishes, it IS the prohibition. Remove ⇄ (state↔occupation relation) → consequence. Remove ⟳ → already static. Δ is essential.",
+      "polarity": "- (contraction — eliminates degenerate fermion configurations, forbids multiple occupation)",
+      "oscillation_notes": "Opus confirmed P=-: Pauli VIETA configuration space region (multiple fermions in same state), like Second Law/Clausius. Pattern: exclusion principles → P=-.",
+      "related": ["Fermions", "Spin-statistics", "Atomic structure", "Fermi-Dirac statistics"]
+    }
+  },
+  {
+    "concept_name": "Quantum Entanglement",
+    "synthesis": {
+      "concept_type": "phenomenon",
+      "formal_statement": "Quantum systems can be correlated such that measurement of one instantly affects the other, regardless of distance",
+      "ontological_structures": [
+        {"pattern": "⇄", "evidence": "PRIMARY — entanglement IS the correlation relation: particle A ↔ particle B states non-locally", "primary": true},
+        {"pattern": "Δ", "evidence": "Distinguishes entangled from separable states"},
+        {"pattern": "⟳", "evidence": "Measurement process reveals correlation"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — non-local correlation in spacetime",
+      "attribute_dominant": "⇄",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove ⇄ (non-local correlation) → entanglement vanishes, it IS the EPR correlation. Remove Δ (entangled/separable) → consequence. Remove ⟳ (measurement) → context. ⇄ is essential.",
+      "polarity": "+ (expansion — opens space of non-local correlations beyond classical)",
+      "related": ["EPR paradox", "Bell's theorem", "Non-locality", "Quantum teleportation"]
+    }
+  },
+  {
+    "concept_name": "No-Cloning Theorem",
+    "synthesis": {
+      "concept_type": "theorem",
+      "formal_statement": "It is impossible to create an identical copy of an arbitrary unknown quantum state",
+      "ontological_structures": [
+        {"pattern": "Δ", "evidence": "PRIMARY — theorem IS the impossibility distinction: quantum states cannot be cloned", "primary": true},
+        {"pattern": "⇄", "evidence": "Relates cloning operation to linearity of quantum mechanics"},
+        {"pattern": "⟳", "evidence": "Minimal — static impossibility, not about process"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — constraint on quantum state operations",
+      "attribute_dominant": "Δ",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove Δ (impossibility of cloning) → theorem vanishes, it IS the prohibition. Remove ⇄ (relation to linearity) → mechanism of proof. Remove ⟳ → already static. Δ is essential.",
+      "polarity": "- (contraction — eliminates cloning operations from possibility space)",
+      "related": ["Quantum information", "Quantum cryptography", "Unitarity", "Linearity"]
+    }
+  },
+  {
+    "concept_name": "Schrödinger Equation",
+    "synthesis": {
+      "concept_type": "law",
+      "formal_statement": "iℏ ∂|ψ⟩/∂t = Ĥ|ψ⟩ — governs time evolution of quantum state",
+      "ontological_structures": [
+        {"pattern": "⟳", "evidence": "PRIMARY — equation IS the temporal evolution process: how |ψ⟩ changes with time", "primary": true},
+        {"pattern": "⇄", "evidence": "Relates state |ψ⟩ to Hamiltonian Ĥ (energy operator)"},
+        {"pattern": "Δ", "evidence": "Distinguishes quantum (wave function) from classical (trajectory) evolution"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — temporal evolution in spacetime",
+      "attribute_dominant": "⟳",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove ⟳ (temporal evolution ∂/∂t) → equation vanishes, it IS the dynamical law. Remove ⇄ (Ĥ-ψ relation) → important but process is essence. Remove Δ → evolution still defined. ⟳ is essential.",
+      "polarity": "+ (expansion — enables quantum dynamics, unitary evolution)",
+      "related": ["Wave function", "Hamiltonian", "Unitary evolution", "Quantum dynamics"]
+    }
+  },
+  {
+    "concept_name": "Quantum Tunneling",
+    "synthesis": {
+      "concept_type": "phenomenon",
+      "formal_statement": "Quantum particles can penetrate potential barriers classically forbidden, with probability depending on barrier properties",
+      "ontological_structures": [
+        {"pattern": "⟳", "evidence": "PRIMARY — tunneling IS the process: particle transitions through barrier over time", "primary": true},
+        {"pattern": "⇄", "evidence": "Relates transmission probability to barrier height/width"},
+        {"pattern": "Δ", "evidence": "Distinguishes quantum (tunneling possible) from classical (forbidden)"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — process in spacetime through potential barrier",
+      "attribute_dominant": "⟳",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove ⟳ (tunneling process) → phenomenon vanishes, it IS the barrier penetration. Remove ⇄ (probability relation) → important but process is essence. Remove Δ → tunneling still defined. ⟳ is essential.",
+      "polarity": "+ (expansion — opens classically forbidden transitions)",
+      "related": ["Potential barriers", "WKB approximation", "Quantum decay", "STM"]
+    }
+  },
+  {
+    "concept_name": "Measurement Problem / Wavefunction Collapse",
+    "synthesis": {
+      "concept_type": "phenomenon",
+      "formal_statement": "Upon measurement, quantum superposition |ψ⟩ = Σcᵢ|ψᵢ⟩ collapses to single eigenstate |ψₖ⟩ with probability |cₖ|²",
+      "ontological_structures": [
+        {"pattern": "⟳", "evidence": "PRIMARY — collapse IS the process: superposition → single state transition at measurement", "primary": true},
+        {"pattern": "⇄", "evidence": "Relates measurement outcome to probability amplitudes"},
+        {"pattern": "Δ", "evidence": "Distinguishes pre-measurement (superposed) from post-measurement (collapsed)"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — discrete temporal transition at measurement event",
+      "attribute_dominant": "⟳",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove ⟳ (collapse process) → phenomenon vanishes, it IS the state transition. Remove ⇄ (Born rule) → important but transition is essence. Remove Δ → collapse still defined. ⟳ is essential.",
+      "polarity": "+ (expansion — enables measurement, classical outcomes from quantum states)",
+      "related": ["Born rule", "Copenhagen interpretation", "Decoherence", "Quantum measurement"]
+    }
+  },
+  {
+    "concept_name": "Spin (Intrinsic Angular Momentum)",
+    "synthesis": {
+      "concept_type": "property",
+      "formal_statement": "Quantum particles possess intrinsic angular momentum (spin) independent of spatial motion, quantized in units of ℏ/2",
+      "ontological_structures": [
+        {"pattern": "Δ", "evidence": "PRIMARY — spin IS the distinction: intrinsic vs orbital angular momentum, quantized values", "primary": true},
+        {"pattern": "⇄", "evidence": "Relates spin operators to commutation relations [Sᵢ,Sⱼ]=iℏεᵢⱼₖSₖ"},
+        {"pattern": "⟳", "evidence": "Spin can precess in magnetic field (dynamic)"}
+      ],
+      "dimension_hints": "D=4 (field/temporal) — intrinsic property in spacetime",
+      "attribute_dominant": "Δ",
+      "complexity": "foundational (1)",
+      "elimination_test": "Remove Δ (intrinsic/orbital distinction, quantization) → spin vanishes, it IS the new quantum number. Remove ⇄ (algebra) → mathematical structure, distinction remains. Remove ⟳ (precession) → dynamics, property remains. Δ is essential.",
+      "polarity": "+ (expansion — introduces new quantum numbers, doubles state space)",
+      "related": ["Angular momentum", "Stern-Gerlach", "Spin-statistics", "Fermions/Bosons"]
+    }
+  }
+]
