@@ -10,7 +10,7 @@ created: 2026-01-08
 updated: 2026-01-11
 license: CC-BY-SA-4.0
 download:
-  file: /downloads/ontologia/studi-empirici/morfogenesi-ear/SCOPERTE_STRUTTURALI_8_GENNAIO_2026.md
+  file: /downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/SCOPERTE_STRUTTURALI_8_GENNAIO_2026.md
   format: md
   size: "~30 KB"
 related:
@@ -55,7 +55,7 @@ Le proposizioni testate empiricamente mediante simulazione Turing:
 
 ### Soglia critica
 
-![Soglia critica: numero di centri (⬡) e contrasto (Δ) in funzione del field strength, con transizione discreta attorno a 0.05](/downloads/ontologia/studi-empirici/morfogenesi-ear/soglia_critica.png)
+![Soglia critica: numero di centri (⬡) e contrasto (Δ) in funzione del field strength, con transizione discreta attorno a 0.05](/downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/soglia_critica.png)
 
 I due tracciati mostrano un **salto netto** intorno a
 `field_strength ≈ 0.05`: la dinamica passa da un regime omogeneo a
@@ -63,7 +63,7 @@ uno strutturato senza valori intermedi. Conferma quantitativa di P3.
 
 ### Confronto pattern
 
-![Tre pattern affiancati: Turing classico, EAR moderato, EAR forte. Il terzo supera la soglia critica e produce una struttura asimmetrica complessa](/downloads/ontologia/studi-empirici/morfogenesi-ear/confronto_pattern.png)
+![Tre pattern affiancati: Turing classico, EAR moderato, EAR forte. Il terzo supera la soglia critica e produce una struttura asimmetrica complessa](/downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/confronto_pattern.png)
 
 Il pattern EAR forte (terzo riquadro) supera la soglia e mostra
 **rottura di simmetria** rispetto al kernel Turing classico (primo).
@@ -74,12 +74,12 @@ predetta da Corollario 3.3.
 
 | Risorsa | Formato | Cosa contiene |
 |---|---|---|
-| **Scoperte strutturali** ([download](/downloads/ontologia/studi-empirici/morfogenesi-ear/SCOPERTE_STRUTTURALI_8_GENNAIO_2026.md)) | md | Writeup formale: tre scoperte, derivazioni, verifiche numeriche |
-| Esperimento Python (modulare) ([download](/downloads/ontologia/studi-empirici/morfogenesi-ear/ear_morphogenetic_experiment.py)) | py | Simulazione Gray-Scott con 4 esperimenti |
-| Esperimento Python (completo) ([download](/downloads/ontologia/studi-empirici/morfogenesi-ear/EAR_Experiment_Complete.py)) | py | Versione estesa: aggiunge il test di rottura simmetria (Cor. 3.3) |
-| Notebook Jupyter ([download](/downloads/ontologia/studi-empirici/morfogenesi-ear/EAR_Morphogenetic_Experiment.ipynb)) | ipynb | Versione interattiva con output e interpretazioni inline |
-| Figura: soglia critica ([download](/downloads/ontologia/studi-empirici/morfogenesi-ear/soglia_critica.png)) | png | Grafico transizione (vedi sopra) |
-| Figura: confronto pattern ([download](/downloads/ontologia/studi-empirici/morfogenesi-ear/confronto_pattern.png)) | png | Confronto visivo Turing vs EAR (vedi sopra) |
+| **Scoperte strutturali** ([download](/downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/SCOPERTE_STRUTTURALI_8_GENNAIO_2026.md)) | md | Writeup formale: tre scoperte, derivazioni, verifiche numeriche |
+| Esperimento Python (modulare) ([download](/downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/ear_morphogenetic_experiment.py)) | py | Simulazione Gray-Scott con 4 esperimenti |
+| Esperimento Python (completo) ([download](/downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/EAR_Experiment_Complete.py)) | py | Versione estesa: aggiunge il test di rottura simmetria (Cor. 3.3) |
+| Notebook Jupyter ([download](/downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/EAR_Morphogenetic_Experiment.ipynb)) | ipynb | Versione interattiva con output e interpretazioni inline |
+| Figura: soglia critica ([download](/downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/soglia_critica.png)) | png | Grafico transizione (vedi sopra) |
+| Figura: confronto pattern ([download](/downloads/ontologia/studi-empirici/pattern-formation/morfogenesi-ear/confronto_pattern.png)) | png | Confronto visivo Turing vs EAR (vedi sopra) |
 
 ## Connessione al trattato
 

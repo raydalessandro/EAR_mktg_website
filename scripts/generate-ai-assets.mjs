@@ -316,8 +316,22 @@ function copyRawMarkdown({ sections, documents }) {
   return written;
 }
 
+function cleanPreviousGeneration() {
+  if (!fs.existsSync(CONTENT_DIR)) return;
+  for (const entry of fs.readdirSync(CONTENT_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    if (entry.name.startsWith(".") || entry.name.startsWith("_")) continue;
+    const dir = path.join(PUBLIC_DIR, entry.name);
+    const mdFile = path.join(PUBLIC_DIR, entry.name + ".md");
+    if (fs.existsSync(dir)) fs.rmSync(dir, { recursive: true, force: true });
+    if (fs.existsSync(mdFile)) fs.rmSync(mdFile);
+  }
+}
+
 function main() {
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
+
+  cleanPreviousGeneration();
 
   const tree = walk(CONTENT_DIR);
 
