@@ -3,7 +3,7 @@ title: "Saga Engine"
 summary: "Pipeline per scrivere saghe narrative seriali con coerenza inter-storia, agnostica al modello AI."
 status: published
 type: pipeline
-version: "1.0.0"
+version: "1.0.1"
 order: 10
 tags: [pipeline, narrative, saga, ai-orchestration, world-building, writing-pipeline, agentic-workflow]
 authors: [Ray]
@@ -11,7 +11,7 @@ created: 2026-04-25
 updated: 2026-04-25
 license: CC-BY-SA-4.0
 download:
-  file: /downloads/pipeline/saga-engine/saga-engine-v1.0.zip
+  file: /downloads/pipeline/saga-engine/saga-engine-v1.0.1.zip
   format: zip
   size: "232 KB"
 related:
@@ -157,7 +157,7 @@ saga-engine/
 ├── SKILL.md                          # entry point per AI
 ├── USAGE.md                          # per agenti
 ├── USAGE-HUMAN.md                    # per autori umani
-├── README.md, VERSION
+├── README.md, VERSION, CHANGELOG.md
 ├── scripts/                          # 7 file Python
 │   ├── bootstrap_saga.py
 │   ├── audit_0_canonical_fields.py   # audit pre-commit
