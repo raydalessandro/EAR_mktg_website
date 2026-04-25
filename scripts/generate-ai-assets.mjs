@@ -200,6 +200,13 @@ function buildLlmsTxt({ sections, documents }) {
       lines.push(
         `  - [${sub.meta.title}](${urlFor(sub.slug)}): ${sub.meta.summary ?? "sotto-sezione"}`
       );
+      if (sub.meta.download?.file) {
+        const dlUrl = sub.meta.download.file.startsWith("http")
+          ? sub.meta.download.file
+          : `${SITE_URL}${sub.meta.download.file}`;
+        const fmt = sub.meta.download.format ?? "file";
+        lines.push(`    - download (${fmt}): ${dlUrl}`);
+      }
     }
 
     const inSection = documents.filter(
@@ -210,6 +217,13 @@ function buildLlmsTxt({ sections, documents }) {
       lines.push(
         `- [${doc.meta.title}](${urlFor(doc.slug)}): ${doc.meta.summary ?? tail}`
       );
+      if (doc.meta.download?.file) {
+        const dlUrl = doc.meta.download.file.startsWith("http")
+          ? doc.meta.download.file
+          : `${SITE_URL}${doc.meta.download.file}`;
+        const fmt = doc.meta.download.format ?? "file";
+        lines.push(`  - download (${fmt}): ${dlUrl}`);
+      }
     }
     lines.push("");
   }
