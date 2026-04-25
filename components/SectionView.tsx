@@ -1,14 +1,26 @@
+import fs from "node:fs";
 import type { SectionNode } from "@/lib/content";
-import { breadcrumbs } from "@/lib/content";
+import { breadcrumbs, renderMarkdown } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { SectionCard } from "./SectionCard";
 import { DocCard } from "./DocCard";
 import { JsonLd, sectionJsonLd } from "./JsonLd";
 
-export function SectionView({ node }: { node: SectionNode }) {
+function readSectionBody(node: SectionNode): string {
+  const file = `${node.dirPath}/_section.md`;
+  if (!fs.existsSync(file)) return "";
+  const raw = fs.readFileSync(file, "utf8");
+  const match = raw.match(/^---\n[\s\S]*?\n---\n?/);
+  return match ? raw.slice(match[0].length).trim() : raw.trim();
+}
+
+export async function SectionView({ node }: { node: SectionNode }) {
   const crumbs = breadcrumbs(node.slug);
   const hasChildren = node.children.length > 0;
   const hasDocs = node.documents.length > 0;
+  const body = readSectionBody(node);
+  const html = body ? await renderMarkdown(body) : "";
+  const download = node.meta.download;
 
   return (
     <div className="mx-auto max-w-canvas px-6 py-12">
@@ -35,7 +47,27 @@ export function SectionView({ node }: { node: SectionNode }) {
             {node.meta.description}
           </p>
         )}
+
+        {download && (
+          <a
+            href={download.file}
+            download
+            className="mt-6 inline-flex items-center gap-2 bg-ink text-paper rounded-lg px-4 py-2.5 text-sm font-medium hover:bg-accent hover:text-ink transition-colors"
+          >
+            <span>Scarica</span>
+            <span className="font-mono text-xs uppercase opacity-80">
+              {download.format}
+            </span>
+            {download.size && (
+              <span className="font-mono text-xs opacity-60">· {download.size}</span>
+            )}
+          </a>
+        )}
       </header>
+
+      {html && (
+        <div className="prose-nodo mb-16" dangerouslySetInnerHTML={{ __html: html }} />
+      )}
 
       {hasChildren && (
         <section className="mb-12">
@@ -63,7 +95,7 @@ export function SectionView({ node }: { node: SectionNode }) {
         </section>
       )}
 
-      {!hasChildren && !hasDocs && (
+      {!hasChildren && !hasDocs && !html && (
         <div className="border border-dashed border-[color:var(--gray-200)] rounded-xl p-10 text-center text-[color:var(--gray-500)]">
           Sezione vuota. I contenuti arriveranno presto.
         </div>
