@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run gen:ai-assets && next dev",
+    "prebuild": "npm run gen:ai-assets",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "gen:ai-assets": "node scripts/generate-ai-assets.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

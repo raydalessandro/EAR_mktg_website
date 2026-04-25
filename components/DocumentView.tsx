@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { DocumentNode } from "@/lib/content";
 import { breadcrumbs, findNode } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
+import { JsonLd, documentJsonLd } from "./JsonLd";
 
 type Props = {
   doc: DocumentNode;
@@ -31,6 +32,14 @@ export function DocumentView({ doc, html }: Props) {
 
   return (
     <article className="mx-auto max-w-canvas px-6 py-12">
+      <JsonLd
+        data={documentJsonLd({
+          title: doc.meta.title,
+          summary: doc.meta.summary,
+          href: doc.href,
+          meta: doc.meta,
+        })}
+      />
       <Breadcrumbs items={crumbs} />
 
       <header className="mb-8 max-w-prose">

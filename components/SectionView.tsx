@@ -3,6 +3,7 @@ import { breadcrumbs } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { SectionCard } from "./SectionCard";
 import { DocCard } from "./DocCard";
+import { JsonLd, sectionJsonLd } from "./JsonLd";
 
 export function SectionView({ node }: { node: SectionNode }) {
   const crumbs = breadcrumbs(node.slug);
@@ -11,6 +12,13 @@ export function SectionView({ node }: { node: SectionNode }) {
 
   return (
     <div className="mx-auto max-w-canvas px-6 py-12">
+      <JsonLd
+        data={sectionJsonLd({
+          title: node.meta.title,
+          summary: node.meta.summary,
+          href: node.href,
+        })}
+      />
       <Breadcrumbs items={crumbs} />
 
       <header className="mb-10 max-w-prose">

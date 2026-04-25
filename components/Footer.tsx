@@ -9,7 +9,7 @@ export function Footer() {
           <span className="mx-2">·</span>
           <span>Hub di orchestrazione AI</span>
         </div>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-5">
           <Link href="/ontologia" className="hover:text-ink">
             Ontologia
           </Link>
@@ -22,6 +22,12 @@ export function Footer() {
           <Link href="/pipeline" className="hover:text-ink">
             Pipeline
           </Link>
+          <Link href="/ai" className="hover:text-ink">
+            Per AI
+          </Link>
+          <a href="/llms.txt" className="hover:text-ink font-mono text-xs">
+            llms.txt
+          </a>
         </div>
       </div>
     </footer>
