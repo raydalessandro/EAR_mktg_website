@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nodo432.com/sitemap.xml
