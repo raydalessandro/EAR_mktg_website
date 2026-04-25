@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 
-const VIZ_URL = "/downloads/tesseract/visualizzazione/ear_tesseract_visualization.html";
+const VIZ_URL = "/tesseract/viz";
+const FULLSCREEN_URL = "/tesseract/viz";
 
 export function TesseractEmbed() {
   const [loaded, setLoaded] = useState(false);
@@ -17,7 +18,7 @@ export function TesseractEmbed() {
           </span>
         </div>
         <a
-          href={VIZ_URL}
+          href={FULLSCREEN_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs text-accent hover:text-ink transition-colors"

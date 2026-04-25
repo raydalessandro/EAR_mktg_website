@@ -120,14 +120,15 @@ function buildCatalog({ sections, documents }) {
     url: SITE_URL,
     generated_at: new Date().toISOString(),
     conventions: {
-      raw_markdown:
-        "Ogni pagina HTML ha un equivalente markdown aggiungendo .md all'URL. Esempio: /ontologia → /ontologia.md",
-      catalog: "/index.json contiene tutto questo catalogo, machine-readable",
-      llms_txt: "/llms.txt segue lo standard llmstxt.org",
+      raw_markdown: `Ogni pagina HTML ha un equivalente markdown aggiungendo .md all'URL. Esempio: ${SITE_URL}/ontologia → ${SITE_URL}/ontologia.md`,
+      catalog: `${SITE_URL}/index.json contiene tutto questo catalogo, machine-readable`,
+      llms_txt: `${SITE_URL}/llms.txt segue lo standard llmstxt.org`,
       future_mcp:
         "Un server MCP è in roadmap (non ancora disponibile). Esporrà list_documents, read_document, get_section come tool MCP.",
       uniform_schema:
         "Sections e documents hanno lo stesso schema (kind=section o document). Una section può avere download, related, type, version come un document.",
+      url_policy:
+        `Tutti gli URL in questo catalogo sono assoluti (https://...). Convertire a relativi solo se serve.`,
     },
     sections: sections.map((s) => nodeEntry(s, "section")),
     documents: documents.map((d) => nodeEntry(d, "document")),
@@ -139,11 +140,11 @@ function buildLlmsTxt({ sections, documents }) {
   lines.push("# nodo432");
   lines.push("");
   lines.push(
-    "> Hub di orchestrazione AI. Sistema ontologico EAR (Essere/Agire/Risuonare), notazione AILA per LLM, teoremi strutturali, risorse e tool. Sito progettato per essere consultabile da agenti AI: ogni pagina ha equivalente markdown raw, catalogo completo machine-readable a /index.json."
+    `> Hub di orchestrazione AI. Sistema ontologico EAR (Essere/Agire/Risuonare), Tesseract a 72 nodi, notazione AILA per LLM, teoremi, mapping dello scibile, studi empirici e tool. Sito progettato per essere consultabile da agenti AI: ogni pagina ha equivalente markdown raw, catalogo completo machine-readable a ${SITE_URL}/index.json.`
   );
   lines.push("");
   lines.push(
-    "Convenzioni: aggiungi `.md` a un URL pagina per ottenere il sorgente markdown. Es: `/ontologia/teoremi/3-soglia-critica` → `/ontologia/teoremi/3-soglia-critica.md`. Catalogo strutturato: `/index.json`."
+    `Convenzioni: aggiungi \`.md\` a un URL pagina per ottenere il sorgente markdown. Esempio: ${SITE_URL}/ontologia/teoremi/3-soglia-critica → ${SITE_URL}/ontologia/teoremi/3-soglia-critica.md. Catalogo strutturato (tutti gli URL assoluti): ${SITE_URL}/index.json. Tutti i link in questo file sono assoluti.`
   );
   lines.push("");
 
@@ -186,10 +187,11 @@ function buildLlmsTxt({ sections, documents }) {
 
   lines.push("## Optional");
   lines.push("");
-  lines.push(`- [Catalogo JSON](${SITE_URL}/index.json): tutti i contenuti in formato strutturato, una sola fetch`);
+  lines.push(`- [Catalogo JSON](${SITE_URL}/index.json): tutti i contenuti in formato strutturato (URL assoluti), una sola fetch`);
   lines.push(`- [Sitemap](${SITE_URL}/sitemap.xml): sitemap XML standard`);
-  lines.push(`- [llms-full.txt](${SITE_URL}/llms-full.txt): tutti i contenuti pubblicati concatenati`);
-  lines.push(`- [Pagina /ai](${SITE_URL}/ai): guida human-readable alla navigazione AI del sito`);
+  lines.push(`- [llms-full.txt](${SITE_URL}/llms-full.txt): tutti i contenuti pubblicati concatenati con metadata`);
+  lines.push(`- [Pagina AI](${SITE_URL}/ai): guida human-readable alla navigazione AI del sito`);
+  lines.push(`- [Tesseract viz](${SITE_URL}/tesseract/viz): visualizzazione interattiva 3D del reticolo a 72 nodi`);
   lines.push("");
 
   return lines.join("\n");
@@ -215,12 +217,15 @@ function buildLlmsFullTxt({ sections, documents }) {
   lines.push("# nodo432 — full content dump");
   lines.push("");
   lines.push(
-    "Concatenazione completa dei contenuti pubblicati su nodo432. Per ogni documento è incluso il testo CANONICO completo (il file linkato nel campo download del frontmatter), quando il canonico è in formato markdown. Per documenti senza canonico markdown è incluso il body della scheda online."
+    "Concatenazione completa dei contenuti pubblicati su nodo432. Per ogni documento è incluso il testo CANONICO completo (il file linkato nel campo download del frontmatter), quando il canonico è in formato markdown. Per documenti senza canonico markdown (DOCX, ZIP, immagini) è incluso il body della scheda online + URL al canonico."
   );
+  lines.push("");
+  lines.push("Tutti gli URL in questo file sono ASSOLUTI (https://nodo432.com/...).");
   lines.push("");
   lines.push(`Generato: ${new Date().toISOString()}`);
   lines.push(`Source: ${SITE_URL}/llms-full.txt`);
-  lines.push(`Catalogo strutturato: ${SITE_URL}/index.json`);
+  lines.push(`Catalogo strutturato (machine-readable): ${SITE_URL}/index.json`);
+  lines.push(`Mappa standard llmstxt.org: ${SITE_URL}/llms.txt`);
   lines.push("");
   lines.push("=".repeat(72));
   lines.push("");
