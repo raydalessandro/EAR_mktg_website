@@ -9,7 +9,15 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "gen:ai-assets": "node scripts/generate-ai-assets.mjs"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "gen:ai-assets": "node scripts/generate-ai-assets.mjs",
+    "audit": "node scripts/audit.mjs",
+    "audit:strict": "node scripts/audit.mjs --strict",
+    "migrate:slug": "node scripts/migrate-slug.mjs",
+    "extract:docx": "node scripts/extract-docx.mjs",
+    "fm:set": "node scripts/set-frontmatter-field.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -29,6 +37,7 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
   }
 }

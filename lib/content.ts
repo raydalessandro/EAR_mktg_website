@@ -8,8 +8,28 @@ import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 import { frontmatterSchema, type Frontmatter } from "./schema";
 
-const CONTENT_ROOT = path.join(process.cwd(), "content");
+// CONTENT_ROOT is resolved lazily so tests can swap the directory via the
+// `CONTENT_ROOT` env var (or by calling `_setRootForTesting`) before the
+// first call. In production this is just `<cwd>/content`.
 const SECTION_FILE = "_section.md";
+
+let contentRootOverride: string | null = null;
+
+function getContentRoot(): string {
+  if (contentRootOverride) return contentRootOverride;
+  if (process.env.CONTENT_ROOT) return process.env.CONTENT_ROOT;
+  return path.join(process.cwd(), "content");
+}
+
+/**
+ * Test-only helper. Swaps the content root and clears the cached tree so
+ * the next loader call re-walks the new directory. Pass `null` to reset
+ * back to the default (cwd/content or CONTENT_ROOT env).
+ */
+export function _setRootForTesting(root: string | null): void {
+  contentRootOverride = root;
+  cachedTree = null;
+}
 
 export type DocumentNode = {
   kind: "document";
@@ -118,12 +138,13 @@ let cachedTree: SectionNode | null = null;
 
 export function getContentTree(): SectionNode {
   if (cachedTree) return cachedTree;
-  if (!fs.existsSync(CONTENT_ROOT)) {
+  const root = getContentRoot();
+  if (!fs.existsSync(root)) {
     cachedTree = {
       kind: "section",
       slug: [],
       href: "/",
-      dirPath: CONTENT_ROOT,
+      dirPath: root,
       meta: defaultSectionMeta("root"),
       children: [],
       documents: [],
@@ -131,7 +152,7 @@ export function getContentTree(): SectionNode {
     };
     return cachedTree;
   }
-  cachedTree = walk(CONTENT_ROOT, [], null);
+  cachedTree = walk(root, [], null);
   return cachedTree;
 }
 

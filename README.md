@@ -134,6 +134,25 @@ npm run typecheck
 npm run gen:ai-assets  # rigenera solo gli asset AI
 ```
 
+## Testing
+
+Suite Vitest che protegge gli invariant del progetto: schema Zod del
+frontmatter, content loader (`lib/content.ts`), generatore di asset AI
+(`scripts/generate-ai-assets.mjs`) e script di audit
+(`scripts/audit.mjs`). Ambiente Node, niente jsdom.
+
+```bash
+npm test             # vitest run (one-shot, exit code per CI)
+npm run test:watch   # vitest in modalità watch
+npm run test:ui      # UI Vitest (richiede @vitest/ui installato)
+```
+
+I test del content loader usano fixture sotto `tests/fixtures/content/`;
+`lib/content.ts` espone `_setRootForTesting(path)` (e rispetta la env
+`CONTENT_ROOT`) per puntare a una root alternativa. I test di
+generazione e audit lavorano contro `/content` reale e scrivono in
+`/public` (che è già un output di build).
+
 ## Deploy
 
 Hosted su **Vercel** (Next.js framework preset). Ogni push su `main`

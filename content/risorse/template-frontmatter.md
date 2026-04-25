@@ -1,6 +1,8 @@
 ---
 title: Template frontmatter
 summary: Il template di frontmatter da copiare quando crei un nuovo documento.
+version: "1.0"
+type: template
 status: published
 order: 1
 tags: [template, meta]

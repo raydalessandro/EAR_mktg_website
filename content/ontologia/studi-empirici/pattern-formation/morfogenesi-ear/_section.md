@@ -1,6 +1,7 @@
 ---
 title: "Morfogenesi EAR — Scoperte strutturali e validazione empirica"
 summary: Tre scoperte derivate (432 = D²·A³, Δ = π/A², ε = A/D) testate via simulazione Turing con kernel ontologico.
+version: "1.0"
 type: study
 status: published
 order: 10
