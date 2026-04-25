@@ -1,6 +1,8 @@
 ---
 title: "Soglia Critica"
 summary: "Le transizioni locale→globale passano sempre per una soglia: non sono graduali, e oltre soglia rompono simmetria globale."
+type: teorema
+version: "2.0"
 status: published
 order: 30
 tags: [teoremi, EAR, transizioni-di-fase, rottura-simmetria]

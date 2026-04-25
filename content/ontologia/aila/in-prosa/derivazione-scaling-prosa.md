@@ -1,6 +1,8 @@
 ---
 title: "Derivazione Scaling 3/4 (in prosa)"
 summary: "Versione in prosa italiana della derivazione formale dello scaling 3/4: dalla legge di Kleiber a A/D = 3/4."
+type: aila-prose-companion
+version: "2.0"
 status: published
 order: 40
 tags: [aila, in-prosa, italiano, scaling, kleiber, teorema]

@@ -3,6 +3,7 @@ import type { DocumentNode } from "@/lib/content";
 import { breadcrumbs, findNode } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { JsonLd, documentJsonLd } from "./JsonLd";
+import { FrontmatterMarker } from "./FrontmatterMarker";
 
 type Props = {
   doc: DocumentNode;
@@ -32,6 +33,11 @@ export function DocumentView({ doc, html }: Props) {
 
   return (
     <article className="mx-auto max-w-canvas px-6 py-12">
+      <FrontmatterMarker
+        meta={doc.meta}
+        slug={doc.slug.join("/")}
+        kind="document"
+      />
       <JsonLd
         data={documentJsonLd({
           title: doc.meta.title,
@@ -43,6 +49,13 @@ export function DocumentView({ doc, html }: Props) {
       <Breadcrumbs items={crumbs} />
 
       <header className="mb-8 max-w-prose">
+        {(doc.meta.type || doc.meta.version) && (
+          <p className="text-xs uppercase tracking-wider text-accent font-mono mb-2">
+            {doc.meta.type}
+            {doc.meta.type && doc.meta.version && " · "}
+            {doc.meta.version && `v${doc.meta.version}`}
+          </p>
+        )}
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-ink">
           {doc.meta.title}
         </h1>

@@ -1,6 +1,8 @@
 ---
 title: "Nano Kernel"
 summary: "Versione compatta (~2500 token) del kernel EAR-AILA per LLM piccoli e contesti ristretti."
+type: aila-nano
+version: "1.0"
 status: published
 order: 10
 tags: [aila, nano, kernel, compatto]

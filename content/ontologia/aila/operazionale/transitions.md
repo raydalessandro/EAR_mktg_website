@@ -1,6 +1,8 @@
 ---
 title: "Transitions"
 summary: "22 tipologie di transizione (⟿) con soglie relative — strato dinamico del vocabolario AILA."
+type: aila-operational
+version: "1.1"
 status: published
 order: 60
 tags: [aila, transizioni, soglie]

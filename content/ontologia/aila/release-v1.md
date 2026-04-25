@@ -1,6 +1,8 @@
 ---
 title: "AILA v1.0 — Release Package"
 summary: "Pacchetto completo AILA v1.0: docs, kernel, decoder, tokenizer di riferimento e LICENSE."
+type: aila-release
+version: "1.0"
 status: published
 order: 999
 tags: [aila, release, distribuzione, package]

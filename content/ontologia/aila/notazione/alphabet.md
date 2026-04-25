@@ -1,6 +1,8 @@
 ---
 title: "Alphabet AILA"
 summary: "Inventario definitivo di 64 segni su 11 livelli + 72 indirizzi compositi Σ_DAXP. Frozen v1.0."
+type: aila-notation
+version: "1.0"
 status: published
 order: 20
 tags: [aila, alfabeto, simboli]

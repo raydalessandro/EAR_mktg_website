@@ -1,6 +1,8 @@
 ---
 title: "Empirical Reference"
 summary: "Indice vivente delle validazioni empiriche EAR — oncologia, neuro, semantica, sintesi cross-dominio."
+type: aila-empirical
+version: "1.0"
 status: published
 order: 95
 tags: [aila, empirico, validazioni]

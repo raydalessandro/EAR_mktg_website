@@ -1,6 +1,8 @@
 ---
 title: "Scaling Dimensionale"
 summary: "Le grandezze estensive scalano con esponente A/D = 3/4: il rapporto fra attributi e dimensioni è necessità strutturale, non legge empirica."
+type: teorema
+version: "1.0"
 status: published
 order: 40
 tags: [teoremi, EAR, scaling, kleiber]

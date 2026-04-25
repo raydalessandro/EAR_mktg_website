@@ -1,6 +1,8 @@
 ---
 title: "Matrix Vocabulary"
 summary: "Matrice 4×3×3×2 = 72 simboli Σ_ijkp e protocollo di analisi a 7 step. Strumento operazionale del kernel."
+type: aila-operational
+version: "1.1"
 status: published
 order: 50
 tags: [aila, matrice, vocabolario]

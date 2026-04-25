@@ -1,10 +1,12 @@
 import fs from "node:fs";
 import type { SectionNode } from "@/lib/content";
-import { breadcrumbs, renderMarkdown } from "@/lib/content";
+import { breadcrumbs, collectDownloads, renderMarkdown } from "@/lib/content";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { SectionCard } from "./SectionCard";
 import { DocCard } from "./DocCard";
 import { JsonLd, sectionJsonLd } from "./JsonLd";
+import { FrontmatterMarker } from "./FrontmatterMarker";
+import { AllDownloads } from "./AllDownloads";
 
 function readSectionBody(node: SectionNode): string {
   const file = `${node.dirPath}/_section.md`;
@@ -21,9 +23,15 @@ export async function SectionView({ node }: { node: SectionNode }) {
   const body = readSectionBody(node);
   const html = body ? await renderMarkdown(body) : "";
   const download = node.meta.download;
+  const allDownloads = collectDownloads(node);
 
   return (
     <div className="mx-auto max-w-canvas px-6 py-12">
+      <FrontmatterMarker
+        meta={node.meta}
+        slug={node.slug.join("/")}
+        kind="section"
+      />
       <JsonLd
         data={sectionJsonLd({
           title: node.meta.title,
@@ -66,8 +74,10 @@ export async function SectionView({ node }: { node: SectionNode }) {
       </header>
 
       {html && (
-        <div className="prose-nodo mb-16" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="prose-nodo mb-12" dangerouslySetInnerHTML={{ __html: html }} />
       )}
+
+      {allDownloads.length > 1 && <AllDownloads entries={allDownloads} />}
 
       {hasChildren && (
         <section className="mb-12">

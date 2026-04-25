@@ -1,6 +1,8 @@
 ---
 title: "Minimo Osservazionale"
 summary: "I quattro requisiti strutturali (A-D) che ogni sistema deve soddisfare per sostenere auto-osservazione ricorsiva stabile."
+type: teorema
+version: "1.0"
 status: published
 order: 10
 tags: [teoremi, EAR, auto-osservazione, vincoli-strutturali]

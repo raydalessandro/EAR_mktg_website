@@ -1,6 +1,8 @@
 ---
 title: "Scaling"
 summary: "Derivazione da primi principi dell'esponente ε = A/D = 3/4 — Kleiber, Hurst, 432 = D²×A³."
+type: aila-derivation
+version: "1.1"
 status: published
 order: 70
 tags: [aila, scaling, kleiber]

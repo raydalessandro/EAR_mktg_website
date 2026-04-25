@@ -1,6 +1,8 @@
 ---
 title: "Risonanza Intersistemica"
 summary: "Quando due sistemi complessi superano una soglia critica di scambio, emerge un pattern auto-sostenente con quattro fasi co-presenti."
+type: teorema
+version: "1.0"
 status: published
 order: 50
 tags: [teoremi, EAR, risonanza, sistemi-complessi]

@@ -1,6 +1,8 @@
 ---
 title: "Vocabolario Operativo EAR (in prosa)"
 summary: "Versione in prosa italiana del Vocabolario Operativo: 72 simboli, 4 fasi di risonanza, protocollo di analisi in 7 step."
+type: aila-prose-companion
+version: "2.0"
 status: published
 order: 30
 tags: [aila, in-prosa, italiano, vocabolario, operazionale]

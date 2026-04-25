@@ -1,6 +1,8 @@
 ---
 title: "Inseparabilità degli Attributi"
 summary: "Distinzione, Relazione e Processo (Δ, ⇄, ⟳) sono co-presenti e inseparabili in ogni nodo emergente: la loro separazione è artefatto osservazionale."
+type: teorema
+version: "1.0"
 status: published
 order: 60
 tags: [teoremi, EAR, attributi, triade]

@@ -187,6 +187,39 @@ export function countDocumentsDeep(node: SectionNode): number {
   return n;
 }
 
+export type DownloadEntry = {
+  title: string;
+  href: string;
+  download: NonNullable<Frontmatter["download"]>;
+  fromKind: "section" | "document";
+};
+
+export function collectDownloads(node: SectionNode): DownloadEntry[] {
+  const out: DownloadEntry[] = [];
+  if (node.meta.download) {
+    out.push({
+      title: node.meta.title,
+      href: node.href,
+      download: node.meta.download,
+      fromKind: "section",
+    });
+  }
+  for (const child of node.children) {
+    out.push(...collectDownloads(child));
+  }
+  for (const doc of node.documents) {
+    if (doc.meta.download) {
+      out.push({
+        title: doc.meta.title,
+        href: doc.href,
+        download: doc.meta.download,
+        fromKind: "document",
+      });
+    }
+  }
+  return out;
+}
+
 export function topLevelSections(): SectionNode[] {
   return getContentTree().children;
 }

@@ -1,6 +1,8 @@
 ---
 title: "Lingua AILA"
 summary: "Specifica ufficiale di grammatica, sintassi e principi della notazione AILA. Il primer di tutto il sistema."
+type: aila-notation
+version: "1.0"
 status: published
 order: 10
 tags: [aila, grammatica, sintassi]

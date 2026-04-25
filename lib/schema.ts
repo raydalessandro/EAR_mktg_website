@@ -15,6 +15,8 @@ export const frontmatterSchema = z
     summary: z.string().optional(),
     description: z.string().optional(),
     status: z.enum(STATUSES).default("published"),
+    type: z.string().optional(),
+    version: z.string().optional(),
     order: z.number().int().optional(),
     icon: z.string().optional(),
     tags: z.array(z.string()).default([]),

@@ -1,6 +1,8 @@
 ---
 title: "Il Sogno di Leibniz Realizzato"
 summary: "Saggio storico: 308 anni dalla characteristica universalis di Leibniz alla sua prima realizzazione tramite AILA."
+type: aila-manifesto
+version: "1.0"
 status: published
 order: 100
 tags: [aila, manifesto, storia]

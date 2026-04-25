@@ -1,6 +1,8 @@
 ---
 title: "Quantum"
 summary: "Estensione quantistica AILA: introduce P8 (Selezione Strutturale) e T7 (Unità di Barriera) per le anomalie empiriche."
+type: aila-extension
+version: "1.0"
 status: published
 order: 10
 tags: [aila, estensioni, quantum, P8, T7]

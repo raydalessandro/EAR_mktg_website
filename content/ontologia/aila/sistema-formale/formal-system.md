@@ -1,6 +1,8 @@
 ---
 title: "Sistema Formale EAR"
 summary: "Formalizzazione matematica completa di EAR: vocabolario, assiomi, regole di inferenza, derivazioni step-by-step."
+type: aila-spec
+version: "1.1"
 status: published
 order: 40
 tags: [aila, formalizzazione, derivazioni]

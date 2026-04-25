@@ -193,23 +193,91 @@ function buildLlmsTxt({ sections, documents }) {
   return lines.join("\n");
 }
 
+function readCanonicalIfMarkdown(meta) {
+  const downloadFile = meta.download?.file;
+  if (!downloadFile) return null;
+  if (!downloadFile.endsWith(".md")) return null;
+  if (downloadFile.startsWith("http")) return null;
+  const rel = downloadFile.replace(/^\//, "");
+  const local = path.join(PUBLIC_DIR, rel);
+  if (!fs.existsSync(local)) return null;
+  try {
+    return fs.readFileSync(local, "utf8");
+  } catch {
+    return null;
+  }
+}
+
 function buildLlmsFullTxt({ sections, documents }) {
   const lines = [];
   lines.push("# nodo432 — full content dump");
   lines.push("");
   lines.push(
-    "Concatenated bodies of all published documents. Generated automatically."
+    "Concatenazione completa dei contenuti pubblicati su nodo432. Per ogni documento è incluso il testo CANONICO completo (il file linkato nel campo download del frontmatter), quando il canonico è in formato markdown. Per documenti senza canonico markdown è incluso il body della scheda online."
   );
-  lines.push(`Generated: ${new Date().toISOString()}`);
   lines.push("");
-  lines.push("---");
+  lines.push(`Generato: ${new Date().toISOString()}`);
+  lines.push(`Source: ${SITE_URL}/llms-full.txt`);
+  lines.push(`Catalogo strutturato: ${SITE_URL}/index.json`);
   lines.push("");
+  lines.push("=".repeat(72));
+  lines.push("");
+
+  function emitNodeBlock(node, kind) {
+    if (!STATUS_LIVE.has(node.meta.status ?? "published")) return;
+
+    lines.push("=".repeat(72));
+    lines.push("");
+    lines.push(`# ${node.meta.title}`);
+    lines.push("");
+    lines.push(`Kind: ${kind}`);
+    lines.push(`Source page: ${urlFor(node.slug)}`);
+    lines.push(`Raw markdown: ${rawUrlFor(node.slug)}`);
+    if (node.meta.type) lines.push(`Type: ${node.meta.type}`);
+    if (node.meta.version) lines.push(`Version: ${node.meta.version}`);
+    if (node.meta.status) lines.push(`Status: ${node.meta.status}`);
+    if (node.meta.summary) lines.push(`Summary: ${node.meta.summary}`);
+    if (node.meta.tags?.length) lines.push(`Tags: ${node.meta.tags.join(", ")}`);
+    if (node.meta.license) lines.push(`License: ${node.meta.license}`);
+
+    const canonicalMd = readCanonicalIfMarkdown(node.meta);
+    if (canonicalMd) {
+      const canonicalUrl = node.meta.download.file.startsWith("http")
+        ? node.meta.download.file
+        : `${SITE_URL}${node.meta.download.file}`;
+      lines.push(`Canonical download: ${canonicalUrl}`);
+      lines.push("");
+      lines.push("## Scheda (intro)");
+      lines.push("");
+      if (node.body?.trim()) lines.push(node.body.trim());
+      lines.push("");
+      lines.push("## Canonical content");
+      lines.push("");
+      lines.push(canonicalMd.trim());
+      lines.push("");
+    } else {
+      if (node.meta.download) {
+        const fmt = node.meta.download.format ?? "binary";
+        const url = node.meta.download.file.startsWith("http")
+          ? node.meta.download.file
+          : `${SITE_URL}${node.meta.download.file}`;
+        lines.push(`Canonical download (${fmt}, not inlined): ${url}`);
+      }
+      lines.push("");
+      if (node.body?.trim()) {
+        lines.push(node.body.trim());
+        lines.push("");
+      }
+    }
+  }
 
   for (const sec of sections) {
     if (sec.slug.length !== 1) continue;
     lines.push(`# ${sec.meta.title}`);
-    if (sec.meta.summary) lines.push("");
-    if (sec.meta.summary) lines.push(`> ${sec.meta.summary}`);
+    if (sec.meta.summary) {
+      lines.push("");
+      lines.push(`> ${sec.meta.summary}`);
+    }
     lines.push("");
     if (sec.body?.trim()) {
       lines.push(sec.body.trim());
@@ -217,20 +285,14 @@ function buildLlmsFullTxt({ sections, documents }) {
     }
   }
 
+  for (const sec of sections) {
+    if (sec.slug.length === 1) continue;
+    if (!sec.meta.download) continue;
+    emitNodeBlock(sec, "section");
+  }
+
   for (const doc of documents) {
-    if (!STATUS_LIVE.has(doc.meta.status ?? "published")) continue;
-    lines.push("---");
-    lines.push("");
-    lines.push(`# ${doc.meta.title}`);
-    lines.push("");
-    lines.push(`Source: ${urlFor(doc.slug)}`);
-    if (doc.meta.summary) lines.push(`Summary: ${doc.meta.summary}`);
-    if (doc.meta.tags?.length) lines.push(`Tags: ${doc.meta.tags.join(", ")}`);
-    lines.push("");
-    if (doc.body?.trim()) {
-      lines.push(doc.body.trim());
-      lines.push("");
-    }
+    emitNodeBlock(doc, "document");
   }
 
   return lines.join("\n");

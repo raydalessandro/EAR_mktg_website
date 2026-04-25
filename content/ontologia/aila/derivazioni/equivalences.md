@@ -1,6 +1,8 @@
 ---
 title: "Equivalences"
 summary: "23 identità cross-dominio: stessa struttura proiettata su scale diverse, con protocollo di attivazione."
+type: aila-derivation
+version: "1.0"
 status: published
 order: 80
 tags: [aila, equivalenze, cross-dominio]

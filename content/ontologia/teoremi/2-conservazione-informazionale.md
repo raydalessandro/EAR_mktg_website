@@ -1,6 +1,8 @@
 ---
 title: "Conservazione Informazionale"
 summary: "L'informazione totale non si crea né si distrugge: cambia forma. Ogni trasformazione ha un costo minimo non nullo."
+type: teorema
+version: "1.0"
 status: published
 order: 20
 tags: [teoremi, EAR, informazione, termodinamica]

@@ -1,6 +1,8 @@
 ---
 title: "Coherence"
 summary: "Tre viste sulla coerenza gerarchica (φ, Δ_scaling, INS) con meccanismo PV→OXPHOS→E/I→SOC."
+type: aila-empirical
+version: "1.1"
 status: published
 order: 90
 tags: [aila, coerenza, validazione]

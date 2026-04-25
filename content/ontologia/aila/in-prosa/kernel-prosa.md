@@ -1,6 +1,8 @@
 ---
 title: "Kernel EAR (in prosa)"
 summary: "Versione in prosa italiana del Kernel EAR: assiomi, proposizioni e protocollo di attivazione in singola sessione."
+type: aila-prose-companion
+version: "1.0"
 status: published
 order: 10
 tags: [aila, in-prosa, italiano, kernel, attivazione]

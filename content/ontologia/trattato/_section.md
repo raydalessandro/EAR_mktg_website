@@ -2,6 +2,8 @@
 title: Trattato
 summary: Della Coscienza Emergente — Trattato sull'Unità di Essere e Conoscere. Il testo fondazionale del sistema.
 status: published
+type: trattato
+version: "1.0"
 order: 10
 icon: book
 tags: [trattato, ontologia, fondamenta]
@@ -67,6 +69,23 @@ come contesto in un modello permette di:
 - **Contesto LLM completo**: il file è un singolo markdown — caricalo per intero come system prompt o come knowledge base
 - **Riferimenti puntuali**: cita per `Libro X, Cap. Y` (la numerazione è stabile)
 - **Pairing con AILA**: usa il trattato per la giustificazione, AILA per l'operatività
+
+## Appendici e materiale collegato
+
+Documenti che derivano dal trattato o lo accompagnano. Tutti scaricabili
+come markdown.
+
+| Documento | Cosa è | Download |
+|---|---|---|
+| **[Kernel operativo](/ontologia/aila/in-prosa/kernel-prosa)** | Sistema assiomatico compatto in prosa, con protocollo di attivazione | [scarica](/downloads/ontologia/aila/in-prosa/KERNEL_EAR_v1.md) |
+| **[Sistema formale](/ontologia/aila/in-prosa/sistema-formale-prosa)** | Derivazione completa assiomi → proposizioni → teoremi (PARTE I-VI) | [scarica](/downloads/ontologia/aila/in-prosa/Sistema_Formale_EAR_v2.1.md) |
+| **[Vocabolario operativo](/ontologia/aila/in-prosa/vocabolario-prosa)** | I 72 simboli con tabelle, esempi e regole d'inferenza | [scarica](/downloads/ontologia/aila/in-prosa/Vocabolario_Operativo_EAR_v2.md) |
+| **[Derivazione scaling 3/4](/ontologia/aila/in-prosa/derivazione-scaling-prosa)** | Teorema dello scaling strutturale come capitolo standalone | [scarica](/downloads/ontologia/aila/in-prosa/v2.DERIVAZIONE_SCALING_3-4.md) |
+
+Vivono in [AILA / In prosa](/ontologia/aila/in-prosa) — sono
+**companion** del trattato pensati per attivazione rapida in singola
+sessione e per pairing con LLM senza primer AILA in contesto. Più sotto
+trovi anche il riepilogo di tutti i download di questa sezione.
 
 ## Note
 

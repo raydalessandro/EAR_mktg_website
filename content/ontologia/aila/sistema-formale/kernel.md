@@ -1,6 +1,8 @@
 ---
 title: "Kernel EAR"
 summary: "Cuore dell'ontologia EAR in AILA: primitivi, assiomi A1-A5, proposizioni P1-P6, teoremi T1-T7."
+type: aila-spec
+version: "1.1"
 status: published
 order: 30
 tags: [aila, kernel, ontologia]

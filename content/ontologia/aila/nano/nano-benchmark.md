@@ -1,6 +1,8 @@
 ---
 title: "Nano Kernel Benchmark"
 summary: "Validazione empirica del nano kernel su Qwen2.5 0.5B-7B e DeepSeek Base: scoperta dell'uncanny valley."
+type: aila-nano
+version: "1.0"
 status: published
 order: 30
 tags: [aila, nano, benchmark, validazione]

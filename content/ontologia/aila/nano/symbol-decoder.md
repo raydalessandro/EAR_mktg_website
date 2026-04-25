@@ -1,6 +1,8 @@
 ---
 title: "Symbol Decoder"
 summary: "Companion del nano kernel: tabella di decodifica zero-ambiguità per i simboli AILA."
+type: aila-nano
+version: "1.0"
 status: published
 order: 20
 tags: [aila, nano, decoder, simboli]

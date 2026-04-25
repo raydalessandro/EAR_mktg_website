@@ -1,6 +1,8 @@
 ---
 title: "Sistema Formale EAR (in prosa)"
 summary: "Versione in prosa italiana del Sistema Formale EAR v2.1: derivazione teorematica completa da assiomi a predizioni testabili."
+type: aila-prose-companion
+version: "2.1"
 status: published
 order: 20
 tags: [aila, in-prosa, italiano, sistema-formale, teoremi]
