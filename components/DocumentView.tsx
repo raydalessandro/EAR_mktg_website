@@ -5,6 +5,7 @@ import { Breadcrumbs } from "./Breadcrumbs";
 import { JsonLd, documentJsonLd } from "./JsonLd";
 import { FrontmatterMarker } from "./FrontmatterMarker";
 import { TypeBadge } from "./TypeBadge";
+import { MediaPlayer } from "./MediaPlayer";
 
 type Props = {
   doc: DocumentNode;
@@ -103,6 +104,10 @@ export function DocumentView({ doc, html }: Props) {
           </a>
         )}
       </header>
+
+      {doc.meta.download && (
+        <MediaPlayer download={doc.meta.download} title={doc.meta.title} />
+      )}
 
       <div className="prose-nodo" dangerouslySetInnerHTML={{ __html: html }} />
 

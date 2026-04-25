@@ -16,6 +16,9 @@ export function Footer() {
           <Link href="/ontologia" className="hover:text-ink">
             Ontologia
           </Link>
+          <Link href="/arte" className="hover:text-ink">
+            Arte
+          </Link>
           <Link href="/risorse" className="hover:text-ink">
             Risorse
           </Link>

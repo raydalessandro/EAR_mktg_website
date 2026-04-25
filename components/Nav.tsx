@@ -23,6 +23,11 @@ export function Nav() {
             </Link>
           </li>
           <li>
+            <Link href="/arte" className="hover:text-ink transition-colors">
+              Arte
+            </Link>
+          </li>
+          <li>
             <Link href="/risorse" className="hover:text-ink transition-colors">
               Risorse
             </Link>

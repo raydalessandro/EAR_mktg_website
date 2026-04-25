@@ -31,6 +31,9 @@ iniziano con `_`) è un documento. La profondità è arbitraria.
   /tesseract                    Top-level, ontologia geometrica
     paper.md, grafo.md, visualizzazione.md, appendix-derivazione.md
     /bridge-signature/          9 test sequenziali + overview + report
+  /arte                         Top-level, pratica artistica
+    /scrittura, /musica, /visivo, /performance
+                                Audio/video player automatico per file mp3/wav/ogg/mp4/webm
   /ontologia
     /trattato                   Trattato della Coscienza Emergente (200pp)
     /teoremi                    6 proposizioni P1-P6
