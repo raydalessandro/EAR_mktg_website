@@ -199,11 +199,23 @@ L'authorship dell'opera resta tua. Saga Engine è infrastruttura.
 
 ## Versioning
 
-**1.0.0** (aprile 2026). SemVer:
+**Versione corrente: 1.0.1** (aprile 2026). SemVer:
 
 - MAJOR: breaking changes a `SKILL.md` o schema base
 - MINOR: nuovi campi core, nuove fasi, nuovi script
 - PATCH: bug fix, documentazione, esempi
 
 Le saghe avviate con una versione restano valide. Migrazione opzionale
-e documentata.
+e documentata. **Le release storiche restano disponibili** ai loro URL
+canonici (vedi sotto).
+
+### Versioni disponibili
+
+| Versione | Download | Note |
+|---|---|---|
+| **1.0.1** (corrente) | [saga-engine-v1.0.1.zip](/downloads/pipeline/saga-engine/saga-engine-v1.0.1.zip) | URL canonico citato nei doc interni; aggiunge CHANGELOG.md |
+| 1.0.0 | [saga-engine-v1.0.zip](/downloads/pipeline/saga-engine/saga-engine-v1.0.zip) | Prima release pubblica; nessuna URL esplicito nei doc interni |
+
+Tutte le versioni sono **CC-BY-SA-4.0** e mantengono lo stesso schema
+del grafo. Cambia solo la documentazione interna (PATCH).
+
