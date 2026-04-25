@@ -77,6 +77,13 @@ export function Footer() {
             >
               {SITE}/graph.json
             </a>
+            <a
+              href={`${SITE}/prompts.md`}
+              className="hover:text-ink"
+              data-ai-endpoint="prompts"
+            >
+              {SITE}/prompts.md
+            </a>
           </span>
         </div>
       </div>

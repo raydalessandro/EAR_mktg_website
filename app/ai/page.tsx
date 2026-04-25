@@ -44,6 +44,12 @@ const endpoints = [
       "72 nodi, 444 archi. Autoritativo per ragionamento spaziale — non inferire dalle prose.",
   },
   {
+    path: "/prompts.md",
+    title: "Starter prompts",
+    description:
+      "Prompt copia-incolla per inizializzare una chat orientata su nodo432: avvio standard, ingestione completa, system prompt, task-specific (saga-engine, telegram bot, ecc.).",
+  },
+  {
     path: "/llms.txt",
     title: "Mappa standard llmstxt.org",
     description:
