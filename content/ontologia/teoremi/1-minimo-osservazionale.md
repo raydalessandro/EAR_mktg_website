@@ -12,8 +12,8 @@ download:
   file: /downloads/ontologia/teoremi/1_PROPOSIZIONE_MINIMO_OSSERVAZIONALE.md
   format: md
 related:
-  - ontologia/aila/kernel
-  - ontologia/aila/formal-system
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/sistema-formale/formal-system
 featured: true
 ---
 
@@ -37,7 +37,7 @@ In pratica, il modello può usare (A)-(D) come check-list: se manca anche un sol
 
 - Carica il documento canonico (link download in alto) come contesto in un LLM per ragionamenti su coscienza, IA, fisica fondamentale.
 - Cita puntualmente "Prop. 1, requisito (B)" o "Corollario Fisico" per ancorare l'argomentazione.
-- Pairing con [AILA Kernel](/ontologia/aila/kernel) per la versione formalizzata compatta P1.
+- Pairing con [AILA Kernel](/ontologia/aila/sistema-formale/kernel) per la versione formalizzata compatta P1.
 
 ## In sintesi
 

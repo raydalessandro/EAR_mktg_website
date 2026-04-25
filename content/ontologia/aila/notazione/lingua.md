@@ -12,8 +12,8 @@ download:
   file: /downloads/ontologia/aila/AILA_LINGUA_v1.0.md
   format: md
 related:
-  - ontologia/aila/alphabet
-  - ontologia/aila/kernel
+  - ontologia/aila/notazione/alphabet
+  - ontologia/aila/sistema-formale/kernel
 featured: true
 ---
 

@@ -12,9 +12,9 @@ download:
   file: /downloads/ontologia/teoremi/4_PROPOSIZIONE_SCALING_DIMENSIONALE.md
   format: md
 related:
-  - ontologia/aila/kernel
-  - ontologia/aila/formal-system
-  - ontologia/aila/scaling
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/sistema-formale/formal-system
+  - ontologia/aila/derivazioni/scaling
   - ontologia/teoremi/1-minimo-osservazionale
 featured: false
 ---
@@ -39,7 +39,7 @@ Permette a un LLM di derivare predizioni quantitative da invarianti strutturali:
 
 - Carica il file canonico come contesto per analisi di scaling, allometria, serie temporali persistenti.
 - Cita "Prop. 4 (A)-(D)" o il Corollario Geometrico Generale per la tabella dei rapporti A/D.
-- Pairing con [AILA Kernel](/ontologia/aila/kernel) (P4) e con [AILA Scaling](/ontologia/aila/scaling) per la formalizzazione compatta.
+- Pairing con [AILA Kernel](/ontologia/aila/sistema-formale/kernel) (P4) e con [AILA Scaling](/ontologia/aila/derivazioni/scaling) per la formalizzazione compatta.
 
 ## In sintesi
 

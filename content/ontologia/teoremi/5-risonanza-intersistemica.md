@@ -12,8 +12,8 @@ download:
   file: /downloads/ontologia/teoremi/5_PROPOSIZIONE_RISONANZA_INTERSISTEMICA.md
   format: md
 related:
-  - ontologia/aila/kernel
-  - ontologia/aila/formal-system
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/sistema-formale/formal-system
   - ontologia/teoremi/1-minimo-osservazionale
   - ontologia/teoremi/2-conservazione-informazionale
   - ontologia/teoremi/3-soglia-critica
@@ -42,7 +42,7 @@ In contesti applicativi (validazione qualità IA, matching terapeutico, selezion
 
 - Carica il file canonico come contesto per analisi di interazioni, dialoghi, collaborazioni.
 - Cita "Prop. 5, Fase X" (Porta/Spirale/Nodo/Seme) o T5.1 per il teorema di co-presenza.
-- Pairing con [AILA Kernel](/ontologia/aila/kernel) (P5) e con la [Prop. 6](/ontologia/teoremi/6-inseparabilita-attributi) per la mappa fasi → attributi.
+- Pairing con [AILA Kernel](/ontologia/aila/sistema-formale/kernel) (P5) e con la [Prop. 6](/ontologia/teoremi/6-inseparabilita-attributi) per la mappa fasi → attributi.
 
 ## In sintesi
 

@@ -12,9 +12,9 @@ download:
   file: /downloads/ontologia/aila/EAR_FORMAL_SYSTEM_AILA_v1_1.md
   format: md
 related:
-  - ontologia/aila/lingua
-  - ontologia/aila/kernel
-  - ontologia/aila/matrix-vocab
+  - ontologia/aila/notazione/lingua
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/operazionale/matrix-vocab
   - ontologia/teoremi
 featured: false
 ---

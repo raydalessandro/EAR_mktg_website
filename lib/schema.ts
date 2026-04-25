@@ -5,7 +5,7 @@ export type Status = (typeof STATUSES)[number];
 
 export const downloadSchema = z.object({
   file: z.string(),
-  format: z.enum(["md", "pdf", "zip", "json", "txt"]).default("md"),
+  format: z.string().default("md"),
   size: z.string().optional(),
 });
 

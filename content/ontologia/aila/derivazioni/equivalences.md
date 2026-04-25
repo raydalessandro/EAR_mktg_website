@@ -12,11 +12,11 @@ download:
   file: /downloads/ontologia/aila/EAR_EQUIVALENCES_AILA_v1_0.md
   format: md
 related:
-  - ontologia/aila/lingua
-  - ontologia/aila/kernel
-  - ontologia/aila/transitions
-  - ontologia/aila/scaling
-  - ontologia/aila/coherence
+  - ontologia/aila/notazione/lingua
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/operazionale/transitions
+  - ontologia/aila/derivazioni/scaling
+  - ontologia/aila/empirico/coherence
 featured: false
 ---
 
@@ -50,7 +50,7 @@ capacità di INS).
 
 ## Come usarlo
 
-- Carica insieme a [Kernel](/ontologia/aila/kernel) come "tabella di
+- Carica insieme a [Kernel](/ontologia/aila/sistema-formale/kernel) come "tabella di
   consultazione attiva"
 - Segui il **protocollo di attivazione** in 7 step: per ogni concetto X,
   controlla in sequenza triade, numeri, propositions, dati empirici,

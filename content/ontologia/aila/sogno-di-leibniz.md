@@ -12,8 +12,8 @@ download:
   file: /downloads/ontologia/aila/AILA_Il_Sogno_di_Leibniz_Realizzato.md
   format: md
 related:
-  - ontologia/aila/lingua
-  - ontologia/aila/kernel
+  - ontologia/aila/notazione/lingua
+  - ontologia/aila/sistema-formale/kernel
 featured: false
 ---
 

@@ -12,10 +12,10 @@ download:
   file: /downloads/ontologia/aila/EAR_SCALING_AILA_v1_1.md
   format: md
 related:
-  - ontologia/aila/lingua
-  - ontologia/aila/kernel
+  - ontologia/aila/notazione/lingua
+  - ontologia/aila/sistema-formale/kernel
   - ontologia/teoremi/4-scaling-dimensionale
-  - ontologia/aila/transitions
+  - ontologia/aila/operazionale/transitions
 featured: false
 ---
 
@@ -48,12 +48,12 @@ diretto tra struttura ontologica e costanti fisiche misurate.
 
 ## Come usarlo
 
-- Carica il file insieme a [Kernel](/ontologia/aila/kernel) per le premesse A, D
+- Carica il file insieme a [Kernel](/ontologia/aila/sistema-formale/kernel) per le premesse A, D
 - Applicazioni dirette: metabolismo (ε = 3/4), frequenza cardiaca (-1/4),
   vita media (1/4), serie temporali (Hurst ~0.75)
 - Test di falsificazione: cercare sistemi con esponente 3/4 ma <3 attributi,
   oppure `Σ_output > Σ_input` (vietato dalla teoria)
-- Pairing utile con [Coherence](/ontologia/aila/coherence) per leggere
+- Pairing utile con [Coherence](/ontologia/aila/empirico/coherence) per leggere
   `+1/12` cerebrale come surplus di integrazione
 
 ## Note

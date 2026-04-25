@@ -35,5 +35,5 @@ AILA, qui in forma estesa per lettura umana e citazione.
 
 Si citano fra loro e citano il trattato (sez. RESISTANCE per le costanti
 432/π). Per la formalizzazione compatta vedi
-[AILA Kernel](/ontologia/aila/kernel) e
-[AILA Formal System](/ontologia/aila/formal-system).
+[AILA Kernel](/ontologia/aila/sistema-formale/kernel) e
+[AILA Formal System](/ontologia/aila/sistema-formale/formal-system).

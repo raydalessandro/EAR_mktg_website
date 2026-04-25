@@ -12,10 +12,10 @@ download:
   file: /downloads/ontologia/aila/EAR_MATRIX_VOCAB_AILA_v1_1.md
   format: md
 related:
-  - ontologia/aila/lingua
-  - ontologia/aila/kernel
-  - ontologia/aila/formal-system
-  - ontologia/aila/alphabet
+  - ontologia/aila/notazione/lingua
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/sistema-formale/formal-system
+  - ontologia/aila/notazione/alphabet
 featured: false
 ---
 

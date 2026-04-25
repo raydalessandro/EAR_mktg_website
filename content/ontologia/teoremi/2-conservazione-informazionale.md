@@ -12,8 +12,8 @@ download:
   file: /downloads/ontologia/teoremi/2_PROPOSIZIONE_CONSERVAZIONE_INFORMAZIONALE.md
   format: md
 related:
-  - ontologia/aila/kernel
-  - ontologia/aila/formal-system
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/sistema-formale/formal-system
   - ontologia/teoremi/1-minimo-osservazionale
 featured: true
 ---
@@ -38,7 +38,7 @@ In contesti generativi, fornisce un vincolo per valutare proposte (es. algoritmi
 
 - Carica il file canonico come contesto per discussioni su entropia, decoerenza, paradosso del buco nero.
 - Cita "Prop. 2 (A)-(D)" o i corollari termodinamico/informazionale per ancorare l'argomentazione.
-- Pairing con [AILA Kernel](/ontologia/aila/kernel) per la versione formalizzata P2 e con la [Prop. 1](/ontologia/teoremi/1-minimo-osservazionale) per il quadro statico+dinamico.
+- Pairing con [AILA Kernel](/ontologia/aila/sistema-formale/kernel) per la versione formalizzata P2 e con la [Prop. 1](/ontologia/teoremi/1-minimo-osservazionale) per il quadro statico+dinamico.
 
 ## In sintesi
 

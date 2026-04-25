@@ -12,10 +12,10 @@ download:
   file: /downloads/ontologia/aila/EAR_COHERENCE_AILA_v1_1.md
   format: md
 related:
-  - ontologia/aila/lingua
-  - ontologia/aila/kernel
-  - ontologia/aila/scaling
-  - ontologia/aila/empirical-reference
+  - ontologia/aila/notazione/lingua
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/derivazioni/scaling
+  - ontologia/aila/empirico/empirical-reference
 featured: false
 ---
 
@@ -48,9 +48,9 @@ per ogni claim del framework.
 
 ## Come usarlo
 
-- Carica con [Scaling](/ontologia/aila/scaling) come prerequisito per
+- Carica con [Scaling](/ontologia/aila/derivazioni/scaling) come prerequisito per
   `ε = A/D`
-- Pairing con [Empirical Reference](/ontologia/aila/empirical-reference)
+- Pairing con [Empirical Reference](/ontologia/aila/empirico/empirical-reference)
   per i dati primari
 - Esempio: "valuta se questa popolazione tumorale mostra perdita di
   coerenza" ⇒ calcola β̄ vascolare, θ metabolico, riporta Δ

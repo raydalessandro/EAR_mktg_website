@@ -1,23 +1,27 @@
 ---
 title: Studi empirici
-summary: Validazioni empiriche dell'ontologia EAR. Coming soon.
-status: coming-soon
+summary: Validazioni e applicazioni empiriche dell'ontologia EAR. Studi originali con codice e dati.
+status: published
 order: 40
 icon: lab
-tags: [empirico, validazione]
+tags: [empirico, validazione, studi]
+authors: [nodo432]
+created: 2026-04-25
+updated: 2026-04-25
+license: CC-BY-SA-4.0
 ---
 
-Studi empirici basati sull'ontologia EAR. Sezione in arrivo.
+Studi originali condotti sull'ontologia EAR. Ogni studio è una **cartella
+autocontenuta**: writeup, codice eseguibile (Python, notebook), figure
+e qualunque altro artefatto, tutto scaricabile.
 
-Anticipazioni di temi che troveranno spazio qui:
+Differenza rispetto a [AILA Empirico](/ontologia/aila/empirico): qui ci
+sono **studi originali** prodotti applicando il framework. Lì c'è
+l'**indice** delle validazioni esistenti in letteratura.
 
-- Validazione su sistemi biologici (NSCLC, criticità neurale SOC)
-- Misure di coerenza cross-dominio (CHE, INS)
-- Esponenti di scaling A/D in fenomeni naturali (Kleiber, Hurst)
+## Aree in arrivo
+
+- Sistemi biologici (oncologia, criticità neurale)
+- Misure di coerenza cross-dominio
+- Esponenti di scaling A/D in fenomeni naturali
 - Mappa delle predizioni testabili dei 6 teoremi
-
-Nel frattempo vedi
-[AILA Empirical Reference](/ontologia/aila/empirical-reference) per
-l'indice attualmente disponibile, e
-[AILA Coherence](/ontologia/aila/coherence) per le tre viste sulla
-coerenza gerarchica.

@@ -12,8 +12,8 @@ download:
   file: /downloads/ontologia/teoremi/3_PROPOSIZIONE_SOGLIA_CRITICA_v2.md
   format: md
 related:
-  - ontologia/aila/kernel
-  - ontologia/aila/formal-system
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/sistema-formale/formal-system
   - ontologia/teoremi/1-minimo-osservazionale
   - ontologia/teoremi/6-inseparabilita-attributi
 featured: false
@@ -39,7 +39,7 @@ Inoltre, la coppia soglia + rottura di simmetria è uno strumento predittivo: do
 
 - Carica il file canonico come contesto per analisi di transizioni di fase, sistemi complessi, dinamiche critiche.
 - Cita "Prop. 3 (A)-(D)" o "Corollario C3.5" per la rottura di simmetria.
-- Pairing con [AILA Kernel](/ontologia/aila/kernel) (P3) e con la [Prop. 6](/ontologia/teoremi/6-inseparabilita-attributi) per il legame Δ/⇄ alla soglia.
+- Pairing con [AILA Kernel](/ontologia/aila/sistema-formale/kernel) (P3) e con la [Prop. 6](/ontologia/teoremi/6-inseparabilita-attributi) per il legame Δ/⇄ alla soglia.
 
 ## In sintesi
 

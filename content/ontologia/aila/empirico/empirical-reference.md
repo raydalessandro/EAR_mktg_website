@@ -12,10 +12,10 @@ download:
   file: /downloads/ontologia/aila/EAR_EMPIRICAL_REFERENCE_AILA_v1.0.md
   format: md
 related:
-  - ontologia/aila/lingua
-  - ontologia/aila/kernel
-  - ontologia/aila/coherence
-  - ontologia/aila/scaling
+  - ontologia/aila/notazione/lingua
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/empirico/coherence
+  - ontologia/aila/derivazioni/scaling
 featured: false
 ---
 
@@ -48,7 +48,7 @@ rischio di overclaiming e abilita una conversazione calibrata sulle evidenze.
 
 ## Come usarlo
 
-- Carica insieme a [Coherence](/ontologia/aila/coherence) per lo specchio
+- Carica insieme a [Coherence](/ontologia/aila/empirico/coherence) per lo specchio
   teorico
 - Usalo come **prima consultazione** prima di assertire validazione: cerca
   proposition o dominio nella tabella di sintesi

@@ -22,30 +22,30 @@ I primitivi sono tre simboli inseparabili — **Δ** (distinzione), **⇄**
 include un alfabeto di 64 segni su 11 livelli e una matrice di 72
 compositi (4×3×3×2).
 
-## Mappa dei file
+## Struttura della sezione
 
-| Cluster | File | Funzione |
-|---|---|---|
-| **Notazione** | [Lingua](/ontologia/aila/lingua) | Grammatica e sintassi (5 principi) |
-| | [Alphabet](/ontologia/aila/alphabet) | 64 segni + 72 compositi (frozen) |
-| **Sistema formale** | [Kernel](/ontologia/aila/kernel) | Primitivi, assiomi, P1-P8, T1-T7 |
-| | [Formal System](/ontologia/aila/formal-system) | Derivazioni complete, regole di inferenza |
-| **Operazionale** | [Matrix Vocab](/ontologia/aila/matrix-vocab) | Matrice 4×3×3×2 = 72 simboli + protocollo a 7 step |
-| | [Transitions](/ontologia/aila/transitions) | 22 sentieri di transizione (Madre/Doppia/Semplice) |
-| **Derivazioni** | [Scaling](/ontologia/aila/scaling) | Teorema ε = A/D = 3/4 da primi principi |
-| | [Equivalences](/ontologia/aila/equivalences) | 23 identità cross-dominio |
-| **Empirico** | [Coherence](/ontologia/aila/coherence) | Tre viste su coerenza (IIT, NSCLC, INS) |
-| | [Empirical Reference](/ontologia/aila/empirical-reference) | Indice di validazioni empiriche |
-| **Manifesto** | [Sogno di Leibniz](/ontologia/aila/sogno-di-leibniz) | Contesto storico: 308 anni di tentativi |
+| Cluster | Cosa contiene |
+|---|---|
+| **[Notazione](/ontologia/aila/notazione)** | Lingua e Alphabet — la grammatica e l'inventario dei segni |
+| **[Sistema formale](/ontologia/aila/sistema-formale)** | Kernel e Formal System — primitivi, assiomi, derivazioni |
+| **[Operazionale](/ontologia/aila/operazionale)** | Matrix Vocab e Transitions — 72 simboli + 22 sentieri |
+| **[Derivazioni](/ontologia/aila/derivazioni)** | Scaling e Equivalences — teoremi e identità cross-dominio |
+| **[Empirico](/ontologia/aila/empirico)** | Coherence e Empirical Reference — validazioni nel mondo reale |
+| **[Nano](/ontologia/aila/nano)** | AILA in formato compatto per LLM piccoli o contesti limitati |
+| **[Estensioni](/ontologia/aila/estensioni)** | Estensioni del core verso domini specifici (quantum, …) |
+| **[In prosa](/ontologia/aila/in-prosa)** | Versioni in prosa italiana — più verbose, pedagogiche |
 
-## Ordine di lettura
+Più, a livello di sezione AILA: **[Sogno di Leibniz](/ontologia/aila/sogno-di-leibniz)** — il manifesto storico del progetto.
 
-Per AI o lettore tecnico:
+## Ordine di lettura per chi inizia
 
-1. **Lingua** (40 min) — la notazione si auto-spiega, è il primer
-2. **Kernel** (30 min) — primitivi e assiomi
-3. **Sogno di Leibniz** (60 min) — perché esiste, contesto storico
-4. Resto a seconda del bisogno
+1. **[Lingua](/ontologia/aila/notazione/lingua)** (~40 min) — la notazione si auto-spiega, è il primer di tutto
+2. **[Kernel](/ontologia/aila/sistema-formale/kernel)** (~30 min) — primitivi e assiomi
+3. **[Sogno di Leibniz](/ontologia/aila/sogno-di-leibniz)** (~60 min) — perché esiste, contesto storico
+4. Il resto a seconda del bisogno (formalizzazione, derivazioni, empirico, estensioni)
+
+Per **LLM piccoli o context budget stretto** vedi [Nano](/ontologia/aila/nano).
+Per chi non è familiare con la notazione AILA vedi [In prosa](/ontologia/aila/in-prosa).
 
 ## Standalone vs dipendenti
 

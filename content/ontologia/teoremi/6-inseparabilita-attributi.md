@@ -12,8 +12,8 @@ download:
   file: /downloads/ontologia/teoremi/6_PROPOSIZIONE_INSEPARABILITA_ATTRIBUTI.md
   format: md
 related:
-  - ontologia/aila/kernel
-  - ontologia/aila/formal-system
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/sistema-formale/formal-system
   - ontologia/teoremi/1-minimo-osservazionale
   - ontologia/teoremi/2-conservazione-informazionale
   - ontologia/teoremi/3-soglia-critica
@@ -42,7 +42,7 @@ Permette a un LLM di rifiutare analisi monodimensionali: se descrive un sistema 
 
 - Carica il file canonico come contesto per analisi strutturali, design di sistemi, valutazione di formalizzazioni.
 - Cita "Prop. 6, C6.X" per i corollari (triade come unità, dominanza vs assenza, gradiente).
-- Pairing con [AILA Kernel](/ontologia/aila/kernel) (P6) e con la [Prop. 5](/ontologia/teoremi/5-risonanza-intersistemica) per la mappa fasi/attributi.
+- Pairing con [AILA Kernel](/ontologia/aila/sistema-formale/kernel) (P6) e con la [Prop. 5](/ontologia/teoremi/5-risonanza-intersistemica) per la mappa fasi/attributi.
 
 ## In sintesi
 

@@ -12,9 +12,9 @@ download:
   file: /downloads/ontologia/aila/AILA_ALPHABET_v1_0.md
   format: md
 related:
-  - ontologia/aila/lingua
-  - ontologia/aila/kernel
-  - ontologia/aila/matrix-vocab
+  - ontologia/aila/notazione/lingua
+  - ontologia/aila/sistema-formale/kernel
+  - ontologia/aila/operazionale/matrix-vocab
 featured: false
 ---
 
