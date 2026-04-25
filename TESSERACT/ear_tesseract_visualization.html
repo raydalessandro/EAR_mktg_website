@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAR Tesseract — Cristallo Ontologico 72</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background: #0a0a0f; 
+            overflow: hidden; 
+            font-family: 'Courier New', monospace;
+            color: #e0e0e0;
+        }
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.7);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            max-width: 320px;
+        }
+        #info h1 {
+            font-size: 16px;
+            color: #00ffaa;
+            margin-bottom: 10px;
+        }
+        #info p {
+            font-size: 11px;
+            line-height: 1.5;
+            color: #aaa;
+        }
+        #stats {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.7);
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            font-size: 12px;
+        }
+        #stats .stat {
+            margin: 5px 0;
+        }
+        #stats .value {
+            color: #00ffaa;
+            font-weight: bold;
+        }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            background: rgba(0,255,170,0.1);
+            border: 1px solid #00ffaa;
+            color: #00ffaa;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: rgba(0,255,170,0.3);
+        }
+        .btn.active {
+            background: #00ffaa;
+            color: #000;
+        }
+        #tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            border: 1px solid #00ffaa;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 11px;
+            pointer-events: none;
+            display: none;
+            z-index: 200;
+            max-width: 250px;
+        }
+        #tooltip .node-name {
+            color: #00ffaa;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        #legend {
+            position: absolute;
+            bottom: 80px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0,0,0,0.7);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            font-size: 11px;
+        }
+        #legend h3 {
+            color: #00ffaa;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        <h1>◉ EAR TESSERACT</h1>
+        <p>Cristallo ontologico derivato dalla matrice 4×3×3×2 = 72 simboli.</p>
+        <p style="margin-top: 10px;">Ogni nodo è un simbolo Σ_DAXP.<br>
+        Colori = Attributi (Δ ⇄ ⟳)<br>
+        Posizione = Coordinate D, X, P</p>
+        <p style="margin-top: 10px; color: #666;">Trascina per ruotare • Scroll per zoom</p>
+    </div>
+    
+    <div id="stats">
+        <div class="stat">Nodi: <span class="value">72</span></div>
+        <div class="stat">Edges: <span class="value">444</span></div>
+        <div class="stat">Connettività: <span class="value">100%</span></div>
+        <div class="stat">Clustering: <span class="value">0.446</span></div>
+        <div class="stat">Diametro: <span class="value">4</span></div>
+    </div>
+    
+    <div id="legend">
+        <h3>Attributi (A)</h3>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #ff6b6b;"></div>
+            <span>Δ Distinzione</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #4ecdc4;"></div>
+            <span>⇄ Relazione</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #ffe66d;"></div>
+            <span>⟳ Processo</span>
+        </div>
+        <h3 style="margin-top: 15px;">Dimensioni (D)</h3>
+        <div class="legend-item">
+            <span style="color: #888;">Asse X: D (1-4)</span>
+        </div>
+        <div class="legend-item">
+            <span style="color: #888;">Asse Y: X (1-3)</span>
+        </div>
+        <div class="legend-item">
+            <span style="color: #888;">Asse Z: P (+/-)</span>
+        </div>
+    </div>
+    
+    <div id="controls">
+        <button class="btn active" onclick="setView('tesseract')">Tesseract</button>
+        <button class="btn" onclick="setView('slices')">Fette D</button>
+        <button class="btn" onclick="setView('attributes')">Attributi</button>
+        <button class="btn" onclick="toggleRotation()">Auto-Rotazione</button>
+        <button class="btn" onclick="toggleEdges()">Toggle Edges</button>
+    </div>
+    
+    <div id="tooltip">
+        <div class="node-name"></div>
+        <div class="node-coords"></div>
+        <div class="node-archetype"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Scene setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x0a0a0f);
+        document.body.appendChild(renderer.domElement);
+
+        // Colors for attributes
+        const attrColors = {
+            1: 0xff6b6b, // Δ - red
+            2: 0x4ecdc4, // ⇄ - cyan
+            3: 0xffe66d  // ⟳ - yellow
+        };
+
+        // Generate all 72 nodes
+        const nodes = [];
+        const nodeObjects = [];
+        const edgeObjects = [];
+        
+        for (let D = 1; D <= 4; D++) {
+            for (let A = 1; A <= 3; A++) {
+                for (let X = 1; X <= 3; X++) {
+                    for (let P of ['+', '-']) {
+                        nodes.push({
+                            id: `Σ_${D}_${A}_${X}_${P}`,
+                            D, A, X, P,
+                            coords: `D${D}.A${A}.X${X}.${P}`
+                        });
+                    }
+                }
+            }
+        }
+
+        // Create node meshes
+        const nodeGeometry = new THREE.SphereGeometry(0.15, 16, 16);
+        
+        nodes.forEach((node, idx) => {
+            const material = new THREE.MeshBasicMaterial({ 
+                color: attrColors[node.A],
+                transparent: true,
+                opacity: 0.9
+            });
+            const mesh = new THREE.Mesh(nodeGeometry, material);
+            
+            // Position based on coordinates
+            // D on X axis, X on Y axis, P on Z axis, A determines color
+            const x = (node.D - 2.5) * 2;
+            const y = (node.X - 2) * 2;
+            const z = (node.P === '+' ? 1 : -1) * 1.5 + (node.A - 2) * 0.5;
+            
+            mesh.position.set(x, y, z);
+            mesh.userData = node;
+            
+            scene.add(mesh);
+            nodeObjects.push(mesh);
+        });
+
+        // Generate edges based on ontological rules
+        const edges = [];
+        
+        // Helper to find node index
+        const findNode = (D, A, X, P) => {
+            return nodes.findIndex(n => n.D === D && n.A === A && n.X === X && n.P === P);
+        };
+
+        // Complementarity edges (Σ+ ↔ Σ-)
+        for (let D = 1; D <= 4; D++) {
+            for (let A = 1; A <= 3; A++) {
+                for (let X = 1; X <= 3; X++) {
+                    const i1 = findNode(D, A, X, '+');
+                    const i2 = findNode(D, A, X, '-');
+                    if (i1 >= 0 && i2 >= 0) {
+                        edges.push({ from: i1, to: i2, type: 'complementary', phi: 6 });
+                    }
+                }
+            }
+        }
+
+        // D-adjacent edges (Double type)
+        for (let D = 1; D <= 3; D++) {
+            for (let A = 1; A <= 3; A++) {
+                for (let X = 1; X <= 3; X++) {
+                    for (let P of ['+', '-']) {
+                        const i1 = findNode(D, A, X, P);
+                        const i2 = findNode(D + 1, A, X, P);
+                        if (i1 >= 0 && i2 >= 0) {
+                            edges.push({ from: i1, to: i2, type: 'double_D', phi: 3 });
+                        }
+                    }
+                }
+            }
+        }
+
+        // A-adjacent edges (Double type)
+        for (let D = 1; D <= 4; D++) {
+            for (let A = 1; A <= 2; A++) {
+                for (let X = 1; X <= 3; X++) {
+                    for (let P of ['+', '-']) {
+                        const i1 = findNode(D, A, X, P);
+                        const i2 = findNode(D, A + 1, X, P);
+                        if (i1 >= 0 && i2 >= 0) {
+                            edges.push({ from: i1, to: i2, type: 'double_A', phi: 3 });
+                        }
+                    }
+                }
+            }
+        }
+
+        // X-adjacent edges (Double type)
+        for (let D = 1; D <= 4; D++) {
+            for (let A = 1; A <= 3; A++) {
+                for (let X = 1; X <= 2; X++) {
+                    for (let P of ['+', '-']) {
+                        const i1 = findNode(D, A, X, P);
+                        const i2 = findNode(D, A, X + 1, P);
+                        if (i1 >= 0 && i2 >= 0) {
+                            edges.push({ from: i1, to: i2, type: 'double_X', phi: 3 });
+                        }
+                    }
+                }
+            }
+        }
+
+        // Create edge lines
+        const edgeMaterial = new THREE.LineBasicMaterial({ 
+            color: 0x333355,
+            transparent: true,
+            opacity: 0.3
+        });
+
+        edges.forEach(edge => {
+            const points = [
+                nodeObjects[edge.from].position.clone(),
+                nodeObjects[edge.to].position.clone()
+            ];
+            const geometry = new THREE.BufferGeometry().setFromPoints(points);
+            const line = new THREE.Line(geometry, edgeMaterial.clone());
+            line.userData = edge;
+            scene.add(line);
+            edgeObjects.push(line);
+        });
+
+        // Camera position
+        camera.position.set(8, 6, 10);
+        camera.lookAt(0, 0, 0);
+
+        // Mouse controls
+        let isDragging = false;
+        let previousMousePosition = { x: 0, y: 0 };
+        let autoRotate = true;
+        let showEdges = true;
+
+        document.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            previousMousePosition = { x: e.clientX, y: e.clientY };
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const deltaMove = {
+                    x: e.clientX - previousMousePosition.x,
+                    y: e.clientY - previousMousePosition.y
+                };
+
+                const rotationSpeed = 0.005;
+                
+                // Rotate the entire scene
+                scene.rotation.y += deltaMove.x * rotationSpeed;
+                scene.rotation.x += deltaMove.y * rotationSpeed;
+
+                previousMousePosition = { x: e.clientX, y: e.clientY };
+            }
+
+            // Tooltip on hover
+            checkHover(e);
+        });
+
+        // Zoom with scroll
+        document.addEventListener('wheel', (e) => {
+            camera.position.multiplyScalar(e.deltaY > 0 ? 1.05 : 0.95);
+        });
+
+        // Raycaster for hover detection
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        const tooltip = document.getElementById('tooltip');
+
+        function checkHover(e) {
+            mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+            const intersects = raycaster.intersectObjects(nodeObjects);
+
+            if (intersects.length > 0) {
+                const node = intersects[0].object.userData;
+                tooltip.style.display = 'block';
+                tooltip.style.left = e.clientX + 15 + 'px';
+                tooltip.style.top = e.clientY + 15 + 'px';
+                
+                const attrNames = { 1: 'Δ Distinzione', 2: '⇄ Relazione', 3: '⟳ Processo' };
+                const dimNames = { 1: 'Linear', 2: 'Planar', 3: 'Volumetric', 4: 'Temporal' };
+                const xNames = { 1: 'Foundational', 2: 'Recursive', 3: 'Synthetic' };
+                
+                tooltip.innerHTML = `
+                    <div class="node-name">${node.id}</div>
+                    <div class="node-coords">
+                        D: ${dimNames[node.D]}<br>
+                        A: ${attrNames[node.A]}<br>
+                        X: ${xNames[node.X]}<br>
+                        P: ${node.P === '+' ? 'Expansion' : 'Contraction'}
+                    </div>
+                `;
+                
+                // Highlight connected edges
+                edgeObjects.forEach(line => {
+                    const edge = line.userData;
+                    const nodeIdx = nodes.indexOf(node);
+                    if (edge.from === nodeIdx || edge.to === nodeIdx) {
+                        line.material.opacity = 0.8;
+                        line.material.color.setHex(0x00ffaa);
+                    }
+                });
+            } else {
+                tooltip.style.display = 'none';
+                // Reset edge colors
+                edgeObjects.forEach(line => {
+                    line.material.opacity = showEdges ? 0.3 : 0;
+                    line.material.color.setHex(0x333355);
+                });
+            }
+        }
+
+        // View modes
+        function setView(mode) {
+            document.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+
+            nodeObjects.forEach((mesh, idx) => {
+                const node = nodes[idx];
+                let x, y, z;
+
+                switch(mode) {
+                    case 'tesseract':
+                        x = (node.D - 2.5) * 2;
+                        y = (node.X - 2) * 2;
+                        z = (node.P === '+' ? 1 : -1) * 1.5 + (node.A - 2) * 0.5;
+                        break;
+                    case 'slices':
+                        // Separate by D dimension
+                        x = (node.D - 2.5) * 4;
+                        y = (node.X - 2) * 1.5;
+                        z = (node.A - 2) * 1.5 + (node.P === '+' ? 0.3 : -0.3);
+                        break;
+                    case 'attributes':
+                        // Group by attribute
+                        const angle = (node.D - 1) / 4 * Math.PI * 2 + (node.X - 1) * 0.3;
+                        const radius = 2 + (node.X - 1) * 0.5;
+                        x = Math.cos(angle) * radius + (node.A - 2) * 5;
+                        y = (node.P === '+' ? 1 : -1);
+                        z = Math.sin(angle) * radius;
+                        break;
+                }
+
+                // Animate transition
+                animatePosition(mesh, x, y, z);
+            });
+
+            // Update edges after animation
+            setTimeout(updateEdges, 500);
+        }
+
+        function animatePosition(mesh, targetX, targetY, targetZ) {
+            const startPos = mesh.position.clone();
+            const endPos = new THREE.Vector3(targetX, targetY, targetZ);
+            const duration = 500;
+            const startTime = Date.now();
+
+            function animate() {
+                const elapsed = Date.now() - startTime;
+                const t = Math.min(elapsed / duration, 1);
+                const easeT = t * (2 - t); // ease out
+
+                mesh.position.lerpVectors(startPos, endPos, easeT);
+
+                if (t < 1) {
+                    requestAnimationFrame(animate);
+                }
+            }
+            animate();
+        }
+
+        function updateEdges() {
+            edgeObjects.forEach((line, idx) => {
+                const edge = edges[idx];
+                const points = [
+                    nodeObjects[edge.from].position.clone(),
+                    nodeObjects[edge.to].position.clone()
+                ];
+                line.geometry.setFromPoints(points);
+            });
+        }
+
+        function toggleRotation() {
+            autoRotate = !autoRotate;
+            event.target.classList.toggle('active');
+        }
+
+        function toggleEdges() {
+            showEdges = !showEdges;
+            edgeObjects.forEach(line => {
+                line.material.opacity = showEdges ? 0.3 : 0;
+            });
+            event.target.classList.toggle('active');
+        }
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            if (autoRotate && !isDragging) {
+                scene.rotation.y += 0.002;
+            }
+
+            renderer.render(scene, camera);
+        }
+
+        // Handle resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+</body>
+</html>
