@@ -92,14 +92,14 @@ export default async function AiPage() {
         <p className="text-[15px] leading-relaxed text-ink">
           LLM e agenti: questo sito è ottimizzato per voi.{" "}
           <a
-            href="/llms-full.txt"
+            href="https://nodo432.com/llms-full.txt"
             className="text-accent underline underline-offset-4"
           >
             llms-full.txt
           </a>{" "}
           +{" "}
           <a
-            href="/ai-instructions.md"
+            href="https://nodo432.com/ai-instructions.md"
             className="text-accent underline underline-offset-4"
           >
             ai-instructions.md
@@ -165,10 +165,10 @@ export default async function AiPage() {
         <h2 className="text-2xl font-bold mb-4">Workflow tipico</h2>
         <ol className="list-decimal pl-5 space-y-2 text-[17px] leading-relaxed">
           <li>
-            Fetch <Link href="/llms.txt" className="text-accent underline underline-offset-4">/llms.txt</Link> per la mappa.
+            Fetch <Link href="https://nodo432.com/llms.txt" className="text-accent underline underline-offset-4">/llms.txt</Link> per la mappa.
           </li>
           <li>
-            Fetch <Link href="/index.json" className="text-accent underline underline-offset-4">/index.json</Link> per il catalogo machine-readable.
+            Fetch <Link href="https://nodo432.com/index.json" className="text-accent underline underline-offset-4">/index.json</Link> per il catalogo machine-readable.
           </li>
           <li>
             Fetch del raw markdown della pagina target (URL pagina + .md).
@@ -215,7 +215,7 @@ export default async function AiPage() {
             </h2>
             <p className="text-sm text-[color:var(--gray-500)] mb-6">
               Contenuto integrale di{" "}
-              <a href="/ai-instructions.md" className="text-accent underline underline-offset-4">
+              <a href="https://nodo432.com/ai-instructions.md" className="text-accent underline underline-offset-4">
                 /ai-instructions.md
               </a>
               . Inlinato qui per agenti AI con policy di fetch ristrette
@@ -238,14 +238,14 @@ export default async function AiPage() {
             <h2 className="text-2xl font-bold mb-2">llms.txt (inline)</h2>
             <p className="text-sm text-[color:var(--gray-500)] mb-4">
               Contenuto integrale di{" "}
-              <a href="/llms.txt" className="text-accent underline underline-offset-4">
+              <a href="https://nodo432.com/llms.txt" className="text-accent underline underline-offset-4">
                 /llms.txt
               </a>
               . Indice navigabile di tutto il sito, standard llmstxt.org.
               Inlinato per agenti che non possono seguire link inferiti.
               Per il dump completo dei contenuti vedi{" "}
               <a
-                href="/llms-full.txt"
+                href="https://nodo432.com/llms-full.txt"
                 className="text-accent underline underline-offset-4"
               >
                 /llms-full.txt

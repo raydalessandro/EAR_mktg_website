@@ -55,17 +55,29 @@ const HERO: Record<Persona, { kicker: string; title: string; sub: string }> = {
   },
 };
 
+const SITE = "https://nodo432.com";
+
 const PERSONA_PINS: Record<Persona, string[]> = {
-  ai: ["/ai", "/llms.txt", "/index.json"],
+  ai: [
+    `${SITE}/ai`,
+    `${SITE}/ai-instructions.md`,
+    `${SITE}/llms.txt`,
+    `${SITE}/llms-full.txt`,
+    `${SITE}/index.json`,
+    `${SITE}/graph.json`,
+  ],
   vibecoder: ["/ontologia/trattato", "/tesseract/paper", "/ontologia/aila/sistema-formale/kernel"],
   tecnico: ["/ontologia/aila/nano/nano-kernel", "/ontologia/aila/release-v1", "/tool"],
   curioso: ["/ontologia/aila/in-prosa/kernel-prosa", "/ontologia/aila/sogno-di-leibniz", "/ontologia/teoremi"],
 };
 
 const PERSONA_PIN_LABELS: Record<string, string> = {
-  "/ai": "Guida AI",
-  "/llms.txt": "llms.txt",
-  "/index.json": "index.json",
+  [`${SITE}/ai`]: "Guida AI",
+  [`${SITE}/ai-instructions.md`]: "ai-instructions.md",
+  [`${SITE}/llms.txt`]: "llms.txt",
+  [`${SITE}/llms-full.txt`]: "llms-full.txt",
+  [`${SITE}/index.json`]: "index.json",
+  [`${SITE}/graph.json`]: "graph.json",
 };
 
 export function HomeView({ sections, featured, recent }: Props) {
@@ -113,10 +125,14 @@ export function HomeView({ sections, featured, recent }: Props) {
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
             {pins.map((href) => {
-              const isExt = href.endsWith(".txt") || href.endsWith(".json");
+              const isExt = href.startsWith("http") || /\.(txt|json|md)$/.test(href);
               const label =
                 PERSONA_PIN_LABELS[href] ??
-                href.replace(/^\/ontologia\//, "").replace(/-/g, " ").replace(/\//g, " · ");
+                href
+                  .replace(/^https:\/\/[^/]+\//, "")
+                  .replace(/^\/ontologia\//, "")
+                  .replace(/-/g, " ")
+                  .replace(/\//g, " · ");
               const className =
                 "inline-flex items-center gap-1 text-sm px-3 py-1.5 rounded-full border border-[color:var(--gray-200)] hover:border-accent hover:text-accent transition-colors";
               return isExt ? (
