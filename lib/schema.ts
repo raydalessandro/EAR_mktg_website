@@ -14,6 +14,7 @@ export const frontmatterSchema = z
     title: z.string().min(1, "title required"),
     summary: z.string().optional(),
     description: z.string().optional(),
+    llm_directive: z.string().optional(),
     status: z.enum(STATUSES).default("published"),
     type: z.string().optional(),
     version: z.string().optional(),

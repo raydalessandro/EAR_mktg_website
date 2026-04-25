@@ -6,6 +6,7 @@ import { JsonLd, documentJsonLd } from "./JsonLd";
 import { FrontmatterMarker } from "./FrontmatterMarker";
 import { TypeBadge } from "./TypeBadge";
 import { MediaPlayer } from "./MediaPlayer";
+import { LlmDirective } from "./LlmDirective";
 
 type Props = {
   doc: DocumentNode;
@@ -107,6 +108,10 @@ export function DocumentView({ doc, html }: Props) {
 
       {doc.meta.download && (
         <MediaPlayer download={doc.meta.download} title={doc.meta.title} />
+      )}
+
+      {doc.meta.llm_directive && (
+        <LlmDirective directive={doc.meta.llm_directive} />
       )}
 
       <div className="prose-nodo" dangerouslySetInnerHTML={{ __html: html }} />

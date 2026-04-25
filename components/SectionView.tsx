@@ -7,6 +7,7 @@ import { DocCard } from "./DocCard";
 import { JsonLd, sectionJsonLd } from "./JsonLd";
 import { FrontmatterMarker } from "./FrontmatterMarker";
 import { AllDownloads } from "./AllDownloads";
+import { LlmDirective } from "./LlmDirective";
 
 function readSectionBody(node: SectionNode): string {
   const file = `${node.dirPath}/_section.md`;
@@ -72,6 +73,10 @@ export async function SectionView({ node }: { node: SectionNode }) {
           </a>
         )}
       </header>
+
+      {node.meta.llm_directive && (
+        <LlmDirective directive={node.meta.llm_directive} />
+      )}
 
       {html && (
         <div className="prose-nodo mb-12" dangerouslySetInnerHTML={{ __html: html }} />
