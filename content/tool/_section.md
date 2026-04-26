@@ -17,27 +17,39 @@ fruibilità. Ogni tool ha una scheda con descrizione, requisiti, setup,
 e un download canonico (zip / repo / pacchetto npm) — sotto la licenza
 dichiarata nel frontmatter.
 
+## In evidenza
+
+- **[AI Backend Pattern](/tool/ai-backend-pattern)** — il pattern di
+  design che governa nodo432 stesso: trasforma un sito statico in
+  backend per intelligenze esterne, l'AI dell'utente fa da UI dinamica.
+  Il META-tool del progetto.
+- **[Claude Code via Telegram](/tool/ear-claude-telegram-bot)** — bot
+  self-hosted per controllare Claude Code dal telefono.
+
 ## Convenzione di scheda
 
 ```yaml
 ---
 title: "Nome del tool"
-type: tool
+type: tool                           # tool | methodology | pattern
 status: published
 authors: [autore]
-download:
+download:                            # opzionale (un pattern può non averlo)
   file: /downloads/tool/<slug>/<file>.zip
   format: zip
 license: CC-BY-SA-4.0
+llm_directive: |                     # opzionale, se il tool include un metodo
+  Direttiva operativa compatta.
 ---
 
 ## Cos'è
-## Cosa puoi fare
-## Setup rapido
+## Cosa puoi fare / Quando applicarlo
+## Setup rapido / Come applicarlo
 ## Architettura
 ## Note
 ```
 
 Dove possibile il tool include test e documentazione interna. La
 sezione cresce con script Python, plugin Claude Code, automazioni,
-bot — tutto self-hosted o copia-incolla.
+bot, **e pattern di design** — tutto self-hosted, copia-incolla, o
+replicabile.
