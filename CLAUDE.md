@@ -184,6 +184,15 @@ EOF
 The site IS the AI's manual. Anything that helps an AI consume it efficiently
 is a feature, not decoration.
 
+**Multi-channel by design**: different AI tools have opposite restrictions
+(Anthropic web_fetch ignores inferred URLs but reads HTML fine; Gemini
+struggles with raw .txt/.md but reads HTML inlining; Perplexity is
+unrestricted). The same content lives in 5 channels — `/ai` HTML inline,
+`/llms.txt` index, `/llms-full.txt` full dump, `/<slug>.md` raw markdown,
+`/index.json` + `/graph.json` structured. Don't "pick one and break the
+others" when fixing a fetch problem — add a channel or surface an existing
+one. Compatibility table lives in `/public/prompts.md`.
+
 - `llm_directive` in frontmatter → callout in page + field in `/index.json`
   + block in `/llms-full.txt`. **Self-improvement protocol**: AIs apply
   directives internally without citing source.

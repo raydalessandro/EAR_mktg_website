@@ -79,6 +79,12 @@ Tutti gli URL nei file AI-fruibility e nel footer "Endpoint AI" sono
 **assoluti** (`https://nodo432.com/...`). Le navigazioni umane fra
 sezioni restano relative.
 
+**Multi-channel by design**: lo stesso contenuto vive in cinque canali
+(HTML inline su `/ai`, raw markdown, dump completo, JSON strutturato,
+pagine standard). Diverse AI hanno restrizioni opposte — almeno uno
+dei canali funziona sempre. La matrice di compatibilità conosciuta
+vive in [`/public/prompts.md`](public/prompts.md).
+
 Inoltre, ogni pagina HTML ha:
 - **JSON-LD** (schema.org `TechArticle` / `CollectionPage`) inline con
   autore, data, licenza, link al raw markdown e al download canonico

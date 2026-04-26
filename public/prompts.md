@@ -8,6 +8,27 @@ URL canonico di questa pagina:
 
 ---
 
+## Matrice di compatibilità AI → canale
+
+Diverse AI hanno restrizioni di fetch diverse — talvolta opposte.
+**Il sito offre lo stesso contenuto in cinque canali**: almeno uno
+funziona per ogni AI nota.
+
+| AI | Restrizione | Canale consigliato |
+|---|---|---|
+| **Claude (Anthropic web_fetch)** | Segue solo URL forniti esplicitamente dall'utente o da web_search; ignora URL inferiti dal contenuto HTML | `/ai` (HTML normale, può fetchare; gli URL al suo interno sono testo assoluto pronto da incollare) |
+| **Gemini browsing** | Difficoltà a leggere file non-HTML (`.txt`, `.md` raw) | `/ai` (HTML che inlinea ai-instructions.md + llms.txt) |
+| **ChatGPT browsing** | Generalmente flessibile, dipende dal client | Qualunque canale; default `/llms.txt` o `/ai` |
+| **Perplexity** | Nessuna restrizione nota | `/llms-full.txt` diretto (1 MB con tutto il corpus) |
+| **AI con accesso MCP** (Claude Desktop, Cursor) | Nessuna restrizione web; serve setup MCP locale | MCP server (in roadmap) |
+| **AI senza restrizioni** (CLI, custom) | — | Qualunque canale |
+
+Quando l'AI ti dice *"non posso fetchare URL inferiti"* o *"ho difficoltà
+con file raw"*, **`https://nodo432.com/ai` funziona sempre**: è una pagina
+HTML normale che contiene inline tutto il manuale d'uso e l'indice.
+
+---
+
 ## 1. Avvio standard (consigliato)
 
 Per AI con policy di fetch ristretta (Claude con web_fetch, ChatGPT con

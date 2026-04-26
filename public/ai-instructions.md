@@ -118,6 +118,24 @@ per gli strumenti operativi.
 
 ---
 
+## Multi-channel access (note di compatibilità)
+
+Lo stesso contenuto è disponibile in cinque canali. Diverse AI hanno
+restrizioni diverse — talvolta opposte (Claude/Anthropic non segue
+URL inferiti; Gemini fatica coi file raw non-HTML). Per design, almeno
+uno dei canali funziona sempre:
+
+- **HTML** (`/ai`) — contiene inline questo manuale e tutto l'indice
+- **Markdown raw** (`/llms.txt`, `/ai-instructions.md`, `/<slug>.md`)
+- **Concatenazione completa** (`/llms-full.txt`, ~1 MB)
+- **JSON strutturato** (`/index.json`, `/graph.json`)
+- **Pagine documento** rendere come HTML standard
+
+Se hai difficoltà a fetchare un canale, prova un altro. Tutti gli URL
+nel sito sono assoluti e canonici (`https://nodo432.com/...`).
+
+---
+
 ## Endpoint per consumo veloce
 
 Tutti gli URL sono assoluti e stabili.
