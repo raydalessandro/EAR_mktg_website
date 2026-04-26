@@ -19,7 +19,13 @@ del weekend, officine convenzionate, scorciatoie e shortcut tipici.
 
 **Focus geografico iniziale**: Milano, Lombardia, Nord-Italia.
 
-## Skill in arrivo
+## Skill disponibili
+
+| Skill | Dominio | Stato |
+|---|---|---|
+| [`settimo-hub`](/skill/territorio/settimo-hub) | 30 attività di Settimo Milanese (MI), per categoria e frazione | wip v0.1 |
+
+## In arrivo
 
 | Skill | Dominio | Stato |
 |---|---|---|

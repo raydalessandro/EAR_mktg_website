@@ -1,0 +1,666 @@
+{
+  "source": "Settimo Hub prototype (React app)",
+  "source_url": "https://github.com/raydalessandro/Settimo_Hub",
+  "comune": "Settimo Milanese",
+  "provincia": "Milano",
+  "regione": "Lombardia",
+  "frazioni": [
+    "centro",
+    "cascine",
+    "seguro",
+    "vighignolo",
+    "villaggio"
+  ],
+  "frazioni_full": {
+    "centro": "Centro",
+    "cascine": "Cascine Olona",
+    "seguro": "Seguro",
+    "vighignolo": "Vighignolo",
+    "villaggio": "Villaggio Cavour"
+  },
+  "categories": [
+    "alimentari",
+    "ristorazione",
+    "servizi",
+    "retail"
+  ],
+  "hours_format": {
+    "open": "HH:MM",
+    "close": "HH:MM",
+    "days": "0=Dom, 1=Lun, ..., 6=Sab"
+  },
+  "count": 30,
+  "note": "Phone/whatsapp numbers from the prototype are placeholders and have been stripped. Verify before contacting.",
+  "shops": [
+    {
+      "id": 1,
+      "name": "Il Forno di Gigi",
+      "category": "alimentari",
+      "frazione": "centro",
+      "description": "93 anni di pane fatto come una volta. Focacce, grissini e dolci artigianali. Tradizione familiare.",
+      "address": "Via Carlo D'Adda, 3",
+      "hours": {
+        "open": "07:00",
+        "close": "19:30",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Dal 1932",
+      "heritage": true,
+      "founded": 1932
+    },
+    {
+      "id": 2,
+      "name": "Moroni dal 1913",
+      "category": "alimentari",
+      "frazione": "centro",
+      "description": "Ex Consorzio Agrario. Riso, farine, legumi, prodotti per animali. Storicità assoluta del territorio.",
+      "address": "Via dei Garibaldini, 27",
+      "hours": {
+        "open": "08:30",
+        "close": "19:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "112 anni di storia",
+      "heritage": true,
+      "founded": 1913
+    },
+    {
+      "id": 3,
+      "name": "Macelleria Colombo",
+      "category": "alimentari",
+      "frazione": "cascine",
+      "description": "Macelleria tradizionale. Tagli selezionati, salumi artigianali. Consulenza e preparazione.",
+      "address": "Via Cascine Olona, 45",
+      "hours": {
+        "open": "08:00",
+        "close": "13:00",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Carne di qualità"
+    },
+    {
+      "id": 4,
+      "name": "Ortofrutta Mariella",
+      "category": "alimentari",
+      "frazione": "vighignolo",
+      "description": "Prodotti di stagione a km zero. Frutta, verdura, legumi. Cassette su ordinazione.",
+      "address": "Via Vighignolo, 23",
+      "hours": {
+        "open": "07:30",
+        "close": "13:30",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Frutta e verdura fresca"
+    },
+    {
+      "id": 5,
+      "name": "Gelateria Gioia",
+      "category": "alimentari",
+      "frazione": "centro",
+      "description": "Produzione propria giornaliera. Ingredienti naturali, gusti stagionali. Senza coloranti artificiali.",
+      "address": "Piazza della Repubblica, 8",
+      "hours": {
+        "open": "12:00",
+        "close": "23:00",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      },
+      "tagline": "Gelato artigianale"
+    },
+    {
+      "id": 6,
+      "name": "Osteria delle Rane Rosse",
+      "category": "ristorazione",
+      "frazione": "centro",
+      "description": "Trattoria storica. Risotto alla milanese, ossobuco, cotoletta. Materie prime locali, atmosfera familiare.",
+      "address": "Via Gramsci, 23",
+      "hours": {
+        "open": "12:00",
+        "close": "22:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      },
+      "tagline": "Cucina milanese dal 1970",
+      "heritage": true,
+      "founded": 1970
+    },
+    {
+      "id": 7,
+      "name": "Chocolat Settimo",
+      "category": "ristorazione",
+      "frazione": "centro",
+      "description": "Dolci artigianali, torte personalizzate, cioccolato di qualità. Laboratorio proprio con vetrina.",
+      "address": "Via Roma, 15",
+      "hours": {
+        "open": "08:00",
+        "close": "20:00",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      },
+      "tagline": "Pasticceria artigianale"
+    },
+    {
+      "id": 8,
+      "name": "Pizza e Mozzarella",
+      "category": "ristorazione",
+      "frazione": "seguro",
+      "description": "Pizza napoletana STG. Forno a legna, impasto 48h lievitazione. Mozzarella di bufala campana.",
+      "address": "Via Seguro, 67",
+      "hours": {
+        "open": "19:00",
+        "close": "23:00",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      },
+      "tagline": "Pizzeria napoletana"
+    },
+    {
+      "id": 9,
+      "name": "Bar Centrale",
+      "category": "ristorazione",
+      "frazione": "centro",
+      "description": "Caffetteria e colazioni. Aperitivi, panini pranzo. Punto di ritrovo del quartiere da 40 anni.",
+      "address": "Piazza Libertà, 12",
+      "hours": {
+        "open": "06:30",
+        "close": "20:00",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Il bar di tutti"
+    },
+    {
+      "id": 10,
+      "name": "Ristorante Da Vito",
+      "category": "ristorazione",
+      "frazione": "villaggio",
+      "description": "Ristorante a gestione familiare. Menù del giorno, cucina italiana tradizionale. Ambiente accogliente.",
+      "address": "Via Villaggio Cavour, 34",
+      "hours": {
+        "open": "12:00",
+        "close": "15:00",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Cucina casalinga"
+    },
+    {
+      "id": 11,
+      "name": "Caffè Letterario",
+      "category": "ristorazione",
+      "frazione": "centro",
+      "description": "Libreria caffè. Colazioni, brunch, aperitivi culturali. Eventi letterari e presentazioni libri.",
+      "address": "Via Matteotti, 8",
+      "hours": {
+        "open": "08:00",
+        "close": "22:00",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      },
+      "tagline": "Caffè e cultura"
+    },
+    {
+      "id": 12,
+      "name": "Pasticceria Ranieri",
+      "category": "ristorazione",
+      "frazione": "cascine",
+      "description": "Pasticceria artigianale. Brioches, paste, torte classiche milanesi. Colazioni e merende.",
+      "address": "Via Cascine Olona, 12",
+      "hours": {
+        "open": "07:00",
+        "close": "13:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      },
+      "tagline": "Dolci tradizionali"
+    },
+    {
+      "id": 13,
+      "name": "Osteria del VII Miglio",
+      "category": "ristorazione",
+      "frazione": "centro",
+      "description": "Oltre 50 anni di cucina lombarda. Piatti della tradizione, vini locali. Gestione familiare.",
+      "address": "Via Gramsci, 1",
+      "hours": {
+        "open": "12:00",
+        "close": "22:00",
+        "days": [
+          3,
+          4,
+          5,
+          6,
+          0
+        ]
+      },
+      "tagline": "Tradizione dal 1970",
+      "heritage": true,
+      "founded": 1970
+    },
+    {
+      "id": 14,
+      "name": "Romano Parrucchieri",
+      "category": "servizi",
+      "frazione": "vighignolo",
+      "description": "Parrucchiere di fiducia da generazioni. Taglio uomo e donna, trattamenti personalizzati. Consulenza immagine.",
+      "address": "Via Vighignolo, 45",
+      "hours": {
+        "open": "09:00",
+        "close": "19:00",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Stile e tradizione"
+    },
+    {
+      "id": 15,
+      "name": "Elline Urban Medi Spa",
+      "category": "servizi",
+      "frazione": "centro",
+      "description": "Centro estetico completo. Trattamenti viso e corpo, massaggi, epilazione. Prodotti naturali.",
+      "address": "Via Roma, 45",
+      "hours": {
+        "open": "09:30",
+        "close": "19:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Bellezza e benessere"
+    },
+    {
+      "id": 16,
+      "name": "Barbiere Vittorio",
+      "category": "servizi",
+      "frazione": "centro",
+      "description": "Barbiere tradizionale. Taglio classico, rasatura col rasoio, rifinitura barba. Atmosfera d'altri tempi.",
+      "address": "Via Matteotti, 23",
+      "hours": {
+        "open": "08:30",
+        "close": "12:30",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Il barbiere di una volta"
+    },
+    {
+      "id": 17,
+      "name": "Centro Benessere Harmony",
+      "category": "servizi",
+      "frazione": "cascine",
+      "description": "Centro massaggi specializzato. Massoterapia, riflessologia plantare, trattamenti olistici.",
+      "address": "Via Cascine Olona, 89",
+      "hours": {
+        "open": "10:00",
+        "close": "20:00",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Massaggi e relax"
+    },
+    {
+      "id": 18,
+      "name": "Nails & Beauty",
+      "category": "servizi",
+      "frazione": "seguro",
+      "description": "Centro unghie specializzato. Ricostruzione, semipermanente, nail art. Pedicure estetico.",
+      "address": "Via Seguro, 34",
+      "hours": {
+        "open": "09:00",
+        "close": "19:00",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Manicure e pedicure"
+    },
+    {
+      "id": 19,
+      "name": "Carlo Corsi Tattoo",
+      "category": "servizi",
+      "frazione": "centro",
+      "description": "Studio tatuaggi. Disegni personalizzati, cover-up, microblading. Igiene certificata, ambiente professionale.",
+      "address": "Via Di Vittorio, 12",
+      "hours": {
+        "open": "14:00",
+        "close": "19:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Tatuaggi custom"
+    },
+    {
+      "id": 20,
+      "name": "Palestra FitZone",
+      "category": "servizi",
+      "frazione": "villaggio",
+      "description": "Palestra di quartiere. Sala pesi, corsi fitness, personal trainer. Atmosfera familiare e motivante.",
+      "address": "Via Villaggio Cavour, 56",
+      "hours": {
+        "open": "07:00",
+        "close": "22:00",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Fitness e salute"
+    },
+    {
+      "id": 21,
+      "name": "Salone Glamour",
+      "category": "servizi",
+      "frazione": "centro",
+      "description": "Parrucchiere specializzato donna. Colore, piega, trattamenti ristrutturanti. Extension e consulenza.",
+      "address": "Piazza Repubblica, 5",
+      "hours": {
+        "open": "09:00",
+        "close": "18:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Parrucchiere donna"
+    },
+    {
+      "id": 22,
+      "name": "Centro Yoga Sattva",
+      "category": "servizi",
+      "frazione": "seguro",
+      "description": "Centro yoga. Corsi per tutti i livelli, meditazione guidata, pilates. Insegnanti certificati.",
+      "address": "Via Seguro, 78",
+      "hours": {
+        "open": "08:00",
+        "close": "21:00",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Yoga e meditazione"
+    },
+    {
+      "id": 23,
+      "name": "Studio Podologico Benessere",
+      "category": "servizi",
+      "frazione": "centro",
+      "description": "Podologo specializzato. Trattamenti piede, callosità, unghie incarnite. Plantari su misura.",
+      "address": "Via Matteotti, 67",
+      "hours": {
+        "open": "09:00",
+        "close": "18:00",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "tagline": "Cura del piede"
+    },
+    {
+      "id": 24,
+      "name": "Sbarbori Gioielli",
+      "category": "retail",
+      "frazione": "centro",
+      "description": "Oltre 50 anni di oreficeria. Laboratorio proprio, creazioni artigianali, riparazioni. Gioielli su misura.",
+      "address": "Via Giuseppe Di Vittorio, 2",
+      "hours": {
+        "open": "09:30",
+        "close": "19:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "3 generazioni di orafi",
+      "heritage": true,
+      "founded": 1970
+    },
+    {
+      "id": 25,
+      "name": "Ferramenta Magrefer",
+      "category": "retail",
+      "frazione": "cascine",
+      "description": "Ferramenta completa. Utensileria, casalinghi, giardinaggio, ferramenta edile. Consulenza gratuita.",
+      "address": "Via Cascine Olona, 78",
+      "hours": {
+        "open": "08:30",
+        "close": "19:30",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Tutto per la casa"
+    },
+    {
+      "id": 26,
+      "name": "Boutique Margherita",
+      "category": "retail",
+      "frazione": "centro",
+      "description": "Boutique abbigliamento donna. Selezione italiana, consulenza personalizzata. Taglie dalla 40 alla 52.",
+      "address": "Via Roma, 34",
+      "hours": {
+        "open": "09:30",
+        "close": "19:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Abbigliamento donna"
+    },
+    {
+      "id": 27,
+      "name": "Libreria Il Punto",
+      "category": "retail",
+      "frazione": "centro",
+      "description": "Libreria indipendente. Narrativa, saggistica, libri per ragazzi. Ordinazioni e consigli personalizzati.",
+      "address": "Piazza Libertà, 7",
+      "hours": {
+        "open": "09:00",
+        "close": "19:30",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Libri e cultura"
+    },
+    {
+      "id": 28,
+      "name": "Ottica Bollani",
+      "category": "retail",
+      "frazione": "centro",
+      "description": "Ottica storica. Optometrista specializzato, lenti progressive, montature selezionate. Laboratorio interno.",
+      "address": "Viale Teodorico, 19",
+      "hours": {
+        "open": "09:15",
+        "close": "19:30",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Bottega storica dal 1972",
+      "heritage": true,
+      "founded": 1972
+    },
+    {
+      "id": 29,
+      "name": "Cartoleria Fantasia",
+      "category": "retail",
+      "frazione": "vighignolo",
+      "description": "Cartoleria completa. Materiale scolastico, articoli ufficio, bomboniere. Fotocopie e plastificazioni.",
+      "address": "Via Vighignolo, 12",
+      "hours": {
+        "open": "08:30",
+        "close": "12:30",
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Scuola e ufficio"
+    },
+    {
+      "id": 30,
+      "name": "Pet Shop Zampa Felice",
+      "category": "retail",
+      "frazione": "seguro",
+      "description": "Negozio animali. Cibo, accessori, toelettatura. Consigli nutrizionali per cani e gatti.",
+      "address": "Via Seguro, 45",
+      "hours": {
+        "open": "09:00",
+        "close": "19:00",
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "tagline": "Tutto per animali"
+    }
+  ]
+}

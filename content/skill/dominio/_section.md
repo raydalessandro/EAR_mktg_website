@@ -27,7 +27,13 @@ Sono complementari. La skill `scrittura-narrativa` può preparare l'AI a
 ragionare di voce/tono/struttura prima ancora che parta una pipeline
 specifica come Saga Engine.
 
-## Skill in arrivo
+## Skill disponibili
+
+| Skill | Cosa fa l'AI dopo averla caricata |
+|---|---|
+| [`isola-tre-venti`](/skill/dominio/isola-tre-venti) | Specialista del canone della saga **L'Isola dei Tre Venti** (12 storie, reference implementation EAR) |
+
+## In arrivo
 
 | Skill | Cosa fa l'AI dopo averla caricata |
 |---|---|
