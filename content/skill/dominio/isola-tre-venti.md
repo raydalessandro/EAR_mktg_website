@@ -145,12 +145,12 @@ percorso di maturazione attraverso le 4 stagioni dell'EAR.
 contiene **104 feature** distribuite su 4 quartieri + centro +
 perimetro:
 
-- **Centro** — Piazza, Albero Vecchio, Forno (case Fiamma)
-- **Quartiere Terra** (sud) — Orti, Pascoli, foresta intrecciata
-- **Quartiere Fuoco** (est) — Forno, Quartiere artigiani
-- **Quartiere Acqua** (ovest) — Fiume con sotto-tratti, Pontile, Bocca
-- **Quartiere Aria** (nord) — Montagne Gemelle, Burrone, Grotta di Grunto
-- **Perimetro** — coste, sentieri esterni
+- **Centro** — Piazza, Albero Vecchio, Scuola di Stria, Pozzo
+- **Quartiere Terra** (ovest) — Orti del Cerchio, Foresta Intrecciata, Tana di Rovo, Casa di Salvia
+- **Quartiere Fuoco** (est) — Forno (casa di Fiamma), Case del Mattino, Via dell'Alba
+- **Quartiere Acqua** (sud) — Pontile, Bocca, Spiaggia delle Conchiglie, Casa di Amo
+- **Quartiere Aria** (nord) — Montagne Gemelle, Pascoli Alti, Burrone, Grotta di Grunto
+- **Perimetro** — coste, sentieri esterni, fascia costiera
 
 Il fiume ha geometria a **Variante C**: due bracci asimmetrici (Ovest
 stretto e veloce, Est ampio e lento) che convergono a Sorgente nord e
