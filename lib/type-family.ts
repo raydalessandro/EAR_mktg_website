@@ -30,6 +30,7 @@ const TYPE_FAMILY: Record<string, TypeFamily> = {
   pipeline: "tool",
   tool: "tool",
   template: "tool",
+  skill: "tool",
   collection: "neutral",
 };
 

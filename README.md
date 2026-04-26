@@ -34,6 +34,10 @@ iniziano con `_`) è un documento. La profondità è arbitraria.
   /arte                         Top-level, pratica artistica
     /scrittura, /musica, /visivo, /performance
                                 Audio/video player automatico per file mp3/wav/ogg/mp4/webm
+  /skill                        Top-level, moduli di conoscenza per AI
+    /territorio                 (Milano/Lombardia/Nord-Italia)
+    /dominio                    (verticali per campo di sapere)
+    /quotidiano                 (task ricorrenti)
   /ontologia
     /trattato                   Trattato della Coscienza Emergente (200pp)
     /teoremi                    6 proposizioni P1-P6
